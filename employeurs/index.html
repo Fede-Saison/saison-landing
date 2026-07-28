@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saison — Recrutement saisonnier hispanophones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night:  #0B1426;
+  --cobalt: #0A3AF2;
+  --bone:   #F5F3EC;
+  --paper:  #FBFAF5;
+  --muted:  rgba(11,20,38,0.38);
+  --border: rgba(11,20,38,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', sans-serif; background: var(--night); color: var(--bone); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+.rv { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.rv.in { opacity: 1; transform: translateY(0); }
+.rv.d1 { transition-delay: 0.08s; }
+.rv.d2 { transition-delay: 0.16s; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 56px; height: 64px;
+  background: rgba(11,20,38,0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(245,243,236,0.06);
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5px; width: 19px; height: 19px; }
+.logo-grid span { border-radius: 2px; background: rgba(10,58,242,0.7); display: block; }
+.logo-grid span:nth-child(2), .logo-grid span:nth-child(3) { background: rgba(10,58,242,0.25); }
+.logo-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 16px; color: var(--bone); letter-spacing: -0.03em; }
+.nav-links { display: flex; align-items: center; gap: 20px; }
+.nav-link { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.4); text-decoration: none; transition: color 0.2s; font-family: 'DM Mono', monospace; }
+.nav-link:hover { color: var(--bone); }
+.nav-cta { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--cobalt); color: var(--bone); padding: 9px 20px; border-radius: 6px; text-decoration: none; transition: background 0.2s; font-family: 'DM Mono', monospace; white-space: nowrap; }
+.nav-cta:hover { background: #0830d4; }
+.nav-candidats { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,243,236,0.35); text-decoration: none; font-family: 'DM Mono', monospace; border: 1px solid rgba(245,243,236,0.1); padding: 9px 14px; border-radius: 6px; transition: all 0.2s; white-space: nowrap; }
+.nav-candidats:hover { border-color: rgba(245,243,236,0.25); color: var(--bone); }
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* BTNS */
+.btn-cobalt { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--cobalt); color: var(--bone); padding: 16px 28px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.btn-cobalt:hover { background: #0830d4; }
+.btn-outline { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; color: rgba(245,243,236,0.5); padding: 16px 28px; border-radius: 8px; border: 1px solid rgba(245,243,236,0.15); text-decoration: none; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; }
+.btn-outline:hover { border-color: rgba(245,243,236,0.3); color: var(--bone); }
+
+/* HERO — fondo forzado night */
+.hero {
+  background: var(--night);
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 100px 0 80px;
+  border-bottom: 1px solid rgba(245,243,236,0.06);
+  position: relative;
+}
+.hero::after {
+  content: 'SCROLL';
+  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+  font-size: 9px; letter-spacing: 0.2em; color: rgba(245,243,236,0.12);
+  font-family: 'DM Mono', monospace;
+}
+.hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; opacity: 0; animation: fadeUp 0.6s 0.2s forwards; }
+.hero-line { width: 28px; height: 1px; background: var(--cobalt); flex-shrink: 0; }
+.hero-eyebrow-text { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,243,236,0.35); font-family: 'DM Mono', monospace; }
+
+.hero-h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; line-height: 0.92; letter-spacing: -0.04em; color: var(--bone); opacity: 0; animation: fadeUp 0.8s 0.35s forwards; }
+.hero-h1-main { font-size: clamp(56px, 8vw, 96px); display: block; }
+.hero-h1-dim { font-size: clamp(56px, 8vw, 96px); display: block; color: rgba(245,243,236,0.18); }
+.hero-h1-sub-line { font-size: clamp(18px, 2.5vw, 26px); font-weight: 600; color: rgba(245,243,236,0.38); display: block; margin-top: 16px; letter-spacing: -0.01em; }
+
+.hero-desc { font-size: 15px; line-height: 1.75; color: rgba(245,243,236,0.45); max-width: 540px; margin: 36px 0 36px; opacity: 0; animation: fadeUp 0.8s 0.55s forwards; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 0.7s forwards; }
+
+/* MARQUEE */
+.marquee { overflow: hidden; padding: 18px 0; border-bottom: 1px solid rgba(245,243,236,0.06); background: rgba(255,255,255,0.015); }
+.marquee-track { display: flex; gap: 48px; width: max-content; animation: ticker 28s linear infinite; }
+.marquee-item { display: flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.18); white-space: nowrap; font-family: 'DM Mono', monospace; }
+.marquee-dot { color: var(--cobalt); font-size: 7px; }
+
+/* SECTION COMMONS */
+.sec-num { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-family: 'DM Mono', monospace; display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.sec-num::after { content: ''; flex: 0 0 28px; height: 1px; }
+.sec-num-light { color: rgba(245,243,236,0.3); }
+.sec-num-light::after { background: rgba(245,243,236,0.15); }
+.sec-num-dark { color: var(--cobalt); }
+.sec-num-dark::after { background: rgba(10,58,242,0.3); }
+
+/* PROBLÈME */
+.probleme { padding: 96px 0; background: var(--night); border-bottom: 1px solid rgba(245,243,236,0.06); }
+.prob-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 60px); letter-spacing: -0.04em; line-height: 1.0; color: var(--bone); margin-bottom: 20px; }
+.prob-h2 span { color: rgba(245,243,236,0.22); }
+.prob-h2 em { font-style: normal; color: var(--cobalt); }
+.prob-body { font-size: 15px; line-height: 1.75; color: rgba(245,243,236,0.45); max-width: 560px; margin-bottom: 48px; }
+.pain-cards { display: flex; flex-direction: column; gap: 1px; background: rgba(245,243,236,0.06); border: 1px solid rgba(245,243,236,0.06); }
+.pain-card { background: rgba(255,255,255,0.03); padding: 28px 32px; display: flex; align-items: flex-start; gap: 20px; transition: background 0.2s; }
+.pain-card:hover { background: rgba(255,255,255,0.06); }
+.pain-icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(10,58,242,0.12); border: 1px solid rgba(10,58,242,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.pain-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px; color: var(--bone); margin-bottom: 6px; }
+.pain-text { font-size: 13px; color: rgba(245,243,236,0.38); line-height: 1.65; }
+
+/* DIFFÉRENCE */
+.difference { padding: 96px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
+.diff-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 60px); letter-spacing: -0.04em; line-height: 1; color: var(--night); margin-bottom: 48px; }
+.diff-h2 em { font-style: normal; color: var(--cobalt); }
+.diff-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.diff-quote { font-size: 15px; line-height: 1.8; color: var(--muted); margin-bottom: 32px; }
+.diff-quote strong { color: var(--night); font-weight: 600; }
+
+/* PROFIL CARD */
+.profil-card { background: var(--night); overflow: hidden; border: 1px solid rgba(245,243,236,0.08); }
+.profil-header { padding: 12px 20px; border-bottom: 1px solid rgba(245,243,236,0.06); display: flex; align-items: center; justify-content: space-between; }
+.profil-ref { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.22); font-family: 'DM Mono', monospace; }
+.profil-status { display: flex; align-items: center; gap: 6px; }
+.profil-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cobalt); animation: blink 2s infinite; }
+.profil-status-text { font-size: 9px; color: var(--cobalt); font-family: 'DM Mono', monospace; }
+.profil-body { padding: 24px 20px; }
+.profil-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; color: var(--bone); letter-spacing: -0.03em; margin-bottom: 4px; }
+.profil-meta { font-size: 11px; color: rgba(245,243,236,0.35); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+.profil-rows { border-top: 1px solid rgba(245,243,236,0.06); }
+.profil-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(245,243,236,0.06); }
+.profil-row:last-child { border-bottom: none; }
+.profil-lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.22); font-family: 'DM Mono', monospace; }
+.profil-val { font-size: 12px; color: var(--bone); }
+.profil-val.cobalt { color: var(--cobalt); }
+.profil-score { background: rgba(10,58,242,0.1); border-top: 1px solid rgba(10,58,242,0.2); padding: 16px 20px; display: flex; align-items: center; gap: 16px; }
+.profil-score-num { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; color: var(--cobalt); letter-spacing: -0.04em; line-height: 1; }
+.profil-score-detail { font-size: 9px; font-family: 'DM Mono', monospace; letter-spacing: 0.06em; color: rgba(245,243,236,0.3); line-height: 1.6; }
+.profil-process { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(245,243,236,0.06); padding: 14px 20px; }
+.profil-process-lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cobalt); font-family: 'DM Mono', monospace; margin-bottom: 6px; }
+.profil-process-text { font-size: 12px; color: rgba(245,243,236,0.35); line-height: 1.65; }
+
+/* SOLUTIONS */
+.solutions { padding: 96px 0; background: var(--night); border-bottom: 1px solid rgba(245,243,236,0.06); }
+.sol-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 64px); letter-spacing: -0.04em; line-height: 0.95; color: var(--bone); margin-bottom: 56px; }
+.sol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(245,243,236,0.06); border: 1px solid rgba(245,243,236,0.06); }
+.sol-card { background: rgba(255,255,255,0.03); padding: 40px 32px; }
+.sol-card.feat { background: rgba(10,58,242,0.08); }
+.sol-tag { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,243,236,0.28); font-family: 'DM Mono', monospace; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.sol-tag::before { content: ''; display: block; width: 16px; height: 1px; background: var(--cobalt); flex-shrink: 0; }
+.sol-price { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 52px; letter-spacing: -0.04em; color: var(--cobalt); line-height: 1; margin-bottom: 8px; }
+.sol-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: var(--bone); margin-bottom: 14px; letter-spacing: -0.02em; }
+.sol-desc { font-size: 13px; color: rgba(245,243,236,0.4); line-height: 1.7; margin-bottom: 24px; }
+.sol-list { list-style: none; }
+.sol-list li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(245,243,236,0.06); font-size: 12px; color: rgba(245,243,236,0.4); font-family: 'DM Mono', monospace; }
+.sol-list li:last-child { border-bottom: none; }
+.sol-list li::before { content: '→'; color: var(--cobalt); flex-shrink: 0; }
+
+/* STATS */
+.stats-sec { background: var(--paper); border-bottom: 1px solid var(--border); }
+.stats-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.stat-item { background: var(--paper); padding: 32px 24px; }
+.stat-num { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 44px; letter-spacing: -0.04em; color: var(--cobalt); line-height: 1; }
+.stat-lbl { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 6px; font-family: 'DM Mono', monospace; }
+
+/* BIENVENU */
+.bienvenu { padding: 80px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
+.bienvenu-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px, 4.5vw, 52px); letter-spacing: -0.04em; line-height: 1; color: var(--night); margin-bottom: 14px; }
+.bienvenu-body { font-size: 15px; color: var(--muted); line-height: 1.75; max-width: 520px; }
+
+/* APROPOS */
+.apropos { padding: 96px 0; background: var(--night); border-bottom: 1px solid rgba(245,243,236,0.06); }
+.apropos-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.apropos-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.04em; line-height: 1.05; color: var(--bone); margin-bottom: 20px; }
+.apropos-h2 em { font-style: normal; color: var(--cobalt); }
+.apropos-body { font-size: 14px; line-height: 1.8; color: rgba(245,243,236,0.45); margin-bottom: 28px; }
+.apropos-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.apropos-tag { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'DM Mono', monospace; padding: 7px 14px; border-radius: 100px; border: 1px solid rgba(245,243,236,0.1); color: rgba(245,243,236,0.4); }
+.apropos-tag.cobalt { background: rgba(10,58,242,0.1); border-color: rgba(10,58,242,0.2); color: var(--cobalt); }
+.faq-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(245,243,236,0.06); padding: 28px; margin-top: 0; }
+.faq-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,236,0.25); font-family: 'DM Mono', monospace; margin-bottom: 16px; }
+.faq-q { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 17px; color: var(--bone); margin-bottom: 14px; line-height: 1.2; }
+.faq-q::before { content: '« '; color: var(--cobalt); }
+.faq-q::after { content: ' »'; color: var(--cobalt); }
+.faq-a { font-size: 13px; color: rgba(245,243,236,0.4); line-height: 1.75; }
+
+/* CONTACT */
+.contact { padding: 96px 0; background: var(--paper); }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.contact-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.04em; line-height: 1; color: var(--night); margin-bottom: 16px; }
+.contact-sub { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 32px; }
+.contact-promises { display: flex; flex-direction: column; gap: 10px; }
+.cp { display: flex; align-items: center; gap: 12px; }
+.cp-icon { width: 26px; height: 26px; border-radius: 6px; background: rgba(10,58,242,0.07); border: 1px solid rgba(10,58,242,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--cobalt); font-size: 11px; font-weight: 700; }
+.cp-text { font-size: 13px; color: var(--muted); }
+.contact-form-wrap { background: var(--night); padding: 36px; }
+.contact-form { display: flex; flex-direction: column; gap: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,236,0.3); font-family: 'DM Mono', monospace; }
+.form-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(245,243,236,0.1); border-radius: 5px; padding: 11px 14px; font-size: 13px; color: var(--bone); font-family: 'Hanken Grotesk', sans-serif; transition: border-color 0.2s; outline: none; }
+.form-input::placeholder { color: rgba(245,243,236,0.18); }
+.form-input:focus { border-color: rgba(10,58,242,0.45); }
+.form-textarea { min-height: 100px; resize: vertical; }
+.form-select { background: rgba(255,255,255,0.05); border: 1px solid rgba(245,243,236,0.1); border-radius: 5px; padding: 11px 14px; font-size: 13px; color: var(--bone); font-family: 'Hanken Grotesk', sans-serif; outline: none; cursor: pointer; }
+.form-select option { background: var(--night); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* FOOTER */
+footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px solid rgba(245,243,236,0.06); }
+.ft-bottom { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.ft-copy { font-size: 10px; color: rgba(245,243,236,0.18); }
+.ft-link { font-size: 10px; color: rgba(245,243,236,0.28); text-decoration: none; font-family: 'DM Mono', monospace; letter-spacing: 0.06em; transition: color 0.2s; }
+.ft-link:hover { color: var(--bone); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; gap: 8px; }
+  .nav-link { display: none; }
+  .container { padding: 0 20px; }
+  .hero { padding: 88px 0 60px; min-height: auto; }
+  .hero::after { display: none; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn-cobalt, .hero-actions .btn-outline { width: 100%; }
+  .diff-inner { grid-template-columns: 1fr; gap: 40px; }
+  .apropos-inner { grid-template-columns: 1fr; gap: 40px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+  .sol-grid { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: 1fr 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .probleme, .difference, .solutions, .apropos, .contact, .bienvenu { padding: 64px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-grid"><span></span><span></span><span></span><span></span></div>
+    <span class="logo-name">Saison</span>
+  </a>
+  <div class="nav-links">
+    <a href="#solutions" class="nav-link">Solutions</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="#contact" class="nav-cta">Envoyer ma demande →</a>
+    <a href="/" class="nav-candidats">Candidats →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">
+      <div class="hero-line"></div>
+      <span class="hero-eyebrow-text">Recrutement saisonnier HCR · France</span>
+    </div>
+    <h1 class="hero-h1">
+      <span class="hero-h1-main">Le bon candidat.</span>
+      <span class="hero-h1-dim">Pas 80 CV.</span>
+      <span class="hero-h1-sub-line">Des profils vérifiés. En 3 à 5 jours ouvrés.</span>
+    </h1>
+    <p class="hero-desc">Nous diffusons votre offre auprès de candidats internationaux motivés, avec leurs papiers en règle. Nous filtrons. Nous rencontrons. Vous recevez une shortlist prête à interviewer.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-cobalt">Envoyer ma demande →</a>
+      <a href="#solutions" class="btn-outline">Nos solutions</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="marquee-dot">●</span>Réceptionniste</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Serveur / Serveuse</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Commis de cuisine</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Plongeur</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Gouvernante</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Barman / Barmaid</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Chef de rang</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Réceptionniste</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Serveur / Serveuse</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Commis de cuisine</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Plongeur</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Gouvernante</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Barman / Barmaid</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Chef de rang</div>
+  </div>
+</div>
+
+<!-- LE PROBLÈME -->
+<section class="probleme">
+  <div class="container">
+    <div class="rv">
+      <div class="sec-num sec-num-light">01 — Le problème</div>
+      <h2 class="prob-h2">Vous trouvez quelqu'un.<br>Ils arrivent.<br><span>Et trois semaines plus tard,</span><br><em>ils sont partis.</em></h2>
+      <p class="prob-body">Pas parce que le poste était difficile. Parce que le candidat n'était pas prêt pour ce que représente une saison — l'exigence, le rythme, l'éloignement. Ce n'est pas un problème de recrutement. C'est un problème de profil.</p>
+    </div>
+    <div class="pain-cards rv">
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(10,58,242,0.8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div>
+          <div class="pain-title">Candidats non engagés</div>
+          <p class="pain-text">Ils postulent à tout ce qui passe. Pas de réflexion sur la saison, pas de préparation, pas d'engagement réel. Ils partent au premier imprévu.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(10,58,242,0.8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="pain-title">Sourcing chronophage</div>
+          <p class="pain-text">Publier sur dix plateformes, trier 80 CV, relancer les non-répondeurs. Du temps que vous n'avez pas en haute saison.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(10,58,242,0.8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div>
+          <div class="pain-title">Départs en cours de saison</div>
+          <p class="pain-text">Le vrai coût n'est pas le recrutement manqué. C'est la désorganisation en plein rush et la formation d'urgence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTRE DIFFÉRENCE -->
+<section class="difference">
+  <div class="container">
+    <div class="rv">
+      <div class="sec-num sec-num-dark">02 — Notre différence</div>
+      <h2 class="diff-h2">Un candidat qui<br><em>choisit</em> la France.</h2>
+    </div>
+    <div class="diff-inner">
+      <div class="rv">
+        <p class="diff-quote">Un candidat international qui choisit la France pour sa saison a déjà pris une décision engageante. Il a investi du temps, de l'argent et de l'énergie pour être là.<br><br><strong>Ce n'est pas quelqu'un qui postule à tout ce qui passe. C'est quelqu'un qui a fait un choix — et qui sait dans quoi il s'engage avant d'arriver.</strong></p>
+      </div>
+      <div class="rv d1">
+        <div class="profil-card">
+          <div class="profil-header">
+            <span class="profil-ref">Profil · SAISON-26 / S-042</span>
+            <div class="profil-status">
+              <div class="profil-dot"></div>
+              <span class="profil-status-text">Disponible</span>
+            </div>
+          </div>
+          <div class="profil-body">
+            <div class="profil-name">Valentina G.</div>
+            <div class="profil-meta">Argentine · Passeport UE · Disponible juin 2026</div>
+            <div class="profil-rows">
+              <div class="profil-row"><span class="profil-lbl">Poste</span><span class="profil-val">Réception · Front Office</span></div>
+              <div class="profil-row"><span class="profil-lbl">Français</span><span class="profil-val cobalt">Niveau B1</span></div>
+              <div class="profil-row"><span class="profil-lbl">Zone</span><span class="profil-val">Côte d'Azur · Corse</span></div>
+              <div class="profil-row"><span class="profil-lbl">Logement</span><span class="profil-val cobalt">Accepte logement employeur</span></div>
+            </div>
+          </div>
+          <div class="profil-score">
+            <div class="profil-score-num">92</div>
+            <div>
+              <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.08em;color:var(--cobalt);margin-bottom:4px">Score Saison v2</div>
+              <div class="profil-score-detail">Documenté · Vérifié · Entretenu</div>
+            </div>
+          </div>
+          <div class="profil-process">
+            <div class="profil-process-lbl">Notre process</div>
+            <p class="profil-process-text">Scoring sur 5 critères + entretien de validation avant présentation. Vous ne recevez pas des CV — vous recevez des candidatures déjà qualifiées.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOS SOLUTIONS -->
+<section class="solutions" id="solutions">
+  <div class="container">
+    <div class="rv">
+      <div class="sec-num sec-num-light">03 — Nos solutions</div>
+      <h2 class="sol-h2">Simple.<br>Efficace.</h2>
+    </div>
+    <div class="sol-grid rv">
+      <div class="sol-card">
+        <div class="sol-tag">Diffusion</div>
+        <div class="sol-price">€50–80</div>
+        <div class="sol-title">Visibilité</div>
+        <p class="sol-desc">Votre offre diffusée auprès de notre communauté de 1.000+ candidats internationaux actifs, avec documents en règle. Vous gérez les candidatures.</p>
+        <ul class="sol-list">
+          <li>Diffusion sur tous nos canaux actifs</li>
+          <li>Communauté 1.000+ candidats actifs</li>
+          <li>Candidatures directement à vous</li>
+          <li>Résultats sous 48h</li>
+        </ul>
+      </div>
+      <div class="sol-card feat" style="border:1px solid rgba(10,58,242,0.35);position:relative">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--cobalt)"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0">
+          <div class="sol-tag" style="margin-bottom:16px">Shortlist</div>
+          <span style="font-size:9px;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Mono',monospace;background:var(--cobalt);color:var(--bone);padding:4px 10px;border-radius:100px;margin-bottom:16px">Recommandé</span>
+        </div>
+        <div class="sol-price" style="font-size:64px">€200</div>
+        <div class="sol-title">Sélection complète</div>
+        <p class="sol-desc">Diffusion + scoring + entretien de validation pour chaque profil. Vous recevez 3 à 5 candidatures prêtes à passer l'entretien final.</p>
+        <ul class="sol-list">
+          <li>Diffusion complète</li>
+          <li>Scoring sur 5 critères</li>
+          <li>Entretien de validation par profil</li>
+          <li>3–5 candidatures qualifiées</li>
+          <li>Livraison en 3 à 5 jours ouvrés</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rv" style="margin-top:24px;background:rgba(10,58,242,0.06);border:1px solid rgba(10,58,242,0.15);padding:20px 28px;display:flex;align-items:center;gap:16px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(10,58,242,0.8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <p style="font-size:13px;color:rgba(245,243,236,0.5);line-height:1.65"><strong style="color:var(--bone)">Garantie Saison :</strong> si les profils livrés ne correspondent pas aux critères convenus, vous ne payez pas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-sec">
+  <div class="container">
+    <div class="stats-inner rv">
+      <div class="stat-item"><div class="stat-num">1K+</div><div class="stat-lbl">Candidats actifs</div></div>
+      <div class="stat-item"><div class="stat-num">3–5</div><div class="stat-lbl">Profils par shortlist</div></div>
+      <div class="stat-item"><div class="stat-num">5j</div><div class="stat-lbl">Délai de livraison</div></div>
+      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-lbl">Documentation vérifiée</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- TOUTE DEMANDE EST BIENVENUE -->
+<section class="bienvenu">
+  <div class="container rv">
+    <h2 class="bienvenu-h2">Toute demande<br>est la bienvenue.</h2>
+    <p class="bienvenu-body">Recrutement d'une équipe complète, besoin urgent en cours de saison, poste atypique — si vous avez une demande spécifique, décrivez-la. Nous trouverons ensemble si nous pouvons y répondre.</p>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section class="apropos">
+  <div class="container">
+    <div class="apropos-inner">
+      <div class="rv">
+        <div class="sec-num sec-num-light" style="margin-bottom:24px">04 — À propos</div>
+        <h2 class="apropos-h2">Un recruteur qui a porté <em>le tablier.</em></h2>
+        <p class="apropos-body">Je m'appelle Federico Alberti. J'ai fait mes saisons dans l'hôtellerie haut de gamme en France, en Suisse et en Italie. Je sais ce que ça demande des deux côtés de la porte de service — et je sais reconnaître les candidats qui sont vraiment prêts pour ça.<br><br>Saison est né de ce constat : des milliers de candidats hispanophones cherchent activement une saison en France, et les établissements ne savent pas qu'ils existent. Je suis le pont entre les deux.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(245,243,236,0.06);border:1px solid rgba(245,243,236,0.06);margin-bottom:28px">
+          <div style="background:rgba(255,255,255,0.03);padding:18px 20px">
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;color:var(--cobalt);letter-spacing:-0.04em;line-height:1">4+</div>
+            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,243,236,0.3);margin-top:4px;font-family:'DM Mono',monospace">ans en HCR</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);padding:18px 20px">
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;color:var(--cobalt);letter-spacing:-0.04em;line-height:1">3</div>
+            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,243,236,0.3);margin-top:4px;font-family:'DM Mono',monospace">pays · FR · CH · IT</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);padding:18px 20px">
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;color:var(--cobalt);letter-spacing:-0.04em;line-height:1">1K+</div>
+            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,243,236,0.3);margin-top:4px;font-family:'DM Mono',monospace">candidats en communauté</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);padding:18px 20px">
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;color:var(--cobalt);letter-spacing:-0.04em;line-height:1">7</div>
+            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,243,236,0.3);margin-top:4px;font-family:'DM Mono',monospace">nationalités dans le vivier</div>
+          </div>
+        </div>
+        <div class="apropos-tags">
+          <span class="apropos-tag cobalt">France</span>
+          <span class="apropos-tag cobalt">Suisse</span>
+          <span class="apropos-tag cobalt">Italie</span>
+          <span class="apropos-tag">HCR · Restauration</span>
+          <span class="apropos-tag">4+ ans de saisons</span>
+        </div>
+      </div>
+      <div class="rv d1">
+        <div class="faq-card">
+          <div class="faq-label">Question fréquente</div>
+          <div class="faq-q">Pourquoi vos candidats ne partent pas en cours de saison ?</div>
+          <p class="faq-a">Un candidat international qui choisit la France pour sa saison a déjà pris une décision engageante. Il a investi du temps, de l'argent et de l'énergie pour être là. Ce n'est pas quelqu'un qui postule à tout ce qui passe. C'est quelqu'un qui a fait un choix — et qui sait dans quoi il s'engage avant d'arriver.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="rv">
+        <div class="sec-num sec-num-dark" style="margin-bottom:20px">05 — Contact</div>
+        <h2 class="contact-h2">Décrivez<br>votre besoin.</h2>
+        <p class="contact-sub">Poste, dates, région, conditions de logement. Nous revenons vers vous sous 48h ouvrables avec une première sélection ou une proposition adaptée.</p>
+        <div class="contact-promises">
+          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Réponse sous 24h ouvrées</span></div>
+          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Shortlist livrée sous 3 à 5 jours ouvrés</span></div>
+          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Sans engagement, sans contrat</span></div>
+        </div>
+      </div>
+      <div class="rv d1">
+        <div class="contact-form-wrap">
+          <div class="contact-form">
+            <div class="form-group">
+              <label class="form-label">Établissement</label>
+              <input type="text" class="form-input" placeholder="Nom de votre hôtel ou restaurant">
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Prénom</label>
+                <input type="text" class="form-input" placeholder="Prénom">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nom</label>
+                <input type="text" class="form-input" placeholder="Nom">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email professionnel</label>
+              <input type="email" class="form-input" placeholder="contact@votrehotel.fr">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Poste recherché</label>
+              <select class="form-select">
+                <option value="" disabled selected>Sélectionner</option>
+                <option>Réceptionniste</option>
+                <option>Serveur / Serveuse</option>
+                <option>Commis de cuisine</option>
+                <option>Chef de rang</option>
+                <option>Barman / Barmaid</option>
+                <option>Gouvernante</option>
+                <option>Plongeur</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Période souhaitée</label>
+              <input type="text" class="form-input" placeholder="Ex : Juillet → Septembre 2026">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-input form-textarea" placeholder="Précisions sur le poste, niveau de français requis, région..."></textarea>
+            </div>
+            <button id="submit-btn" class="btn-cobalt" style="width:100%">Envoyer ma demande →</button>
+            <p style="font-size:10px;color:rgba(245,243,236,0.18);text-align:center;margin-top:8px;line-height:1.6">En envoyant ce formulaire, vous acceptez d'être contacté par Saison concernant votre demande.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-bottom">
+    <span class="ft-copy">© 2026 Saison. Tous droits réservés.</span>
+    <a href="/" class="ft-link">Espace candidats →</a>
+  </div>
+</footer>
+
+<script>
+function checkReveal() {
+  document.querySelectorAll('.rv:not(.in)').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.88)
+      el.classList.add('in');
+  });
+}
+window.addEventListener('scroll', checkReveal, { passive: true });
+checkReveal();
+
+document.getElementById('submit-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  this.textContent = 'Demande envoyée ✓';
+  this.style.background = '#1A6B3F';
+  setTimeout(() => {
+    this.textContent = 'Envoyer ma demande →';
+    this.style.background = '';
+  }, 3000);
+});
+</script>
+</body>
+</html>
