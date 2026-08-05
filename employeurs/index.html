@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saison — Recrutement saisonnier hispanophones</title>
@@ -491,21 +490,8 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="rv">
-        <div class="sec-num sec-num-dark" style="margin-bottom:20px">05 — Contact</div>
-        <h2 class="contact-h2">Décrivez<br>votre besoin.</h2>
-        <p class="contact-sub">Poste, dates, région, conditions de logement. Nous revenons vers vous sous 48h ouvrables avec une première sélection ou une proposition adaptée.</p>
-        <div class="contact-promises">
-          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Réponse sous 24h ouvrées</span></div>
-          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Shortlist livrée sous 3 à 5 jours ouvrés</span></div>
-          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Sans engagement, sans contrat</span></div>
-        </div>
-      </div>
-      <div class="rv d1">
-        <div class="contact-form-wrap">
-         <form class="contact-form" action="https://formspree.io/f/xlgqkbzb" method="POST">
+ <div class="contact-form-wrap">
+  <form class="contact-form" action="https://formspree.io/f/xlgqkbzb" method="POST">
     <div class="form-group">
       <label class="form-label">Établissement</label>
       <input type="text" name="etablissement" class="form-input" placeholder="Nom de votre hôtel ou restaurant">
@@ -546,55 +532,10 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
       <label class="form-label">Message</label>
       <textarea name="message" class="form-input form-textarea" placeholder="Précisions sur le poste, niveau de français requis, région..."></textarea>
     </div>
-    <button type="submit" class="btn-cobalt" style="width:100%">Envoyer ma demande →</button>
-    <p style="font-size:10px;color:rgba(245,243,236,0.18);text-align:center;margin-top:8px;line-height:1.6">En envoyant ce formulaire, vous acceptez d'être
-            <div class="form-group">
-              <label class="form-label">Établissement</label>
-              <input type="text" class="form-input" name="etablissement" placeholder="Nom de votre hôtel ou restaurant"
-            </div>
-            <div class="form-grid">
-              <div class="form-group">
-                <label class="form-label">Prénom</label>
-                <input type="text" class="form-input" name="prenom" placeholder="Prénom"
-              </div>
-              <div class="form-group">
-                <label class="form-label">Nom</label>
-                <input type="text" class="form-input" name="nom" placeholder="Nom"
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email professionnel</label>
-              <input type="email" class="form-input" name="email" placeholder="contact@votrehotel.fr>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Poste recherché</label>
-              <select class="form-select" name="poste"></select>
-                <option value="" disabled selected>Sélectionner</option>
-                <option>Réceptionniste</option>
-                <option>Serveur / Serveuse</option>
-                <option>Commis de cuisine</option>
-                <option>Chef de rang</option>
-                <option>Barman / Barmaid</option>
-                <option>Gouvernante</option>
-                <option>Plongeur</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Période souhaitée</label>
-              <input type="text" class="form-input" name="periode" placeholder="Ex : Juillet → Septembre 2026">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Message</label>
-              <textarea class="form-input form-textarea" name="message" placeholder="Précisions sur le poste"></textarea>
-            </div>
-            <button id="submit-btn" type="submit" class="btn-cobalt" style="width:100%">Envoyer ma demande →</button>
-            <p style="font-size:10px;color:rgba(245,243,236,0.18);text-align:center;margin-top:8px;line-height:1.6">En envoyant ce formulaire, vous acceptez d'être contacté par Saison concernant votre demande.</p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+    <button type="submit" id="submit-btn" class="btn-cobalt" style="width:100%">Envoyer ma demande →</button>
+    <p style="font-size:10px;color:rgba(245,243,236,0.18);text-align:center;margin-top:8px;line-height:1.6">En envoyant ce formulaire, vous acceptez d'être contacté par Saison concernant votre demande.</p>
+  </form>
+</div>
 </section>
 
 <!-- FOOTER -->
@@ -615,11 +556,14 @@ function checkReveal() {
 window.addEventListener('scroll', checkReveal, { passive: true });
 checkReveal();
 
-  const form = document.querySelector('.contact-form');
-  if (form.checkValidity()) {
-    this.textContent = 'Envoi en cours...';
-    this.style.background = '#1A6B3F';
-  }
+document.getElementById('submit-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  this.textContent = 'Demande envoyée ✓';
+  this.style.background = '#1A6B3F';
+  setTimeout(() => {
+    this.textContent = 'Envoyer ma demande →';
+    this.style.background = '';
+  }, 3000);
 });
 </script>
 </body>
