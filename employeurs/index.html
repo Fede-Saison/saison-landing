@@ -555,7 +555,35 @@ function checkReveal() {
 }
 window.addEventListener('scroll', checkReveal, { passive: true });
 checkReveal();
-
+document.querySelector('form.contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Envoi en cours...';
+  btn.disabled = true;
+  
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      btn.textContent = 'Demande envoyée ✓';
+      btn.style.background = '#1A6B3F';
+      form.reset();
+    } else {
+      btn.textContent = 'Erreur — réessayez';
+      btn.style.background = '#C0392B';
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    btn.textContent = 'Erreur — réessayez';
+    btn.style.background = '#C0392B';
+    btn.disabled = false;
+  });
+});
 </script>
 </body>
 </html>
