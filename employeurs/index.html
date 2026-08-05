@@ -490,68 +490,52 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="rv">
-        <div class="sec-num sec-num-dark" style="margin-bottom:20px">05 — Contact</div>
-        <h2 class="contact-h2">Décrivez<br>votre besoin.</h2>
-        <p class="contact-sub">Poste, dates, région, conditions de logement. Nous revenons vers vous sous 48h ouvrables avec une première sélection ou une proposition adaptée.</p>
-        <div class="contact-promises">
-          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Réponse sous 24h ouvrées</span></div>
-          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Shortlist livrée sous 3 à 5 jours ouvrés</span></div>
-          <div class="cp"><div class="cp-icon">✓</div><span class="cp-text">Sans engagement, sans contrat</span></div>
-        </div>
+ <div class="contact-form-wrap">
+  <form class="contact-form" action="https://formspree.io/f/xlgqkbzb" method="POST">
+    <div class="form-group">
+      <label class="form-label">Établissement</label>
+      <input type="text" name="etablissement" class="form-input" placeholder="Nom de votre hôtel ou restaurant">
+    </div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label class="form-label">Prénom</label>
+        <input type="text" name="prenom" class="form-input" placeholder="Prénom">
       </div>
-      <div class="rv d1">
-        <div class="contact-form-wrap">
-          <div class="contact-form">
-            <div class="form-group">
-              <label class="form-label">Établissement</label>
-              <input type="text" class="form-input" placeholder="Nom de votre hôtel ou restaurant">
-            </div>
-            <div class="form-grid">
-              <div class="form-group">
-                <label class="form-label">Prénom</label>
-                <input type="text" class="form-input" placeholder="Prénom">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Nom</label>
-                <input type="text" class="form-input" placeholder="Nom">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email professionnel</label>
-              <input type="email" class="form-input" placeholder="contact@votrehotel.fr">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Poste recherché</label>
-              <select class="form-select">
-                <option value="" disabled selected>Sélectionner</option>
-                <option>Réceptionniste</option>
-                <option>Serveur / Serveuse</option>
-                <option>Commis de cuisine</option>
-                <option>Chef de rang</option>
-                <option>Barman / Barmaid</option>
-                <option>Gouvernante</option>
-                <option>Plongeur</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Période souhaitée</label>
-              <input type="text" class="form-input" placeholder="Ex : Juillet → Septembre 2026">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Message</label>
-              <textarea class="form-input form-textarea" placeholder="Précisions sur le poste, niveau de français requis, région..."></textarea>
-            </div>
-            <button id="submit-btn" class="btn-cobalt" style="width:100%">Envoyer ma demande →</button>
-            <p style="font-size:10px;color:rgba(245,243,236,0.18);text-align:center;margin-top:8px;line-height:1.6">En envoyant ce formulaire, vous acceptez d'être contacté par Saison concernant votre demande.</p>
-          </div>
-        </div>
+      <div class="form-group">
+        <label class="form-label">Nom</label>
+        <input type="text" name="nom" class="form-input" placeholder="Nom">
       </div>
     </div>
-  </div>
+    <div class="form-group">
+      <label class="form-label">Email professionnel</label>
+      <input type="email" name="email" class="form-input" placeholder="contact@votrehotel.fr">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Poste recherché</label>
+      <select name="poste" class="form-select">
+        <option value="" disabled selected>Sélectionner</option>
+        <option>Réceptionniste</option>
+        <option>Serveur / Serveuse</option>
+        <option>Commis de cuisine</option>
+        <option>Chef de rang</option>
+        <option>Barman / Barmaid</option>
+        <option>Gouvernante</option>
+        <option>Plongeur</option>
+        <option>Autre</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Période souhaitée</label>
+      <input type="text" name="periode" class="form-input" placeholder="Ex : Juillet → Septembre 2026">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Message</label>
+      <textarea name="message" class="form-input form-textarea" placeholder="Précisions sur le poste, niveau de français requis, région..."></textarea>
+    </div>
+    <button type="submit" id="submit-btn" class="btn-cobalt" style="width:100%">Envoyer ma demande →</button>
+    <p style="font-size:10px;color:rgba(245,243,236,0.18);text-align:center;margin-top:8px;line-height:1.6">En envoyant ce formulaire, vous acceptez d'être contacté par Saison concernant votre demande.</p>
+  </form>
+</div>
 </section>
 
 <!-- FOOTER -->
