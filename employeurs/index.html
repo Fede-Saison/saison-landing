@@ -556,15 +556,6 @@ function checkReveal() {
 window.addEventListener('scroll', checkReveal, { passive: true });
 checkReveal();
 
-document.getElementById('submit-btn').addEventListener('click', function(e) {
-  e.preventDefault();
-  this.textContent = 'Demande envoyée ✓';
-  this.style.background = '#1A6B3F';
-  setTimeout(() => {
-    this.textContent = 'Envoyer ma demande →';
-    this.style.background = '';
-  }, 3000);
-});
 </script>
 </body>
 </html>
