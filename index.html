@@ -3,12 +3,35 @@
 <head>
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saison — Todo para tu temporada en Francia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+
+<meta property="og:title" content="Trabajo de Temporada en Francia | Saison — En Español">
+<meta property="og:description" content="Ofertas reales de temporada en Francia filtradas por alojamiento. Todo en español. Explorá gratis.">
+<meta property="og:image" content="https://app.saisonfr.com/og-image.png">
+<meta property="og:url" content="https://app.saisonfr.com">
+<meta property="og:type" content="website">
+<title>Trabajo de Temporada en Francia | Saison — En Español</title>
+<meta name="description" content="Ofertas reales de temporada en Francia (esquí, hostelería, vendimia) filtradas por alojamiento. Todo en español. Explorá gratis en Saison.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Necesito hablar francés?","acceptedAnswer":{"@type":"Answer","text":"No es obligatorio, pero sí te va a abrir puertas. Las jornadas de temporada son intensas, y los empleadores valoran mucho más a alguien responsable y con ganas que a alguien con francés perfecto."}},
+    {"@type":"Question","name":"¿Necesito visa?","acceptedAnswer":{"@type":"Answer","text":"Todas las ofertas en Saison son para gente ya autorizada a trabajar en Francia. Las formas más comunes: pasaporte europeo, titre de séjour (residencia) o visa VVT (working holiday)."}},
+    {"@type":"Question","name":"¿Cuánto se puede ahorrar por temporada?","acceptedAnswer":{"@type":"Answer","text":"Depende de la duración, el salario, las propinas y tu estilo de vida. Pero después de 4 años como saisonniers, en Saison sabemos que €1.000 de ahorro mensual es el estándar — y podés ahorrar bastante más si te lo proponés."}},
+    {"@type":"Question","name":"¿Puedo cancelar cuando quiera?","acceptedAnswer":{"@type":"Answer","text":"Sí. Sin permanencia, cancelás cuando quieras desde tu cuenta."}}
+  ]
+}
+</script>
 <style>
 :root {
   --night:  #0B1426;
@@ -108,28 +131,6 @@ nav {
 .section-eyebrow { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; font-family: 'DM Mono', monospace; }
 .section-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(32px, 4.5vw, 56px); letter-spacing: -0.035em; line-height: 0.95; color: var(--night); }
 
-/* JOURNEY */
-.journey { padding: 96px 0; background: var(--bone); border-bottom: 1px solid var(--border); }
-.journey-intro { text-align: center; max-width: 600px; margin: 0 auto 64px; }
-.journey-tabs { display: flex; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 1px; }
-.jtab { flex: 1; padding: 16px 12px; background: var(--bone); color: var(--muted); border: none; cursor: pointer; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.2s; }
-.jtab:hover { color: var(--night); }
-.jtab.active { background: var(--night); color: var(--bone); }
-.jtab-panel { display: none; background: var(--paper); border: 1px solid var(--border); border-top: none; }
-.jtab-panel.active { display: grid; grid-template-columns: 1fr 1fr; }
-.jtab-content { padding: 48px 40px; border-right: 1px solid var(--border); }
-.jtab-visual { padding: 48px 40px; background: var(--bone); }
-.jtab-step { display: flex; gap: 16px; margin-bottom: 28px; }
-.jtab-step:last-child { margin-bottom: 0; }
-.jtab-step-num { width: 28px; height: 28px; border-radius: 6px; background: rgba(10,58,242,0.08); border: 1px solid rgba(10,58,242,0.15); display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 9px; color: var(--cobalt); flex-shrink: 0; }
-.jtab-step-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 15px; color: var(--night); margin-bottom: 4px; }
-.jtab-step-body { font-size: 12px; color: var(--muted); line-height: 1.65; }
-
-/* RADAR BADGE */
-.radar-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(10,58,242,0.06); border: 1px solid rgba(10,58,242,0.15); border-radius: 100px; padding: 6px 14px; margin-top: 20px; }
-.radar-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cobalt); animation: blink 2s infinite; }
-.radar-text { font-size: 10px; font-family: 'DM Mono', monospace; letter-spacing: 0.06em; color: var(--cobalt); }
-
 /* OFERTAS */
 .offers { padding: 96px 0; border-bottom: 1px solid var(--border); }
 .offer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
@@ -218,8 +219,8 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
   .hero-desc { max-width: 100%; }
   .offer-grid { grid-template-columns: 1fr; }
   .afiliado-grid { grid-template-columns: 1fr; }
-  .jtab-panel.active { grid-template-columns: 1fr; }
-  .jtab-visual { border-top: 1px solid var(--border); }
+  .pricing-grid { grid-template-columns: 1fr !important; }
+  .sin-con-grid { grid-template-columns: 1fr !important; }
   footer { padding: 48px 24px 32px; }
   .ft-top { flex-direction: column; }
 }
@@ -240,8 +241,6 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
     <span class="logo-name">Saison</span>
   </a>
   <div class="nav-links">
-    <a href="#como-funciona" class="nav-link">Cómo funciona</a>
-    <a href="#precios" class="nav-link">Precios</a>
     <a href="#ofertas" class="nav-cta">Ver ofertas</a>
     <a href="/employeurs" class="nav-empleadores">Employeurs →</a>
   </div>
@@ -256,14 +255,13 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
     </div>
     <div class="hero-eyebrow">
       <div class="hero-dot"></div>
-      <span class="hero-eyebrow-text">La plataforma para hispanohablantes en Francia</span>
+      <span class="hero-eyebrow-text">Hecho por saisonniers, para saisonniers</span>
     </div>
-    <h1 class="hero-h1">Todo para tu temporada en Francia,<br><span class="hero-h1-accent">en un solo lugar.</span></h1>
+    <h1 class="hero-h1">Conseguí tu próximo trabajo en Francia,<br><span class="hero-h1-accent">con solo un click.</span></h1>
     <div class="hero-bottom">
-      <p class="hero-desc">Desde conseguir la visa hasta cobrar tu primer sueldo. Buscá, postulá y llegá a Francia <strong>sin traducir nada y sin perderte en grupos de WhatsApp.</strong></p>
+      <p class="hero-desc">Ofertas de temporada <strong>con alojamiento</strong> por toda Francia. Creá tu perfil, filtrá las ofertas por ubicación y alojamiento, y <strong>ahorrate horas perdidas</strong> entre grupos de WhatsApp y portales en francés que no entendés.</p>
       <div class="hero-actions">
-        <a href="https://app.saisonfr.com" class="btn-primary">Empezar gratis →</a>
-        <a href="#como-funciona" class="btn-ghost">Cómo funciona</a>
+        <a href="https://app.saisonfr.com" class="btn-primary">Accedé a Saison →</a>
       </div>
       <p style="font-size:11px;color:var(--muted);margin-top:8px;font-family:'DM Mono',monospace;letter-spacing:0.04em">+1.000 candidatos en la comunidad · +400.000 puestos por año en Francia</p>
     </div>
@@ -304,148 +302,6 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
   </div>
 </div>
 
-<!-- JOURNEY: CÓMO FUNCIONA -->
-<section class="journey" id="como-funciona">
-  <div class="container">
-    <div class="journey-intro rv">
-      <div class="section-eyebrow" style="text-align:center;margin-bottom:12px">Tu camino a Francia</div>
-      <div class="section-title" style="text-align:center;margin-bottom:16px">Elegí por dónde<br>empezás.</div>
-      <p style="font-size:15px;color:var(--muted);line-height:1.75">No todos llegan al mismo punto. Saison te acompaña desde donde estés — sea que todavía estés tramitando la visa o que ya tengas el permiso de trabajo listo.</p>
-    </div>
-
-    <div class="rv">
-      <div class="journey-tabs">
-        <button class="jtab active" onclick="switchTab('vvt', this)">Necesito visa VVT</button>
-        <button class="jtab" onclick="switchTab('eu', this)">Ya tengo permiso de trabajo</button>
-      </div>
-
-      <!-- PANEL VVT -->
-      <div class="jtab-panel active" id="panel-vvt">
-        <div class="jtab-content">
-          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:var(--night);letter-spacing:-0.03em;margin-bottom:8px;line-height:1.1">Visa VVT Francia</div>
-          <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:32px">La visa de vacaciones y trabajo te permite vivir y trabajar hasta 12 meses en Francia. Disponible para argentinos, chilenos, colombianos, mexicanos, uruguayos, ecuatorianos y peruanos.</p>
-
-          <div class="jtab-step">
-            <div class="jtab-step-num">01</div>
-            <div>
-              <div class="jtab-step-title">Chequeá los cupos de tu país</div>
-              <div class="jtab-step-body">Cada país tiene cupos anuales limitados. Argentina tiene 900, Colombia 400, Chile 400. Cuando se agotan, hay que esperar al año siguiente.</div>
-            </div>
-          </div>
-          <div class="jtab-step">
-            <div class="jtab-step-num">02</div>
-            <div>
-              <div class="jtab-step-title">Conseguí turno en el consulado</div>
-              <div class="jtab-step-body">Los turnos abren sin aviso y se agotan en minutos. Hay que estar atento. Saison te explica el proceso paso a paso para cada país.</div>
-            </div>
-          </div>
-          <div class="jtab-step">
-            <div class="jtab-step-num">03</div>
-            <div>
-              <div class="jtab-step-title">Preparate mientras esperás</div>
-              <div class="jtab-step-body">El tiempo entre la visa y el viaje es perfecto para buscar trabajo, mejorar el francés y organizar todo lo que necesitás antes de llegar.</div>
-            </div>
-          </div>
-          <div class="jtab-step">
-            <div class="jtab-step-num">04</div>
-            <div>
-              <div class="jtab-step-title">Buscá trabajo en Saison</div>
-              <div class="jtab-step-body">Todas las ofertas en español, filtradas por alojamiento incluido, región y nivel de francés. Postulá directamente sin intermediarios.</div>
-            </div>
-          </div>
-
-          <div class="radar-badge">
-            <div class="radar-dot"></div>
-            <span class="radar-text">Radar de turnos VVT para argentinos · Próximamente</span>
-          </div>
-        </div>
-        <div class="jtab-visual">
-          <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;font-family:'DM Mono',monospace">Cupos orientativos 2026</div>
-          <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)">
-            <div style="background:var(--paper);padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
-              <span style="font-size:13px;color:var(--night);font-weight:500">🇦🇷 Argentina</span>
-              <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--cobalt)">900</span>
-            </div>
-            <div style="background:var(--paper);padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
-              <span style="font-size:13px;color:var(--night);font-weight:500">🇨🇴 Colombia</span>
-              <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--cobalt)">400</span>
-            </div>
-            <div style="background:var(--paper);padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
-              <span style="font-size:13px;color:var(--night);font-weight:500">🇨🇱 Chile</span>
-              <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--cobalt)">400</span>
-            </div>
-            <div style="background:var(--paper);padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
-              <span style="font-size:13px;color:var(--night);font-weight:500">🇲🇽 México</span>
-              <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--cobalt)">300</span>
-            </div>
-            <div style="background:var(--paper);padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
-              <span style="font-size:13px;color:var(--night);font-weight:500">🇺🇾 Uruguay</span>
-              <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--cobalt)">300</span>
-            </div>
-            <div style="background:var(--paper);padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
-              <span style="font-size:13px;color:var(--night);font-weight:500">🇪🇨 Ecuador</span>
-              <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--cobalt)">300</span>
-            </div>
-            <div style="background:var(--paper);padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
-              <span style="font-size:13px;color:var(--night);font-weight:500">🇵🇪 Perú</span>
-              <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--cobalt)">—</span>
-            </div>
-          </div>
-          <div style="background:rgba(10,58,242,0.04);border:1px solid rgba(10,58,242,0.1);padding:12px 14px;margin-top:12px">
-            <p style="font-size:11px;color:var(--muted);line-height:1.65">Cada país tiene requisitos distintos: edad máxima, fondos requeridos, documentación y proceso de turno. Consultá siempre el consulado francés de tu país para la información oficial actualizada. <strong>Saison</strong> por el momento no asesora trámites de visa.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- PANEL EU -->
-      <div class="jtab-panel" id="panel-eu">
-        <div class="jtab-content">
-          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:var(--night);letter-spacing:-0.03em;margin-bottom:8px;line-height:1.1">Pasaporte europeo o residencia</div>
-          <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:32px">Si tenés pasaporte de un país de la UE o residencia en Europa, podés trabajar en Francia sin visa adicional. El proceso es más directo — solo necesitás encontrar el trabajo correcto.</p>
-
-          <div class="jtab-step">
-            <div class="jtab-step-num">01</div>
-            <div>
-              <div class="jtab-step-title">Buscá trabajo directamente</div>
-              <div class="jtab-step-body">Sin trámites previos. Podés aplicar a cualquier oferta en Francia con tu documento europeo o permiso de residencia vigente.</div>
-            </div>
-          </div>
-          <div class="jtab-step">
-            <div class="jtab-step-num">02</div>
-            <div>
-              <div class="jtab-step-title">Encontrá ofertas con alojamiento incluido</div>
-              <div class="jtab-step-body">El filtro de alojamiento es tu mejor aliado. Vivir donde trabajás reduce tus gastos a casi cero y maximiza lo que ahorrás.</div>
-            </div>
-          </div>
-          <div class="jtab-step">
-            <div class="jtab-step-num">03</div>
-            <div>
-              <div class="jtab-step-title">Postulá con una carta perfecta en francés</div>
-              <div class="jtab-step-body">La IA genera tu carta de presentación personalizada para cada establecimiento. Profesional, en francés formal, lista para enviar.</div>
-            </div>
-          </div>
-          <div class="jtab-step">
-            <div class="jtab-step-num">04</div>
-            <div>
-              <div class="jtab-step-title">Llegá con todo preparado</div>
-              <div class="jtab-step-body">Cuenta bancaria, seguro, chip, transporte — Saison te guía en cada paso antes de llegar para que el primer día sea tranquilo.</div>
-            </div>
-          </div>
-        </div>
-        <div class="jtab-visual">
-          <div style="background:rgba(10,58,242,0.04);border:1px solid rgba(10,58,242,0.12);padding:28px;margin-bottom:20px">
-            <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:12px;font-family:'DM Mono',monospace">Promedio de ahorro mensual</div>
-            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:48px;color:var(--night);letter-spacing:-0.04em;line-height:1">€800–1.300</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:6px">por mes, con alojamiento y comidas incluidas</div>
-            <div style="font-size:10px;color:rgba(11,20,38,0.3);margin-top:8px;line-height:1.6;font-family:'DM Mono',monospace">Varía según salario, primas y estilo de vida de cada uno.</div>
-          </div>
-          <p style="font-size:12px;color:var(--muted);line-height:1.7">Basado en SMIC 2026 (€12,31/h · 35h/sem). Con alojamiento y comidas incluidas, casi todo lo que ganás lo podés ahorrar.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- OFERTAS -->
 <section class="offers" id="ofertas">
   <div class="container">
@@ -456,13 +312,13 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
     <div class="offer-grid">
       <div class="oc rv d1">
         <div class="oc-active-bar"></div>
-        <div class="oc-status"><div class="oc-dot"></div><span class="oc-state">Búsqueda activa</span><span class="oc-ref">SAISON-26 / CAN</span></div>
+        <div class="oc-status"><div class="oc-dot"></div><span class="oc-state">Búsqueda activa</span><span class="oc-ref">SAISON-26 / CVL</span></div>
         <div class="oc-title">Recepcionista<span>/a</span></div>
-        <div class="oc-loc">Boutique hotel 5★ · Cannes</div>
+        <div class="oc-loc">Hotel 5★ · Courchevel</div>
         <div class="oc-rows">
-          <div class="oc-row"><span class="oc-lbl">Contrato</span><span class="oc-val">Jun → Sep 2026</span></div>
+          <div class="oc-row"><span class="oc-lbl">Contrato</span><span class="oc-val">Dic → Abr 2027</span></div>
           <div class="oc-row"><span class="oc-lbl">Alojamiento</span><span class="oc-val accent">Incluido</span></div>
-          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.500 neto/mes</span></div>
+          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.680 neto/mes</span></div>
           <div class="oc-row"><span class="oc-lbl">Francés</span><span class="oc-val">Intermedio</span></div>
         </div>
         <a href="https://app.saisonfr.com" class="oc-btn">Ver oferta →</a>
@@ -475,7 +331,7 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
         <div class="oc-rows">
           <div class="oc-row"><span class="oc-lbl">Contrato</span><span class="oc-val">Dic → Abr 2027</span></div>
           <div class="oc-row"><span class="oc-lbl">Alojamiento</span><span class="oc-val accent">Incluido + comidas</span></div>
-          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.350 neto/mes</span></div>
+          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.950 neto/mes</span></div>
           <div class="oc-row"><span class="oc-lbl">Francés</span><span class="oc-val">Básico</span></div>
         </div>
         <a href="https://app.saisonfr.com" class="oc-btn">Ver oferta →</a>
@@ -488,7 +344,7 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
         <div class="oc-rows">
           <div class="oc-row"><span class="oc-lbl">Contrato</span><span class="oc-val">Jul → Sep 2026</span></div>
           <div class="oc-row"><span class="oc-lbl">Alojamiento</span><span class="oc-val accent">Incluido + comidas</span></div>
-          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.320 neto/mes</span></div>
+          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.720 neto/mes</span></div>
           <div class="oc-row"><span class="oc-lbl">Francés</span><span class="oc-val">Básico</span></div>
         </div>
         <a href="https://app.saisonfr.com" class="oc-btn">Ver oferta →</a>
@@ -504,47 +360,61 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
 <!-- HERRAMIENTAS -->
 <section class="tools" id="herramientas">
   <div class="container">
-    <div class="rv" style="margin-bottom:56px">
-      <div class="section-eyebrow" style="color:rgba(245,243,236,0.3)">La plataforma</div>
-      <div class="section-title" style="color:var(--bone)">Con Saison hacés<br><span style="color:var(--cobalt)">todo en un lugar.</span></div>
-      <p style="font-size:15px;color:rgba(245,243,236,0.45);max-width:520px;margin-top:16px;line-height:1.7">No es solo un job board. Es todo lo que necesitás desde que decidís irte hasta que cerrás la temporada — en español, sin volverte loco.</p>
+    <div class="rv" style="text-align:center;max-width:640px;margin:0 auto 48px">
+      <div class="section-title" style="color:var(--bone)">Encontrar trabajo de temporada<br>en Francia, <span style="color:var(--cobalt)">no debería ser tan difícil.</span></div>
+      <p style="font-size:15px;color:rgba(245,243,236,0.45);margin-top:16px;line-height:1.7">Dejamos atrás el caos para que te concentres en lo que importa: armar las valijas.</p>
+    </div>
+
+    <div class="rv sin-con-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:64px">
+      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(245,243,236,0.08);border-radius:14px;padding:32px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
+          <span style="width:6px;height:6px;border-radius:50%;background:rgba(245,243,236,0.35)"></span>
+          <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,243,236,0.4);font-family:'DM Mono',monospace">Sin Saison</span>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Grupos de WhatsApp colapsados y sin orden.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Portales en francés que no se entienden.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Horas tratando de personalizar cartas para postular.</li>
+        </ul>
+      </div>
+      <div style="background:rgba(10,58,242,0.07);border:1px solid rgba(10,58,242,0.25);border-radius:14px;padding:32px;position:relative">
+        <div style="position:absolute;top:0;right:0;background:rgba(10,58,242,0.15);color:var(--cobalt);font-size:9px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:0 13px 0 10px;font-family:'DM Mono',monospace">Tu temporada resuelta</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--cobalt);animation:blink 2s infinite"></span>
+          <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--cobalt);font-family:'DM Mono',monospace">Con Saison</span>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.85);line-height:1.55"><span style="color:var(--cobalt);font-weight:700;flex-shrink:0">✓</span>Ofertas en español filtradas por región, alojamiento y puesto.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.85);line-height:1.55"><span style="color:var(--cobalt);font-weight:700;flex-shrink:0">✓</span>Alojamiento visible desde el primer segundo.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.85);line-height:1.55"><span style="color:var(--cobalt);font-weight:700;flex-shrink:0">✓</span>Postulación directa con carta de presentación personalizada, en un click.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rv" style="text-align:center;max-width:520px;margin:0 auto 40px">
+      <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.03em;color:var(--bone);margin-bottom:8px">Todo lo que necesitás,<br>en una sola plataforma.</div>
     </div>
 
     <div class="rv tools-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(245,243,236,0.06);border:1px solid rgba(245,243,236,0.06)">
       <div class="tool-cell">
         <div class="tool-num">01</div>
-        <div class="tool-title">Ofertas filtradas en español</div>
-        <p class="tool-body">Todas filtradas por puesto, región, nivel de francés y alojamiento incluido. En segundos tenés solo lo que aplica para vos.</p>
+        <div class="tool-title">Empleos con alojamiento</div>
+        <p class="tool-body">No solo te ayuda a ahorrar — te ahorra dolores de cabeza y burocracia. Filtrá todas las ofertas con alojamiento incluido en un paso.</p>
       </div>
       <div class="tool-cell">
         <div class="tool-num">02</div>
-        <div class="tool-title">Calculadora de sueldo neto</div>
-        <p class="tool-body">Sabé exactamente cuánto vas a cobrar en mano y cuánto podés ahorrar viviendo con alojamiento incluido. Basado en SMIC 2026.</p>
+        <div class="tool-title">Todo en español y filtrado para vos</div>
+        <p class="tool-body">Adiós a traducir webs francesas a las corridas. Filtrá por puesto, región y nivel de francés requerido en segundos.</p>
       </div>
       <div class="tool-cell">
         <div class="tool-num">03</div>
-        <div class="tool-title">Carta de presentación con IA</div>
-        <p class="tool-body">La IA genera tu carta en francés formal para cada establecimiento específico. Personalizada, profesional, lista para enviar.</p>
-      </div>
-      <div class="tool-cell">
-        <div class="tool-num">04</div>
-        <div class="tool-title">Intérprete de contratos</div>
-        <p class="tool-body">Subís el contrato en francés y te dice qué dice, qué falta y qué no tenés que firmar nunca. Antes de que sea tarde.</p>
-      </div>
-      <div class="tool-cell">
-        <div class="tool-num">05</div>
-        <div class="tool-title">Alertas personalizadas</div>
-        <p class="tool-body">Configurás tu perfil una vez y Saison te avisa cuando aparece exactamente lo que buscás. Sin tener que revisar todo el tiempo.</p>
-      </div>
-      <div class="tool-cell">
-        <div class="tool-num">06</div>
-        <div class="tool-title">Checklists de principio a fin</div>
-        <p class="tool-body">Antes de firmar, al llegar y al terminar la temporada. Todo lo que tenés que hacer en cada momento, en orden, sin que se te escape nada.</p>
+        <div class="tool-title">Herramientas para ganar tiempo</div>
+        <p class="tool-body">Cartas de presentación generadas a medida, calculadora de sueldo, checklists de trámites y seguimiento de tus postulaciones.</p>
       </div>
     </div>
 
     <div style="text-align:center;margin-top:48px" class="rv">
-      <a href="https://app.saisonfr.com" class="btn-primary" style="background:var(--cobalt);font-size:13px;padding:14px 36px">Acceder a Saison →</a>
+      <a href="https://app.saisonfr.com" class="btn-primary" style="background:var(--cobalt);font-size:13px;padding:14px 36px">Accedé a Saison →</a>
     </div>
   </div>
 </section>
@@ -561,21 +431,21 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
     <div class="afiliado-grid rv">
       <div class="af-card">
         <div class="af-tag">Cuenta bancaria</div>
-        <div class="af-title">Revolut o Wise</div>
+        <div class="af-title">Wise</div>
         <p class="af-body">Abrí tu cuenta antes de llegar. Te pagan en euros, podés enviar plata a casa sin comisiones absurdas y funciona desde el primer día en Francia.</p>
-        <a href="LINK_REVOLUT" class="af-link">Abrir cuenta gratis →</a>
+        <a href="https://wise.com/invite/ilpc/federiconicolasalbertia" target="_blank" rel="noopener" class="af-link">Abrir cuenta gratis →</a>
       </div>
       <div class="af-card">
         <div class="af-tag">Seguro obligatorio VVT</div>
-        <div class="af-title">Chapka o iati</div>
+        <div class="af-title">iati Seguros</div>
         <p class="af-body">Si vas con visa VVT, necesitás cobertura mínima de €30.000 por 365 días. Es requisito del consulado. Comparamos las mejores opciones para vos.</p>
-        <a href="LINK_SEGURO" class="af-link">Ver coberturas →</a>
+        <a href="https://www.iatiseguros.com?r=89715432565643&utm_source=colaboradores&utm_medium=referral" target="_blank" rel="noopener" class="af-link">Ver coberturas →</a>
       </div>
       <div class="af-card">
         <div class="af-tag">Conectividad</div>
         <div class="af-title">eSIM Airalo</div>
         <p class="af-body">Llegás a Francia con datos desde el primer minuto. Sin buscar locutorio, sin esperar SIM física. Activás desde tu teléfono antes de subir al avión.</p>
-        <a href="LINK_AIRALO" class="af-link">Activar eSIM →</a>
+        <a href="https://www.airalo.com" target="_blank" rel="noopener" class="af-link">Activar eSIM (código FEDERI4313) →</a>
       </div>
     </div>
   </div>
@@ -648,32 +518,40 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
   <div class="container">
     <div class="rv" style="text-align:center">
       <div class="section-eyebrow" style="text-align:center;margin-bottom:12px">Acceso</div>
-      <div class="section-title">Todo esto,<br>por €5,99 al mes.</div>
+      <div class="section-title">Cubrí toda<br>tu temporada.</div>
       <p style="font-size:15px;color:var(--muted);max-width:440px;margin:16px auto 0;line-height:1.7">Precio de lanzamiento. Cancelás cuando querés.</p>
     </div>
-    <div class="price-card rv">
-      <div class="pc-tag">
-        <span style="width:5px;height:5px;background:var(--cobalt);border-radius:50%;flex-shrink:0;animation:blink 2s infinite"></span>
-        Precio de lanzamiento
+    <div class="rv pricing-grid" style="max-width:780px;margin:56px auto 0;display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:start">
+      <div class="price-card" style="margin:0">
+        <div class="pc-tag">
+          <span style="width:5px;height:5px;background:var(--cobalt);border-radius:50%;flex-shrink:0;animation:blink 2s infinite"></span>
+          Recomendado · cubre la temporada
+        </div>
+        <div class="pc-name">Saison Premium</div>
+        <div class="pc-price">€11,99</div>
+        <div class="pc-period">cada 3 meses</div>
+        <ul class="pc-list" style="margin-top:24px">
+          <li>Contacto directo con el empleador</li>
+          <li>Carta de presentación en francés con IA</li>
+          <li>Guardá ofertas y hacé seguimiento de tus postulaciones</li>
+          <li>Calculadora de sueldo neto SMIC 2026</li>
+          <li>Templates de CV descargables en Canva</li>
+          <li>Guía completa "Tu primera temporada" PDF</li>
+          <li>Checklists de contrato, arribo y cierre</li>
+          <li>Conectar con saisonniers compatibles</li>
+        </ul>
+        <a href="https://app.saisonfr.com" class="btn-primary" style="width:100%;justify-content:center;display:flex;background:var(--cobalt);font-size:13px;padding:14px">Empezar ahora →</a>
+        <p style="text-align:center;font-size:11px;color:rgba(245,243,236,0.25);margin-top:10px">Sin compromiso · Cancelás cuando querás</p>
       </div>
-      <div class="pc-name">Saison Premium</div>
-      <div class="pc-price">€5,99</div>
-      <div class="pc-period">por mes</div>
-      <div class="pc-alt">O mejor: €11,99 los 3 meses. La mayoría de los candidatos consiguen trabajo en 4–8 semanas — el trimestral es el plan inteligente.</div>
-      <ul class="pc-list">
-        <li>Contacto directo con el empleador</li>
-        <li>Carta de presentación en francés con IA</li>
-        <li>Intérprete de contratos</li>
-        <li>Calculadora de sueldo neto SMIC 2026</li>
-        <li>Templates de CV descargables en Canva</li>
-        <li>Guía completa "Tu primera temporada" PDF</li>
-        <li>Alertas personalizadas por perfil</li>
-        <li>Checklists de contrato, arribo y cierre</li>
-        <li>Conectar con saisonniers compatibles</li>
-      </ul>
-      <a href="https://app.saisonfr.com" class="btn-primary" style="width:100%;justify-content:center;display:flex;background:var(--cobalt);font-size:13px;padding:14px">Empezar ahora →</a>
-      <p style="text-align:center;font-size:11px;color:rgba(245,243,236,0.25);margin-top:10px">Sin compromiso · Cancelás cuando querás</p>
-      <p style="text-align:center;font-size:11px;color:rgba(245,243,236,0.2);margin-top:6px">Podés explorar las ofertas antes de suscribirte.</p>
+      <div class="price-card" style="margin:0;background:var(--paper);border:1px solid var(--border)">
+        <div class="pc-tag" style="background:rgba(10,58,242,0.08);color:var(--cobalt)">Flexible</div>
+        <div class="pc-name" style="color:var(--night)">Saison Premium</div>
+        <div class="pc-price" style="color:var(--night)">€5,99</div>
+        <div class="pc-period" style="color:var(--muted)">por mes</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-top:20px">Mismo acceso completo. Ideal si solo necesitás un mes activo para conseguir tu próximo trabajo.</p>
+        <a href="https://app.saisonfr.com" class="btn-ghost" style="width:100%;justify-content:center;display:flex;margin-top:24px">Elegir mensual →</a>
+        <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:10px">Podés explorar las ofertas antes de suscribirte.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -688,8 +566,8 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
     <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)">
       <div style="background:var(--paper);padding:40px 36px">
         <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--cobalt);margin-bottom:16px;font-family:'DM Mono',monospace">Asesoría personal</div>
-        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.03em;color:var(--night);margin-bottom:12px;line-height:1.1">45 minutos con Federico,<br>el fundador.</h3>
-        <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px">Federico tiene más de 4 años de temporadas en Francia, Suiza e Italia. Sabe exactamente qué buscan los empleadores y cómo posicionarte para conseguir el trabajo que querés.</p>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.03em;color:var(--night);margin-bottom:12px;line-height:1.1">Ayuda a tu medida.</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px">Si sentís que necesitás alguien que te guíe con alguna situación específica, el equipo de Saison tiene más de 4 años de temporadas en Francia, Suiza e Italia. Sabemos exactamente qué buscan los empleadores y cómo posicionarte para conseguir el trabajo que querés.</p>
         <div style="background:rgba(10,58,242,0.05);border-left:2px solid var(--cobalt);padding:12px 16px;margin-bottom:24px;font-size:13px;color:var(--muted);line-height:1.6">Incluye 1 mes de acceso a Saison Premium.</div>
         <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:24px">
           <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;color:var(--night);letter-spacing:-0.04em">€55</span>
@@ -707,8 +585,48 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
           <span style="font-size:12px;color:rgba(245,243,236,0.4)">los 3 meses · 12 clases</span>
         </div>
         <p style="font-size:11px;color:rgba(245,243,236,0.3);margin-bottom:24px">Máx. 8 alumnos · Google Meet · 1h/semana</p>
-        <a href="LINK_CURSO_FRANCES" class="btn-primary" style="background:var(--cobalt)">Conocer el curso →</a>
+        <a href="mailto:contact@saisonfr.com?subject=Quiero%20m%C3%A1s%20info%20sobre%20el%20curso%20de%20franc%C3%A9s" class="btn-primary" style="background:var(--cobalt)">Quiero más info →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:96px 0;background:var(--paper);border-bottom:1px solid var(--border)" id="faq">
+  <div class="container">
+    <div class="rv" style="margin-bottom:48px">
+      <div class="section-eyebrow">Antes de empezar</div>
+      <div class="section-title">Preguntas<br>frecuentes.</div>
+    </div>
+    <div class="rv" style="max-width:640px">
+      <div style="border-top:1px solid rgba(10,58,242,0.14);padding:22px 0">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Necesito hablar francés?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">No es obligatorio, pero <strong>sí te va a abrir puertas</strong>. Las jornadas de temporada son intensas, y los empleadores valoran mucho más a alguien <strong>responsable y con ganas</strong> que a alguien con francés perfecto.</p>
+      </div>
+      <div style="border-top:1px solid rgba(10,58,242,0.14);padding:22px 0">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Necesito visa?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">Todas las ofertas en Saison son para gente <strong>ya autorizada a trabajar en Francia</strong>. Las formas más comunes: pasaporte europeo, titre de séjour (residencia) o visa VVT (working holiday).</p>
+      </div>
+      <div style="border-top:1px solid rgba(10,58,242,0.14);padding:22px 0">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Cuánto se puede ahorrar por temporada?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">Depende de la duración, el salario, las propinas y tu estilo de vida. Pero después de 4 años como saisonniers, en Saison sabemos que <strong>€1.000 de ahorro mensual es el estándar</strong> — y podés ahorrar bastante más si te lo proponés.</p>
+      </div>
+      <div style="border-top:1px solid rgba(10,58,242,0.14);border-bottom:1px solid rgba(10,58,242,0.14);padding:22px 0">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Puedo cancelar cuando quiera?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">Sí. <strong>Sin permanencia</strong>, cancelás cuando quieras desde tu cuenta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section style="padding:72px 0;background:var(--night);border-bottom:1px solid rgba(245,243,236,0.06)" id="contacto">
+  <div class="container" style="text-align:center">
+    <div class="rv">
+      <div class="section-eyebrow" style="text-align:center;color:rgba(245,243,236,0.3)">¿Tenés dudas?</div>
+      <div class="section-title" style="color:var(--bone);margin-bottom:16px">Escribinos.</div>
+      <p style="font-size:14px;color:rgba(245,243,236,0.5);max-width:420px;margin:0 auto 28px;line-height:1.7">Si algo no te quedó claro o necesitás ayuda con algo puntual, mandanos un mail y te respondemos.</p>
+      <a href="mailto:contact@saisonfr.com" class="btn-primary" style="background:var(--cobalt)">contact@saisonfr.com</a>
     </div>
   </div>
 </section>
@@ -728,15 +646,15 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
       <div class="ft-col">
         <h4>Candidatos</h4>
         <a href="#ofertas">Ver ofertas</a>
-        <a href="#como-funciona">Cómo funciona</a>
         <a href="#antes-de-venir">Antes de llegar</a>
         <a href="#precios">Precios</a>
         <a href="#comunidad">Saisonniers</a>
       </div>
       <div class="ft-col">
         <h4>Saison</h4>
-        <a href="LINK_INSTAGRAM">Instagram</a>
-        <a href="LINK_WHATSAPP">Comunidad WhatsApp</a>
+        <a href="https://instagram.com/saisonfr" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/saisonfr" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://chat.whatsapp.com/HVnifNjtk2LIifo2HSpHSi?mode=gi_t" target="_blank" rel="noopener">Comunidad WhatsApp</a>
         <a href="/employeurs">Pour les employeurs</a>
       </div>
       <div class="ft-col">
@@ -762,14 +680,6 @@ function checkReveal() {
 }
 window.addEventListener('scroll', checkReveal, { passive: true });
 checkReveal();
-
-// JOURNEY TABS
-function switchTab(tab, btn) {
-  document.querySelectorAll('.jtab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.jtab-panel').forEach(p => p.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('panel-' + tab).classList.add('active');
-}
 </script>
 </body>
 </html>
