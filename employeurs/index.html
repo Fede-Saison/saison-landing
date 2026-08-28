@@ -3,7 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saison — Recrutement saisonnier hispanophones</title>
+<title>Recrutement Saisonnier HCR en France | Saison</title>
+<meta name="description" content="Recrutement de personnel saisonnier pour l'hôtellerie-restauration. Candidats internationaux motivés, profils vérifiés en 3 à 5 jours. Sans engagement.">
+<link rel="canonical" href="https://www.saisonfr.com/employeurs">
+<meta property="og:title" content="Recrutement Saisonnier HCR en France | Saison">
+<meta property="og:description" content="Le bon candidat, pas 80 CV. Profils vérifiés pour votre établissement, en 3 à 5 jours ouvrés.">
+<meta property="og:url" content="https://www.saisonfr.com/employeurs">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Recrutement saisonnier HCR",
+  "provider": { "@type": "Organization", "name": "Saison" },
+  "areaServed": "FR",
+  "description": "Diffusion et présélection de candidats internationaux pour l'hôtellerie-restauration saisonnière en France."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Pourquoi vos candidats ne partent pas en cours de saison ?","acceptedAnswer":{"@type":"Answer","text":"Un candidat international qui choisit la France pour sa saison a déjà pris une décision engageante. Il a investi du temps, de l'argent et de l'énergie pour être là. Ce n'est pas quelqu'un qui postule à tout ce qui passe. C'est quelqu'un qui a fait un choix — et qui sait dans quoi il s'engage avant d'arriver."}},
+    {"@type":"Question","name":"Combien coûte votre service ?","acceptedAnswer":{"@type":"Answer","text":"Ça dépend de la mission : nombre de postes, urgence, niveau de sélection souhaité. On propose un tarif adapté au besoin réel plutôt qu'un prix fixe. Décrivez votre demande, on revient vers vous rapidement."}}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +44,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Hanken Grotesk', sans-serif; background: var(--night); color: var(--bone); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { font-family: 'Hanken Grotesk', sans-serif; background: var(--paper); color: var(--night); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 
 .rv { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .rv.in { opacity: 1; transform: translateY(0); }
@@ -34,84 +60,88 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 56px; height: 64px;
-  background: rgba(11,20,38,0.96);
+  background: rgba(251,250,245,0.92);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(245,243,236,0.06);
+  border-bottom: 1px solid var(--border);
 }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5px; width: 19px; height: 19px; }
 .logo-grid span { border-radius: 2px; background: rgba(10,58,242,0.7); display: block; }
 .logo-grid span:nth-child(2), .logo-grid span:nth-child(3) { background: rgba(10,58,242,0.25); }
-.logo-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 16px; color: var(--bone); letter-spacing: -0.03em; }
+.logo-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 16px; color: var(--night); letter-spacing: -0.03em; }
 .nav-links { display: flex; align-items: center; gap: 20px; }
-.nav-link { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.4); text-decoration: none; transition: color 0.2s; font-family: 'DM Mono', monospace; }
-.nav-link:hover { color: var(--bone); }
+.nav-link { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(11,20,38,0.45); text-decoration: none; transition: color 0.2s; font-family: 'DM Mono', monospace; }
+.nav-link:hover { color: var(--night); }
 .nav-cta { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--cobalt); color: var(--bone); padding: 9px 20px; border-radius: 6px; text-decoration: none; transition: background 0.2s; font-family: 'DM Mono', monospace; white-space: nowrap; }
 .nav-cta:hover { background: #0830d4; }
-.nav-candidats { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,243,236,0.35); text-decoration: none; font-family: 'DM Mono', monospace; border: 1px solid rgba(245,243,236,0.1); padding: 9px 14px; border-radius: 6px; transition: all 0.2s; white-space: nowrap; }
-.nav-candidats:hover { border-color: rgba(245,243,236,0.25); color: var(--bone); }
+.nav-candidats { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(11,20,38,0.4); text-decoration: none; font-family: 'DM Mono', monospace; border: 1px solid var(--border); padding: 9px 14px; border-radius: 6px; transition: all 0.2s; white-space: nowrap; }
+.nav-candidats:hover { border-color: rgba(11,20,38,0.2); color: var(--night); }
 
 .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
 /* BTNS */
 .btn-cobalt { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--cobalt); color: var(--bone); padding: 16px 28px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
 .btn-cobalt:hover { background: #0830d4; }
-.btn-outline { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; color: rgba(245,243,236,0.5); padding: 16px 28px; border-radius: 8px; border: 1px solid rgba(245,243,236,0.15); text-decoration: none; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; }
-.btn-outline:hover { border-color: rgba(245,243,236,0.3); color: var(--bone); }
+.btn-outline { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; color: rgba(11,20,38,0.55); padding: 16px 28px; border-radius: 8px; border: 1px solid var(--border); text-decoration: none; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; }
+.btn-outline:hover { border-color: rgba(11,20,38,0.25); color: var(--night); }
 
 /* HERO — fondo forzado night */
 .hero {
-  background: var(--night);
+  background: var(--paper);
   min-height: 100vh;
   display: flex; align-items: center;
   padding: 100px 0 80px;
-  border-bottom: 1px solid rgba(245,243,236,0.06);
+  border-bottom: 1px solid var(--border);
   position: relative;
+}
+.hero::before {
+  content: ''; position: absolute; top: 64px; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, rgba(10,58,242,0) 0%, var(--cobalt) 40%, rgba(10,58,242,0) 100%);
 }
 .hero::after {
   content: 'SCROLL';
   position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
-  font-size: 9px; letter-spacing: 0.2em; color: rgba(245,243,236,0.12);
+  font-size: 9px; letter-spacing: 0.2em; color: rgba(11,20,38,0.15);
   font-family: 'DM Mono', monospace;
 }
 .hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; opacity: 0; animation: fadeUp 0.6s 0.2s forwards; }
 .hero-line { width: 28px; height: 1px; background: var(--cobalt); flex-shrink: 0; }
-.hero-eyebrow-text { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,243,236,0.35); font-family: 'DM Mono', monospace; }
+.hero-eyebrow-text { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(11,20,38,0.4); font-family: 'DM Mono', monospace; font-weight: 400; margin: 0; }
 
-.hero-h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; line-height: 0.92; letter-spacing: -0.04em; color: var(--bone); opacity: 0; animation: fadeUp 0.8s 0.35s forwards; }
+.hero-h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; line-height: 0.92; letter-spacing: -0.04em; color: var(--night); opacity: 0; animation: fadeUp 0.8s 0.35s forwards; }
 .hero-h1-main { font-size: clamp(56px, 8vw, 96px); display: block; }
-.hero-h1-dim { font-size: clamp(56px, 8vw, 96px); display: block; color: rgba(245,243,236,0.18); }
-.hero-h1-sub-line { font-size: clamp(18px, 2.5vw, 26px); font-weight: 600; color: rgba(245,243,236,0.38); display: block; margin-top: 16px; letter-spacing: -0.01em; }
+.hero-h1-dim { font-size: clamp(56px, 8vw, 96px); display: block; color: var(--cobalt); }
+.hero-h1-sub-line { font-size: clamp(18px, 2.5vw, 26px); font-weight: 600; color: rgba(11,20,38,0.45); display: block; margin-top: 16px; letter-spacing: -0.01em; }
 
-.hero-desc { font-size: 15px; line-height: 1.75; color: rgba(245,243,236,0.45); max-width: 540px; margin: 36px 0 36px; opacity: 0; animation: fadeUp 0.8s 0.55s forwards; }
+.hero-desc { font-size: 15px; line-height: 1.75; color: var(--muted); max-width: 540px; margin: 36px 0 36px; opacity: 0; animation: fadeUp 0.8s 0.55s forwards; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 0.7s forwards; }
 
 /* MARQUEE */
-.marquee { overflow: hidden; padding: 18px 0; border-bottom: 1px solid rgba(245,243,236,0.06); background: rgba(255,255,255,0.015); }
+.marquee { overflow: hidden; padding: 18px 0; border-bottom: 1px solid var(--border); background: rgba(11,20,38,0.02); }
 .marquee-track { display: flex; gap: 48px; width: max-content; animation: ticker 28s linear infinite; }
-.marquee-item { display: flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.18); white-space: nowrap; font-family: 'DM Mono', monospace; }
+.marquee-item { display: flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(11,20,38,0.3); white-space: nowrap; font-family: 'DM Mono', monospace; }
 .marquee-dot { color: var(--cobalt); font-size: 7px; }
 
 /* SECTION COMMONS */
 .sec-num { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-family: 'DM Mono', monospace; display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
 .sec-num::after { content: ''; flex: 0 0 28px; height: 1px; }
-.sec-num-light { color: rgba(245,243,236,0.3); }
-.sec-num-light::after { background: rgba(245,243,236,0.15); }
+.sec-num-light { color: rgba(11,20,38,0.35); }
+.sec-num-light::after { background: rgba(11,20,38,0.15); }
 .sec-num-dark { color: var(--cobalt); }
 .sec-num-dark::after { background: rgba(10,58,242,0.3); }
 
 /* PROBLÈME */
-.probleme { padding: 96px 0; background: var(--night); border-bottom: 1px solid rgba(245,243,236,0.06); }
-.prob-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 60px); letter-spacing: -0.04em; line-height: 1.0; color: var(--bone); margin-bottom: 20px; }
-.prob-h2 span { color: rgba(245,243,236,0.22); }
+.probleme { padding: 96px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
+.prob-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 60px); letter-spacing: -0.04em; line-height: 1.0; color: var(--night); margin-bottom: 20px; }
+.prob-h2 span { color: rgba(11,20,38,0.25); }
 .prob-h2 em { font-style: normal; color: var(--cobalt); }
-.prob-body { font-size: 15px; line-height: 1.75; color: rgba(245,243,236,0.45); max-width: 560px; margin-bottom: 48px; }
-.pain-cards { display: flex; flex-direction: column; gap: 1px; background: rgba(245,243,236,0.06); border: 1px solid rgba(245,243,236,0.06); }
-.pain-card { background: rgba(255,255,255,0.03); padding: 28px 32px; display: flex; align-items: flex-start; gap: 20px; transition: background 0.2s; }
-.pain-card:hover { background: rgba(255,255,255,0.06); }
+.prob-body { font-size: 15px; line-height: 1.75; color: var(--muted); max-width: 560px; margin-bottom: 48px; }
+.pain-cards { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.pain-card { background: var(--paper); padding: 28px 32px; display: flex; align-items: flex-start; gap: 20px; transition: background 0.2s; border-left: 2px solid transparent; }
+.pain-card:hover { background: rgba(10,58,242,0.03); border-left-color: var(--cobalt); }
 .pain-icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(10,58,242,0.12); border: 1px solid rgba(10,58,242,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.pain-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px; color: var(--bone); margin-bottom: 6px; }
-.pain-text { font-size: 13px; color: rgba(245,243,236,0.38); line-height: 1.65; }
+.pain-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px; color: var(--night); margin-bottom: 6px; }
+.pain-text { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
 /* DIFFÉRENCE */
 .difference { padding: 96px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
@@ -122,41 +152,41 @@ nav {
 .diff-quote strong { color: var(--night); font-weight: 600; }
 
 /* PROFIL CARD */
-.profil-card { background: var(--night); overflow: hidden; border: 1px solid rgba(245,243,236,0.08); }
-.profil-header { padding: 12px 20px; border-bottom: 1px solid rgba(245,243,236,0.06); display: flex; align-items: center; justify-content: space-between; }
-.profil-ref { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.22); font-family: 'DM Mono', monospace; }
+.profil-card { background: var(--paper); overflow: hidden; border: 1px solid var(--border); }
+.profil-header { padding: 12px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; background: rgba(10,58,242,0.04); }
+.profil-ref { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(11,20,38,0.3); font-family: 'DM Mono', monospace; }
 .profil-status { display: flex; align-items: center; gap: 6px; }
 .profil-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cobalt); animation: blink 2s infinite; }
 .profil-status-text { font-size: 9px; color: var(--cobalt); font-family: 'DM Mono', monospace; }
 .profil-body { padding: 24px 20px; }
-.profil-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; color: var(--bone); letter-spacing: -0.03em; margin-bottom: 4px; }
-.profil-meta { font-size: 11px; color: rgba(245,243,236,0.35); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-.profil-rows { border-top: 1px solid rgba(245,243,236,0.06); }
-.profil-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(245,243,236,0.06); }
+.profil-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; color: var(--night); letter-spacing: -0.03em; margin-bottom: 4px; }
+.profil-meta { font-size: 11px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+.profil-rows { border-top: 1px solid var(--border); }
+.profil-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border); }
 .profil-row:last-child { border-bottom: none; }
-.profil-lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.22); font-family: 'DM Mono', monospace; }
-.profil-val { font-size: 12px; color: var(--bone); }
+.profil-lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(11,20,38,0.3); font-family: 'DM Mono', monospace; }
+.profil-val { font-size: 12px; color: var(--night); }
 .profil-val.cobalt { color: var(--cobalt); }
 .profil-score { background: rgba(10,58,242,0.1); border-top: 1px solid rgba(10,58,242,0.2); padding: 16px 20px; display: flex; align-items: center; gap: 16px; }
 .profil-score-num { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; color: var(--cobalt); letter-spacing: -0.04em; line-height: 1; }
-.profil-score-detail { font-size: 9px; font-family: 'DM Mono', monospace; letter-spacing: 0.06em; color: rgba(245,243,236,0.3); line-height: 1.6; }
-.profil-process { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(245,243,236,0.06); padding: 14px 20px; }
+.profil-score-detail { font-size: 9px; font-family: 'DM Mono', monospace; letter-spacing: 0.06em; color: rgba(11,20,38,0.35); line-height: 1.6; }
+.profil-process { background: rgba(11,20,38,0.02); border-top: 1px solid var(--border); padding: 14px 20px; }
 .profil-process-lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cobalt); font-family: 'DM Mono', monospace; margin-bottom: 6px; }
-.profil-process-text { font-size: 12px; color: rgba(245,243,236,0.35); line-height: 1.65; }
+.profil-process-text { font-size: 12px; color: var(--muted); line-height: 1.65; }
 
 /* SOLUTIONS */
-.solutions { padding: 96px 0; background: var(--night); border-bottom: 1px solid rgba(245,243,236,0.06); }
-.sol-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 64px); letter-spacing: -0.04em; line-height: 0.95; color: var(--bone); margin-bottom: 56px; }
-.sol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(245,243,236,0.06); border: 1px solid rgba(245,243,236,0.06); }
-.sol-card { background: rgba(255,255,255,0.03); padding: 40px 32px; }
+.solutions { padding: 96px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
+.sol-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 64px); letter-spacing: -0.04em; line-height: 0.95; color: var(--night); margin-bottom: 56px; }
+.sol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.sol-card { background: var(--paper); padding: 40px 32px; }
 .sol-card.feat { background: rgba(10,58,242,0.08); }
-.sol-tag { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,243,236,0.28); font-family: 'DM Mono', monospace; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.sol-tag { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(11,20,38,0.35); font-family: 'DM Mono', monospace; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .sol-tag::before { content: ''; display: block; width: 16px; height: 1px; background: var(--cobalt); flex-shrink: 0; }
 .sol-price { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 52px; letter-spacing: -0.04em; color: var(--cobalt); line-height: 1; margin-bottom: 8px; }
-.sol-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: var(--bone); margin-bottom: 14px; letter-spacing: -0.02em; }
-.sol-desc { font-size: 13px; color: rgba(245,243,236,0.4); line-height: 1.7; margin-bottom: 24px; }
+.sol-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: var(--night); margin-bottom: 14px; letter-spacing: -0.02em; }
+.sol-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
 .sol-list { list-style: none; }
-.sol-list li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(245,243,236,0.06); font-size: 12px; color: rgba(245,243,236,0.4); font-family: 'DM Mono', monospace; }
+.sol-list li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: rgba(11,20,38,0.65); font-family: 'Hanken Grotesk', sans-serif; }
 .sol-list li:last-child { border-bottom: none; }
 .sol-list li::before { content: '→'; color: var(--cobalt); flex-shrink: 0; }
 
@@ -173,20 +203,20 @@ nav {
 .bienvenu-body { font-size: 15px; color: var(--muted); line-height: 1.75; max-width: 520px; }
 
 /* APROPOS */
-.apropos { padding: 96px 0; background: var(--night); border-bottom: 1px solid rgba(245,243,236,0.06); }
+.apropos { padding: 96px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
 .apropos-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.apropos-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.04em; line-height: 1.05; color: var(--bone); margin-bottom: 20px; }
+.apropos-h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.04em; line-height: 1.05; color: var(--night); margin-bottom: 20px; }
 .apropos-h2 em { font-style: normal; color: var(--cobalt); }
-.apropos-body { font-size: 14px; line-height: 1.8; color: rgba(245,243,236,0.45); margin-bottom: 28px; }
+.apropos-body { font-size: 14px; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
 .apropos-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.apropos-tag { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'DM Mono', monospace; padding: 7px 14px; border-radius: 100px; border: 1px solid rgba(245,243,236,0.1); color: rgba(245,243,236,0.4); }
+.apropos-tag { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'DM Mono', monospace; padding: 7px 14px; border-radius: 100px; border: 1px solid var(--border); color: var(--muted); }
 .apropos-tag.cobalt { background: rgba(10,58,242,0.1); border-color: rgba(10,58,242,0.2); color: var(--cobalt); }
-.faq-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(245,243,236,0.06); padding: 28px; margin-top: 0; }
-.faq-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,236,0.25); font-family: 'DM Mono', monospace; margin-bottom: 16px; }
-.faq-q { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 17px; color: var(--bone); margin-bottom: 14px; line-height: 1.2; }
+.faq-card { background: rgba(10,58,242,0.03); border: 1px solid rgba(10,58,242,0.12); padding: 28px; margin-top: 0; }
+.faq-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(11,20,38,0.35); font-family: 'DM Mono', monospace; margin-bottom: 16px; }
+.faq-q { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 17px; color: var(--night); margin-bottom: 14px; line-height: 1.2; }
 .faq-q::before { content: '« '; color: var(--cobalt); }
 .faq-q::after { content: ' »'; color: var(--cobalt); }
-.faq-a { font-size: 13px; color: rgba(245,243,236,0.4); line-height: 1.75; }
+.faq-a { font-size: 13px; color: var(--muted); line-height: 1.75; }
 
 /* CONTACT */
 .contact { padding: 96px 0; background: var(--paper); }
@@ -197,24 +227,24 @@ nav {
 .cp { display: flex; align-items: center; gap: 12px; }
 .cp-icon { width: 26px; height: 26px; border-radius: 6px; background: rgba(10,58,242,0.07); border: 1px solid rgba(10,58,242,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--cobalt); font-size: 11px; font-weight: 700; }
 .cp-text { font-size: 13px; color: var(--muted); }
-.contact-form-wrap { background: var(--night); padding: 36px; }
+.contact-form-wrap { background: var(--bone); border: 1px solid var(--border); padding: 36px; }
 .contact-form { display: flex; flex-direction: column; gap: 14px; }
 .form-group { display: flex; flex-direction: column; gap: 5px; }
-.form-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,236,0.3); font-family: 'DM Mono', monospace; }
-.form-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(245,243,236,0.1); border-radius: 5px; padding: 11px 14px; font-size: 13px; color: var(--bone); font-family: 'Hanken Grotesk', sans-serif; transition: border-color 0.2s; outline: none; }
-.form-input::placeholder { color: rgba(245,243,236,0.18); }
+.form-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(11,20,38,0.4); font-family: 'DM Mono', monospace; }
+.form-input { background: var(--paper); border: 1px solid var(--border); border-radius: 5px; padding: 11px 14px; font-size: 13px; color: var(--night); font-family: 'Hanken Grotesk', sans-serif; transition: border-color 0.2s; outline: none; }
+.form-input::placeholder { color: rgba(11,20,38,0.25); }
 .form-input:focus { border-color: rgba(10,58,242,0.45); }
 .form-textarea { min-height: 100px; resize: vertical; }
-.form-select { background: rgba(255,255,255,0.05); border: 1px solid rgba(245,243,236,0.1); border-radius: 5px; padding: 11px 14px; font-size: 13px; color: var(--bone); font-family: 'Hanken Grotesk', sans-serif; outline: none; cursor: pointer; }
-.form-select option { background: var(--night); }
+.form-select { background: var(--paper); border: 1px solid var(--border); border-radius: 5px; padding: 11px 14px; font-size: 13px; color: var(--night); font-family: 'Hanken Grotesk', sans-serif; outline: none; cursor: pointer; }
+.form-select option { background: var(--paper); color: var(--night); }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
 /* FOOTER */
-footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px solid rgba(245,243,236,0.06); }
+footer { background: var(--bone); padding: 36px 24px 24px; border-top: 1px solid var(--border); }
 .ft-bottom { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-.ft-copy { font-size: 10px; color: rgba(245,243,236,0.18); }
-.ft-link { font-size: 10px; color: rgba(245,243,236,0.28); text-decoration: none; font-family: 'DM Mono', monospace; letter-spacing: 0.06em; transition: color 0.2s; }
-.ft-link:hover { color: var(--bone); }
+.ft-copy { font-size: 10px; color: rgba(11,20,38,0.3); }
+.ft-link { font-size: 10px; color: rgba(11,20,38,0.4); text-decoration: none; font-family: 'DM Mono', monospace; letter-spacing: 0.06em; transition: color 0.2s; }
+.ft-link:hover { color: var(--night); }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -384,12 +414,12 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
     <div class="rv">
       <div class="sec-num sec-num-light">03 — Nos solutions</div>
       <h2 class="sol-h2">Simple.<br>Efficace.</h2>
+      <p style="font-size:14px;color:var(--muted);max-width:480px;margin-top:12px;line-height:1.65">Le tarif dépend de la mission — nombre de postes, urgence, niveau de sélection souhaité. On vous propose un tarif adapté après votre demande.</p>
     </div>
     <div class="sol-grid rv">
       <div class="sol-card">
         <div class="sol-tag">Diffusion</div>
-        <div class="sol-price">€50–80</div>
-        <div class="sol-title">Visibilité</div>
+        <div class="sol-title" style="margin-top:16px">Visibilité</div>
         <p class="sol-desc">Votre offre diffusée auprès de notre communauté de 1.000+ candidats internationaux actifs, avec documents en règle. Vous gérez les candidatures.</p>
         <ul class="sol-list">
           <li>Diffusion sur tous nos canaux actifs</li>
@@ -404,8 +434,7 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
           <div class="sol-tag" style="margin-bottom:16px">Shortlist</div>
           <span style="font-size:9px;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Mono',monospace;background:var(--cobalt);color:var(--bone);padding:4px 10px;border-radius:100px;margin-bottom:16px">Recommandé</span>
         </div>
-        <div class="sol-price" style="font-size:64px">€200</div>
-        <div class="sol-title">Sélection complète</div>
+        <div class="sol-title" style="margin-top:4px">Sélection complète</div>
         <p class="sol-desc">Diffusion + scoring + entretien de validation pour chaque profil. Vous recevez 3 à 5 candidatures prêtes à passer l'entretien final.</p>
         <ul class="sol-list">
           <li>Diffusion complète</li>
@@ -418,7 +447,7 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
     </div>
     <div class="rv" style="margin-top:24px;background:rgba(10,58,242,0.06);border:1px solid rgba(10,58,242,0.15);padding:20px 28px;display:flex;align-items:center;gap:16px">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(10,58,242,0.8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <p style="font-size:13px;color:rgba(245,243,236,0.5);line-height:1.65"><strong style="color:var(--bone)">Garantie Saison :</strong> si les profils livrés ne correspondent pas aux critères convenus, vous ne payez pas.</p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.65"><strong style="color:var(--night)">Garantie Saison :</strong> si les profils livrés ne correspondent pas aux critères convenus, vous ne payez pas.</p>
     </div>
   </div>
 </section>
@@ -449,24 +478,24 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
     <div class="apropos-inner">
       <div class="rv">
         <div class="sec-num sec-num-light" style="margin-bottom:24px">04 — À propos</div>
-        <h2 class="apropos-h2">Un recruteur qui a porté <em>le tablier.</em></h2>
-        <p class="apropos-body">Je m'appelle Federico Alberti. J'ai fait mes saisons dans l'hôtellerie haut de gamme en France, en Suisse et en Italie. Je sais ce que ça demande des deux côtés de la porte de service — et je sais reconnaître les candidats qui sont vraiment prêts pour ça.<br><br>Saison est né de ce constat : des milliers de candidats hispanophones cherchent activement une saison en France, et les établissements ne savent pas qu'ils existent. Je suis le pont entre les deux.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(245,243,236,0.06);border:1px solid rgba(245,243,236,0.06);margin-bottom:28px">
-          <div style="background:rgba(255,255,255,0.03);padding:18px 20px">
+        <h2 class="apropos-h2">Une équipe qui a porté <em>le tablier.</em></h2>
+        <p class="apropos-body">Saison est formé d'anciens saisonniers qui connaissent le milieu de l'intérieur. On sait à quel point les saisons sont intenses, les imprévus qui surgissent, et comment lire un profil au-delà du CV.<br><br>Chaque saison, trouver du personnel engagé est plus difficile — ce n'est un secret pour personne. Notre vivier est composé de candidats qui choisissent activement de venir travailler en France : l'engagement n'est pas le même, et la mentalité de respect du métier non plus.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:28px">
+          <div style="background:rgba(10,58,242,0.04);padding:18px 20px">
             <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;color:var(--cobalt);letter-spacing:-0.04em;line-height:1">4+</div>
-            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,243,236,0.3);margin-top:4px;font-family:'DM Mono',monospace">ans en HCR</div>
+            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(11,20,38,0.4);margin-top:4px;font-family:'DM Mono',monospace">ans d'expérience HCR dans l'équipe</div>
           </div>
-          <div style="background:rgba(255,255,255,0.03);padding:18px 20px">
+          <div style="background:rgba(10,58,242,0.04);padding:18px 20px">
             <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;color:var(--cobalt);letter-spacing:-0.04em;line-height:1">3</div>
-            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,243,236,0.3);margin-top:4px;font-family:'DM Mono',monospace">pays · FR · CH · IT</div>
+            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(11,20,38,0.4);margin-top:4px;font-family:'DM Mono',monospace">pays · FR · CH · IT</div>
           </div>
-          <div style="background:rgba(255,255,255,0.03);padding:18px 20px">
+          <div style="background:rgba(10,58,242,0.04);padding:18px 20px">
             <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;color:var(--cobalt);letter-spacing:-0.04em;line-height:1">1K+</div>
-            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,243,236,0.3);margin-top:4px;font-family:'DM Mono',monospace">candidats en communauté</div>
+            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(11,20,38,0.4);margin-top:4px;font-family:'DM Mono',monospace">candidats en communauté</div>
           </div>
-          <div style="background:rgba(255,255,255,0.03);padding:18px 20px">
+          <div style="background:rgba(10,58,242,0.04);padding:18px 20px">
             <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;color:var(--cobalt);letter-spacing:-0.04em;line-height:1">7</div>
-            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,243,236,0.3);margin-top:4px;font-family:'DM Mono',monospace">nationalités dans le vivier</div>
+            <div style="font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(11,20,38,0.4);margin-top:4px;font-family:'DM Mono',monospace">nationalités dans le vivier</div>
           </div>
         </div>
         <div class="apropos-tags">
@@ -474,7 +503,7 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
           <span class="apropos-tag cobalt">Suisse</span>
           <span class="apropos-tag cobalt">Italie</span>
           <span class="apropos-tag">HCR · Restauration</span>
-          <span class="apropos-tag">4+ ans de saisons</span>
+          <span class="apropos-tag">Ex-saisonniers</span>
         </div>
       </div>
       <div class="rv d1">
@@ -482,6 +511,11 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
           <div class="faq-label">Question fréquente</div>
           <div class="faq-q">Pourquoi vos candidats ne partent pas en cours de saison ?</div>
           <p class="faq-a">Un candidat international qui choisit la France pour sa saison a déjà pris une décision engageante. Il a investi du temps, de l'argent et de l'énergie pour être là. Ce n'est pas quelqu'un qui postule à tout ce qui passe. C'est quelqu'un qui a fait un choix — et qui sait dans quoi il s'engage avant d'arriver.</p>
+        </div>
+        <div class="faq-card" style="margin-top:16px">
+          <div class="faq-label">Question fréquente</div>
+          <div class="faq-q">Combien coûte votre service ?</div>
+          <p class="faq-a">Ça dépend de la mission : nombre de postes, urgence, niveau de sélection souhaité. On préfère vous proposer un tarif adapté à votre besoin réel plutôt qu'un prix fixe qui ne correspond à personne. Décrivez votre demande, on revient vers vous rapidement.</p>
         </div>
       </div>
     </div>
@@ -533,7 +567,7 @@ footer { background: var(--night); padding: 36px 24px 24px; border-top: 1px soli
       <textarea name="message" class="form-input form-textarea" placeholder="Précisions sur le poste, niveau de français requis, région..."></textarea>
     </div>
     <button type="submit" id="submit-btn" class="btn-cobalt" style="width:100%">Envoyer ma demande →</button>
-    <p style="font-size:10px;color:rgba(245,243,236,0.18);text-align:center;margin-top:8px;line-height:1.6">En envoyant ce formulaire, vous acceptez d'être contacté par Saison concernant votre demande.</p>
+    <p style="font-size:10px;color:rgba(11,20,38,0.3);text-align:center;margin-top:8px;line-height:1.6">En envoyant ce formulaire, vous acceptez d'être contacté par Saison concernant votre demande.</p>
   </form>
 </div>
 </section>
