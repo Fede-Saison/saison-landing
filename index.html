@@ -28,7 +28,7 @@
     {"@type":"Question","name":"¿Necesito hablar francés?","acceptedAnswer":{"@type":"Answer","text":"No es obligatorio, pero sí te va a abrir puertas. Las jornadas de temporada son intensas, y los empleadores valoran mucho más a alguien responsable y con ganas que a alguien con francés perfecto."}},
     {"@type":"Question","name":"¿Necesito visa?","acceptedAnswer":{"@type":"Answer","text":"Todas las ofertas en Saison son para gente ya autorizada a trabajar en Francia. Las formas más comunes: pasaporte europeo, titre de séjour (residencia) o visa VVT (working holiday)."}},
     {"@type":"Question","name":"¿Cuánto se puede ahorrar por temporada?","acceptedAnswer":{"@type":"Answer","text":"Depende de la duración, el salario, las propinas y tu estilo de vida. Pero después de 4 años como saisonniers, en Saison sabemos que €1.000 de ahorro mensual es el estándar — y podés ahorrar bastante más si te lo proponés."}},
-    {"@type":"Question","name":"¿Puedo cancelar cuando quiera?","acceptedAnswer":{"@type":"Answer","text":"Sí. Sin permanencia, cancelás cuando quieras desde tu cuenta."}}
+    {"@type":"Question","name":"¿Es una suscripción?","acceptedAnswer":{"@type":"Answer","text":"No. Es un pago único que te da acceso por 3 meses. No se renueva solo y no tenés que cancelar nada."}}
   ]
 }
 </script>
@@ -373,7 +373,7 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
         </div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
           <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Grupos de WhatsApp colapsados y sin orden.</li>
-          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Portales en francés que no se entienden.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Portales en francés que no se entendes.</li>
           <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Horas tratando de personalizar cartas para postular.</li>
         </ul>
       </div>
@@ -404,7 +404,7 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
       <div class="tool-cell">
         <div class="tool-num">02</div>
         <div class="tool-title">Todo en español y filtrado para vos</div>
-        <p class="tool-body">Adiós a traducir webs francesas a las corridas. Filtrá por puesto, región y nivel de francés requerido en segundos.</p>
+        <p class="tool-body">Adiós a traducir webs francesas. Filtrá por puesto, región y nivel de francés requerido en segundos.</p>
       </div>
       <div class="tool-cell">
         <div class="tool-num">03</div>
@@ -519,17 +519,20 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
     <div class="rv" style="text-align:center">
       <div class="section-eyebrow" style="text-align:center;margin-bottom:12px">Acceso</div>
       <div class="section-title">Cubrí toda<br>tu temporada.</div>
-      <p style="font-size:15px;color:var(--muted);max-width:440px;margin:16px auto 0;line-height:1.7">Precio de lanzamiento. Cancelás cuando querés.</p>
+      <p style="font-size:15px;color:var(--muted);max-width:440px;margin:16px auto 0;line-height:1.7">Pago único. Sin suscripción, sin renovación automática.</p>
     </div>
-    <div class="rv pricing-grid" style="max-width:780px;margin:56px auto 0;display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:start">
+    <div class="rv" style="max-width:480px;margin:56px auto 0">
       <div class="price-card" style="margin:0">
         <div class="pc-tag">
           <span style="width:5px;height:5px;background:var(--cobalt);border-radius:50%;flex-shrink:0;animation:blink 2s infinite"></span>
-          Recomendado · cubre la temporada
+          3 meses · pago único
         </div>
         <div class="pc-name">Saison Premium</div>
-        <div class="pc-price">€11,99</div>
-        <div class="pc-period">cada 3 meses</div>
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <div class="pc-price">€7,99</div>
+          <div style="font-size:18px;color:rgba(245,243,236,0.35);text-decoration:line-through">€14,99</div>
+        </div>
+        <div class="pc-period">pago único · 3 meses de acceso</div>
         <ul class="pc-list" style="margin-top:24px">
           <li>Contacto directo con el empleador</li>
           <li>Carta de presentación en francés con IA</li>
@@ -541,16 +544,8 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
           <li>Conectar con saisonniers compatibles</li>
         </ul>
         <a href="https://app.saisonfr.com" class="btn-primary" style="width:100%;justify-content:center;display:flex;background:var(--cobalt);font-size:13px;padding:14px">Empezar ahora →</a>
-        <p style="text-align:center;font-size:11px;color:rgba(245,243,236,0.25);margin-top:10px">Sin compromiso · Cancelás cuando querás</p>
-      </div>
-      <div class="price-card" style="margin:0;background:var(--paper);border:1px solid var(--border)">
-        <div class="pc-tag" style="background:rgba(10,58,242,0.08);color:var(--cobalt)">Flexible</div>
-        <div class="pc-name" style="color:var(--night)">Saison Premium</div>
-        <div class="pc-price" style="color:var(--night)">€5,99</div>
-        <div class="pc-period" style="color:var(--muted)">por mes</div>
-        <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-top:20px">Mismo acceso completo. Ideal si solo necesitás un mes activo para conseguir tu próximo trabajo.</p>
-        <a href="https://app.saisonfr.com" class="btn-ghost" style="width:100%;justify-content:center;display:flex;margin-top:24px">Elegir mensual →</a>
-        <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:10px">Podés explorar las ofertas antes de suscribirte.</p>
+        <p style="text-align:center;font-size:11px;color:rgba(245,243,236,0.25);margin-top:10px">Pago único · sin renovación automática</p>
+        <p style="text-align:center;font-size:11px;color:rgba(245,243,236,0.2);margin-top:6px">Podés explorar las ofertas antes de pagar.</p>
       </div>
     </div>
   </div>
@@ -570,7 +565,7 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
         <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px">Si sentís que necesitás alguien que te guíe con alguna situación específica, el equipo de Saison tiene más de 4 años de temporadas en Francia, Suiza e Italia. Sabemos exactamente qué buscan los empleadores y cómo posicionarte para conseguir el trabajo que querés.</p>
         <div style="background:rgba(10,58,242,0.05);border-left:2px solid var(--cobalt);padding:12px 16px;margin-bottom:24px;font-size:13px;color:var(--muted);line-height:1.6">Incluye 1 mes de acceso a Saison Premium.</div>
         <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:24px">
-          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;color:var(--night);letter-spacing:-0.04em">€55</span>
+          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;color:var(--night);letter-spacing:-0.04em">€20</span>
           <span style="font-size:12px;color:var(--muted)">la sesión · 45 minutos</span>
         </div>
         <a href="https://cal.com/saison-federico-alberti/asesoria-personalizada" class="btn-primary">Reservar asesoría →</a>
@@ -612,8 +607,8 @@ footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px soli
         <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">Depende de la duración, el salario, las propinas y tu estilo de vida. Pero después de 4 años como saisonniers, en Saison sabemos que <strong>€1.000 de ahorro mensual es el estándar</strong> — y podés ahorrar bastante más si te lo proponés.</p>
       </div>
       <div style="border-top:1px solid rgba(10,58,242,0.14);border-bottom:1px solid rgba(10,58,242,0.14);padding:22px 0">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Puedo cancelar cuando quiera?</div>
-        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">Sí. <strong>Sin permanencia</strong>, cancelás cuando quieras desde tu cuenta.</p>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Es una suscripción?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">No. Es un <strong>pago único</strong> que te da acceso por 3 meses. No se renueva solo y <strong>no tenés que cancelar nada</strong> — cuando se cumplen los 3 meses, listo.</p>
       </div>
     </div>
   </div>
