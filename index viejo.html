@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+
+<meta property="og:title" content="Trabajo de Temporada en Francia | Saison — En Español">
+<meta property="og:description" content="Ofertas reales de temporada en Francia filtradas por alojamiento. Todo en español. Explorá gratis.">
+<meta property="og:image" content="https://app.saisonfr.com/og-image.png">
+<meta property="og:url" content="https://app.saisonfr.com">
+<meta property="og:type" content="website">
+<title>Trabajo de Temporada en Francia | Saison — En Español</title>
+<meta name="description" content="Ofertas reales de temporada en Francia (esquí, hostelería, vendimia) filtradas por alojamiento. Todo en español. Explorá gratis en Saison.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Necesito hablar francés?","acceptedAnswer":{"@type":"Answer","text":"No es obligatorio, pero sí te va a abrir puertas. Las jornadas de temporada son intensas, y los empleadores valoran mucho más a alguien responsable y con ganas que a alguien con francés perfecto."}},
+    {"@type":"Question","name":"¿Necesito visa?","acceptedAnswer":{"@type":"Answer","text":"Todas las ofertas en Saison son para gente ya autorizada a trabajar en Francia. Las formas más comunes: pasaporte europeo, titre de séjour (residencia) o visa VVT (working holiday)."}},
+    {"@type":"Question","name":"¿Cuánto se puede ahorrar por temporada?","acceptedAnswer":{"@type":"Answer","text":"Depende de la duración, el salario, las propinas y tu estilo de vida. Pero después de 4 años como saisonniers, en Saison sabemos que €1.000 de ahorro mensual es el estándar — y podés ahorrar bastante más si te lo proponés."}},
+    {"@type":"Question","name":"¿Puedo cancelar cuando quiera?","acceptedAnswer":{"@type":"Answer","text":"Sí. Sin permanencia, cancelás cuando quieras desde tu cuenta."}}
+  ]
+}
+</script>
+<style>
+:root {
+  --night:  #0B1426;
+  --cobalt: #0A3AF2;
+  --bone:   #F5F3EC;
+  --paper:  #FBFAF5;
+  --muted:  rgba(11,20,38,0.38);
+  --border: rgba(11,20,38,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background: var(--paper);
+  color: var(--night);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* REVEAL */
+.rv { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.rv.in { opacity: 1; transform: translateY(0); }
+.rv.d1 { transition-delay: 0.08s; }
+.rv.d2 { transition-delay: 0.16s; }
+.rv.d3 { transition-delay: 0.24s; }
+.rv.d4 { transition-delay: 0.32s; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes squareIn { from { opacity:0; transform:scale(0.7); } to { opacity:var(--op,1); transform:scale(1); } }
+@keyframes heroLogoIn { from { opacity:0; transform:scale(0.92); } to { opacity:1; transform:scale(1); } }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 56px; height: 64px;
+  background: rgba(251,250,245,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5px; width: 19px; height: 19px; }
+.logo-grid span { border-radius: 2px; background: var(--cobalt); display: block; }
+.logo-grid span:nth-child(2), .logo-grid span:nth-child(3) { background: rgba(10,58,242,0.25); }
+.logo-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 16px; color: var(--night); letter-spacing: -0.03em; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-link { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; font-family: 'DM Mono', monospace; }
+.nav-link:hover { color: var(--night); }
+.nav-cta { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--night); color: var(--bone); padding: 9px 22px; border-radius: 6px; text-decoration: none; transition: background 0.2s; font-family: 'DM Mono', monospace; }
+.nav-cta:hover { background: var(--cobalt); }
+.nav-empleadores { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cobalt); text-decoration: none; font-family: 'DM Mono', monospace; border: 1px solid rgba(10,58,242,0.2); padding: 9px 16px; border-radius: 6px; transition: all 0.2s; }
+.nav-empleadores:hover { background: rgba(10,58,242,0.06); }
+
+/* CONTAINER */
+.container { max-width: 1080px; margin: 0 auto; padding: 0 56px; }
+
+/* HERO */
+.hero { padding: 140px 0 96px; position: relative; text-align: center; }
+.hero::before { content: ''; position: absolute; top: 64px; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, rgba(10,58,242,0) 0%, var(--cobalt) 40%, rgba(10,58,242,0) 100%); }
+
+.hero-logo { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 40px; opacity: 0; animation: heroLogoIn 0.8s 0.1s cubic-bezier(0.22,1,0.36,1) forwards; }
+.hero-logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; width: 64px; height: 64px; }
+.hero-logo-grid span { border-radius: 6px; display: block; opacity: 0; }
+.hero-logo-grid span:nth-child(1) { background: var(--cobalt); --op:1; animation: squareIn 0.4s 0.2s ease forwards; }
+.hero-logo-grid span:nth-child(2) { background: var(--cobalt); --op:0.55; animation: squareIn 0.4s 0.3s ease forwards; }
+.hero-logo-grid span:nth-child(3) { background: var(--cobalt); --op:0.3; animation: squareIn 0.4s 0.38s ease forwards; }
+.hero-logo-grid span:nth-child(4) { background: var(--cobalt); --op:0.12; animation: squareIn 0.4s 0.46s ease forwards; }
+.hero-logo-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 64px; color: var(--night); letter-spacing: -0.04em; line-height: 1; opacity: 0; animation: fadeIn 0.6s 0.55s ease forwards; }
+
+.hero-eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 24px; opacity: 0; animation: fadeUp 0.7s 0.85s forwards; }
+.hero-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cobalt); animation: blink 2s ease-in-out infinite; }
+.hero-eyebrow-text { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cobalt); font-family: 'DM Mono', monospace; }
+
+.hero-h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 80px); letter-spacing: -0.04em; line-height: 1.05; color: var(--night); margin: 0 auto; max-width: 720px; opacity: 0; animation: fadeUp 0.8s 1s forwards; }
+.hero-h1-accent { color: rgba(10,58,242,0.72); }
+
+.hero-bottom { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 24px; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--border); opacity: 0; animation: fadeUp 0.8s 1.2s forwards; }
+.hero-desc { font-size: 15px; line-height: 1.75; color: var(--muted); max-width: 480px; text-align: center; }
+.hero-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+
+/* BTNS */
+.btn-primary { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--night); color: var(--bone); padding: 12px 24px; border-radius: 6px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+.btn-primary:hover { background: var(--cobalt); }
+.btn-ghost { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; color: var(--muted); padding: 12px 24px; border-radius: 6px; border: 1px solid var(--border); text-decoration: none; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+.btn-ghost:hover { border-color: rgba(11,20,38,0.25); color: var(--night); }
+
+/* MARQUEE */
+.marquee { overflow: hidden; padding: 20px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bone); }
+.marquee-track { display: flex; gap: 48px; width: max-content; animation: ticker 28s linear infinite; }
+.marquee-item { display: flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; flex-shrink: 0; font-family: 'DM Mono', monospace; }
+.marquee-dot { color: var(--cobalt); font-size: 7px; }
+
+/* SECTION COMUNES */
+.section-eyebrow { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; font-family: 'DM Mono', monospace; }
+.section-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(32px, 4.5vw, 56px); letter-spacing: -0.035em; line-height: 0.95; color: var(--night); }
+
+/* OFERTAS */
+.offers { padding: 96px 0; border-bottom: 1px solid var(--border); }
+.offer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.oc { background: var(--paper); padding: 28px 24px; transition: background 0.2s; position: relative; }
+.oc:hover { background: var(--bone); }
+.oc-active-bar { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--cobalt); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease; }
+.oc:hover .oc-active-bar { transform: scaleX(1); }
+.oc-status { display: flex; align-items: center; gap: 6px; margin-bottom: 20px; }
+.oc-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cobalt); animation: blink 2s ease-in-out infinite; }
+.oc-state { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cobalt); font-family: 'DM Mono', monospace; }
+.oc-ref { font-size: 9px; letter-spacing: 0.1em; color: rgba(11,20,38,0.2); margin-left: auto; font-family: 'DM Mono', monospace; }
+.oc-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.03em; color: var(--night); line-height: 1; margin-bottom: 4px; }
+.oc-title span { color: var(--cobalt); }
+.oc-loc { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+.oc-rows { border-top: 1px solid var(--border); }
+.oc-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border); gap: 12px; }
+.oc-row:last-child { border-bottom: none; }
+.oc-lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); flex-shrink: 0; font-family: 'DM Mono', monospace; }
+.oc-val { font-size: 11px; color: var(--night); font-weight: 500; text-align: right; }
+.oc-val.accent { color: var(--cobalt); }
+.oc-btn { width: 100%; margin-top: 20px; background: var(--night); color: var(--bone); border: none; border-radius: 5px; cursor: pointer; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 11px; display: flex; align-items: center; justify-content: center; gap: 6px; transition: background 0.2s; }
+.oc-btn:hover { background: var(--cobalt); }
+
+/* HERRAMIENTAS */
+.tools { padding: 96px 0; background: var(--night); border-bottom: 1px solid rgba(245,243,236,0.06); }
+.tool-cell { background: rgba(255,255,255,0.03); padding: 32px 28px; transition: background 0.2s; border-right: 1px solid rgba(245,243,236,0.06); border-bottom: 1px solid rgba(245,243,236,0.06); }
+.tool-cell:hover { background: rgba(255,255,255,0.06); }
+.tool-num { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cobalt); margin-bottom: 14px; font-family: 'DM Mono', monospace; }
+.tool-title { font-size: 17px; font-weight: 700; color: var(--bone); font-family: 'Bricolage Grotesque', sans-serif; margin-bottom: 8px; letter-spacing: -0.02em; line-height: 1.2; }
+.tool-body { font-size: 13px; color: rgba(245,243,236,0.4); line-height: 1.65; }
+
+/* ANTES DE VENIR - AFILIADOS */
+.antes { padding: 96px 0; background: var(--bone); border-bottom: 1px solid var(--border); }
+.afiliado-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+.af-card { background: var(--paper); padding: 32px 28px; transition: background 0.2s; position: relative; }
+.af-card:hover { background: var(--bone); }
+.af-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--cobalt); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease; }
+.af-card:hover::before { transform: scaleX(1); }
+.af-tag { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cobalt); font-family: 'DM Mono', monospace; margin-bottom: 12px; }
+.af-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 18px; color: var(--night); margin-bottom: 8px; letter-spacing: -0.02em; }
+.af-body { font-size: 12px; color: var(--muted); line-height: 1.65; margin-bottom: 20px; }
+.af-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cobalt); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.af-link:hover { opacity: 0.7; }
+
+/* COMUNIDAD */
+.comunidad { padding: 96px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
+
+/* PRECIOS */
+.pricing { padding: 96px 0; background: var(--bone); border-bottom: 1px solid var(--border); }
+.price-card { background: var(--night); padding: 48px 40px; max-width: 520px; margin: 56px auto 0; }
+.pc-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cobalt); background: rgba(10,58,242,0.2); padding: 5px 12px; border-radius: 100px; margin-bottom: 28px; font-family: 'DM Mono', monospace; }
+.pc-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--bone); margin-bottom: 6px; }
+.pc-price { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 72px; letter-spacing: -0.04em; line-height: 1; color: var(--bone); }
+.pc-period { font-size: 11px; color: rgba(245,243,236,0.35); margin-bottom: 8px; }
+.pc-alt { font-size: 12px; color: rgba(245,243,236,0.45); margin-bottom: 32px; background: rgba(10,58,242,0.12); border-left: 2px solid var(--cobalt); padding: 10px 14px; line-height: 1.6; }
+.pc-list { list-style: none; margin-bottom: 36px; }
+.pc-list li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid rgba(245,243,236,0.08); font-size: 12px; color: rgba(245,243,236,0.55); }
+.pc-list li::before { content: '✓'; color: var(--cobalt); font-weight: 700; flex-shrink: 0; }
+
+/* MÁS ACOMPAÑAMIENTO */
+.servicios { padding: 96px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
+
+/* FOOTER */
+footer { background: var(--night); padding: 64px 56px 40px; border-top: 1px solid rgba(245,243,236,0.06); }
+.ft-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 56px; gap: 48px; flex-wrap: wrap; }
+.ft-logo .logo-name { color: var(--bone); }
+.ft-logo .logo-grid span { background: rgba(10,58,242,0.7); }
+.ft-logo .logo-grid span:nth-child(2), .ft-logo .logo-grid span:nth-child(3) { background: rgba(10,58,242,0.25); }
+.ft-tagline { font-size: 11px; color: rgba(245,243,236,0.28); margin-top: 10px; max-width: 260px; line-height: 1.65; }
+.ft-cols { display: flex; gap: 56px; flex-wrap: wrap; }
+.ft-col h4 { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,236,0.25); margin-bottom: 16px; font-family: 'DM Mono', monospace; }
+.ft-col a { display: block; font-size: 11px; color: rgba(245,243,236,0.45); text-decoration: none; margin-bottom: 8px; transition: color 0.2s; }
+.ft-col a:hover { color: var(--bone); }
+.ft-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid rgba(245,243,236,0.06); flex-wrap: wrap; gap: 12px; }
+.ft-copy { font-size: 10px; color: rgba(245,243,236,0.18); }
+.ft-smic { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,236,0.15); font-family: 'DM Mono', monospace; }
+.ft-empleadores { display: inline-flex; align-items: center; gap: 8px; background: rgba(10,58,242,0.15); border: 1px solid rgba(10,58,242,0.3); color: var(--cobalt); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; margin-top: 24px; }
+.ft-empleadores:hover { background: rgba(10,58,242,0.25); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .container { padding: 0 24px; }
+  .hero { padding: 120px 0 72px; }
+  .hero-bottom { flex-direction: column; align-items: center; text-align: center; }
+  .hero-desc { max-width: 100%; }
+  .offer-grid { grid-template-columns: 1fr; }
+  .afiliado-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr !important; }
+  .sin-con-grid { grid-template-columns: 1fr !important; }
+  footer { padding: 48px 24px 32px; }
+  .ft-top { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .nav-links .nav-link { display: none; }
+  .hero-logo-name { font-size: 48px; }
+  .hero-logo-grid { width: 48px; height: 48px; }
+  .tools-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-grid"><span></span><span></span><span></span><span></span></div>
+    <span class="logo-name">Saison</span>
+  </a>
+  <div class="nav-links">
+    <a href="#ofertas" class="nav-cta">Ver ofertas</a>
+    <a href="/employeurs" class="nav-empleadores">Employeurs →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-logo">
+      <div class="hero-logo-grid"><span></span><span></span><span></span><span></span></div>
+      <span class="hero-logo-name">Saison</span>
+    </div>
+    <div class="hero-eyebrow">
+      <div class="hero-dot"></div>
+      <span class="hero-eyebrow-text">Hecho por saisonniers, para saisonniers</span>
+    </div>
+    <h1 class="hero-h1">Conseguí tu próximo trabajo en Francia,<br><span class="hero-h1-accent">con solo un click.</span></h1>
+    <div class="hero-bottom">
+      <p class="hero-desc">Ofertas de temporada <strong>con alojamiento</strong> por toda Francia. Creá tu perfil, filtrá las ofertas por ubicación y alojamiento, y <strong>ahorrate horas perdidas</strong> entre grupos de WhatsApp y portales en francés que no entendés.</p>
+      <div class="hero-actions">
+        <a href="https://app.saisonfr.com" class="btn-primary">Accedé a Saison →</a>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px;font-family:'DM Mono',monospace;letter-spacing:0.04em">+1.000 candidatos en la comunidad · +400.000 puestos por año en Francia</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="marquee-dot">●</span>Córcega</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Saint-Tropez</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Biarritz</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Courchevel</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Megève</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Val Thorens</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Val d'Isère</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Ramatuelle</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Porquerolles</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Quiberon</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Île de Ré</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Tignes</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>La Plagne</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Antibes</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Córcega</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Saint-Tropez</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Biarritz</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Courchevel</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Megève</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Val Thorens</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Val d'Isère</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Ramatuelle</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Porquerolles</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Quiberon</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Île de Ré</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Tignes</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>La Plagne</div>
+    <div class="marquee-item"><span class="marquee-dot">●</span>Antibes</div>
+  </div>
+</div>
+
+<!-- OFERTAS -->
+<section class="offers" id="ofertas">
+  <div class="container">
+    <div class="section-head rv">
+      <div class="section-eyebrow">Ofertas activas</div>
+      <div class="section-title">Tu próximo trabajo<br>te espera acá.</div>
+    </div>
+    <div class="offer-grid">
+      <div class="oc rv d1">
+        <div class="oc-active-bar"></div>
+        <div class="oc-status"><div class="oc-dot"></div><span class="oc-state">Búsqueda activa</span><span class="oc-ref">SAISON-26 / CVL</span></div>
+        <div class="oc-title">Recepcionista<span>/a</span></div>
+        <div class="oc-loc">Hotel 5★ · Courchevel</div>
+        <div class="oc-rows">
+          <div class="oc-row"><span class="oc-lbl">Contrato</span><span class="oc-val">Dic → Abr 2027</span></div>
+          <div class="oc-row"><span class="oc-lbl">Alojamiento</span><span class="oc-val accent">Incluido</span></div>
+          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.680 neto/mes</span></div>
+          <div class="oc-row"><span class="oc-lbl">Francés</span><span class="oc-val">Intermedio</span></div>
+        </div>
+        <a href="https://app.saisonfr.com" class="oc-btn">Ver oferta →</a>
+      </div>
+      <div class="oc rv d2">
+        <div class="oc-active-bar"></div>
+        <div class="oc-status"><div class="oc-dot"></div><span class="oc-state">Búsqueda activa</span><span class="oc-ref">SAISON-26 / MCH</span></div>
+        <div class="oc-title">Commis<span> de cuisine</span></div>
+        <div class="oc-loc">Chalet de montaña · Méribel</div>
+        <div class="oc-rows">
+          <div class="oc-row"><span class="oc-lbl">Contrato</span><span class="oc-val">Dic → Abr 2027</span></div>
+          <div class="oc-row"><span class="oc-lbl">Alojamiento</span><span class="oc-val accent">Incluido + comidas</span></div>
+          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.950 neto/mes</span></div>
+          <div class="oc-row"><span class="oc-lbl">Francés</span><span class="oc-val">Básico</span></div>
+        </div>
+        <a href="https://app.saisonfr.com" class="oc-btn">Ver oferta →</a>
+      </div>
+      <div class="oc rv d3">
+        <div class="oc-active-bar"></div>
+        <div class="oc-status"><div class="oc-dot"></div><span class="oc-state">Búsqueda activa</span><span class="oc-ref">SAISON-26 / COR</span></div>
+        <div class="oc-title">Serveur<span>/se</span></div>
+        <div class="oc-loc">Resort de playa · Córcega</div>
+        <div class="oc-rows">
+          <div class="oc-row"><span class="oc-lbl">Contrato</span><span class="oc-val">Jul → Sep 2026</span></div>
+          <div class="oc-row"><span class="oc-lbl">Alojamiento</span><span class="oc-val accent">Incluido + comidas</span></div>
+          <div class="oc-row"><span class="oc-lbl">Salario</span><span class="oc-val">~€1.720 neto/mes</span></div>
+          <div class="oc-row"><span class="oc-lbl">Francés</span><span class="oc-val">Básico</span></div>
+        </div>
+        <a href="https://app.saisonfr.com" class="oc-btn">Ver oferta →</a>
+      </div>
+    </div>
+    <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between" class="rv">
+      <span style="font-size:11px;color:var(--muted)">Mostrando 3 de las ofertas activas</span>
+      <a href="https://app.saisonfr.com" class="btn-ghost">Ver todas →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HERRAMIENTAS -->
+<section class="tools" id="herramientas">
+  <div class="container">
+    <div class="rv" style="text-align:center;max-width:640px;margin:0 auto 48px">
+      <div class="section-title" style="color:var(--bone)">Encontrar trabajo de temporada<br>en Francia, <span style="color:var(--cobalt)">no debería ser tan difícil.</span></div>
+      <p style="font-size:15px;color:rgba(245,243,236,0.45);margin-top:16px;line-height:1.7">Dejamos atrás el caos para que te concentres en lo que importa: armar las valijas.</p>
+    </div>
+
+    <div class="rv sin-con-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:64px">
+      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(245,243,236,0.08);border-radius:14px;padding:32px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
+          <span style="width:6px;height:6px;border-radius:50%;background:rgba(245,243,236,0.35)"></span>
+          <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,243,236,0.4);font-family:'DM Mono',monospace">Sin Saison</span>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Grupos de WhatsApp colapsados y sin orden.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Portales en francés que no se entendes.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.5);line-height:1.55"><span style="color:rgba(245,243,236,0.3);flex-shrink:0">—</span>Horas tratando de personalizar cartas para postular.</li>
+        </ul>
+      </div>
+      <div style="background:rgba(10,58,242,0.07);border:1px solid rgba(10,58,242,0.25);border-radius:14px;padding:32px;position:relative">
+        <div style="position:absolute;top:0;right:0;background:rgba(10,58,242,0.15);color:var(--cobalt);font-size:9px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:0 13px 0 10px;font-family:'DM Mono',monospace">Tu temporada resuelta</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--cobalt);animation:blink 2s infinite"></span>
+          <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--cobalt);font-family:'DM Mono',monospace">Con Saison</span>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.85);line-height:1.55"><span style="color:var(--cobalt);font-weight:700;flex-shrink:0">✓</span>Ofertas en español filtradas por región, alojamiento y puesto.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.85);line-height:1.55"><span style="color:var(--cobalt);font-weight:700;flex-shrink:0">✓</span>Alojamiento visible desde el primer segundo.</li>
+          <li style="display:flex;gap:10px;font-size:13.5px;color:rgba(245,243,236,0.85);line-height:1.55"><span style="color:var(--cobalt);font-weight:700;flex-shrink:0">✓</span>Postulación directa con carta de presentación personalizada, en un click.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rv" style="text-align:center;max-width:520px;margin:0 auto 40px">
+      <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.03em;color:var(--bone);margin-bottom:8px">Todo lo que necesitás,<br>en una sola plataforma.</div>
+    </div>
+
+    <div class="rv tools-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(245,243,236,0.06);border:1px solid rgba(245,243,236,0.06)">
+      <div class="tool-cell">
+        <div class="tool-num">01</div>
+        <div class="tool-title">Empleos con alojamiento</div>
+        <p class="tool-body">No solo te ayuda a ahorrar — te ahorra dolores de cabeza y burocracia. Filtrá todas las ofertas con alojamiento incluido en un paso.</p>
+      </div>
+      <div class="tool-cell">
+        <div class="tool-num">02</div>
+        <div class="tool-title">Todo en español y filtrado para vos</div>
+        <p class="tool-body">Adiós a traducir webs francesas. Filtrá por puesto, región y nivel de francés requerido en segundos.</p>
+      </div>
+      <div class="tool-cell">
+        <div class="tool-num">03</div>
+        <div class="tool-title">Herramientas para ganar tiempo</div>
+        <p class="tool-body">Cartas de presentación generadas a medida, calculadora de sueldo, checklists de trámites y seguimiento de tus postulaciones.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px" class="rv">
+      <a href="https://app.saisonfr.com" class="btn-primary" style="background:var(--cobalt);font-size:13px;padding:14px 36px">Accedé a Saison →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ANTES DE VENIR — AFILIADOS -->
+<section class="antes" id="antes-de-venir">
+  <div class="container">
+    <div class="rv" style="margin-bottom:8px">
+      <div class="section-eyebrow">Antes de llegar a Francia</div>
+      <div class="section-title">Lo que necesitás<br>tener resuelto.</div>
+      <p style="font-size:15px;color:var(--muted);max-width:540px;margin-top:16px;line-height:1.75">Cuando confirmás el trabajo, el reloj empieza a correr. Cuenta bancaria, seguro, chip, transporte — Saison te guía hacia las mejores opciones para hispanohablantes que van a Francia.</p>
+    </div>
+
+    <div class="afiliado-grid rv">
+      <div class="af-card">
+        <div class="af-tag">Cuenta bancaria</div>
+        <div class="af-title">Wise</div>
+        <p class="af-body">Abrí tu cuenta antes de llegar. Te pagan en euros, podés enviar plata a casa sin comisiones absurdas y funciona desde el primer día en Francia.</p>
+        <a href="https://wise.com/invite/ilpc/federiconicolasalbertia" target="_blank" rel="noopener" class="af-link">Abrir cuenta gratis →</a>
+      </div>
+      <div class="af-card">
+        <div class="af-tag">Seguro obligatorio VVT</div>
+        <div class="af-title">iati Seguros</div>
+        <p class="af-body">Si vas con visa VVT, necesitás cobertura mínima de €30.000 por 365 días. Es requisito del consulado. Comparamos las mejores opciones para vos.</p>
+        <a href="https://www.iatiseguros.com?r=89715432565643&utm_source=colaboradores&utm_medium=referral" target="_blank" rel="noopener" class="af-link">Ver coberturas →</a>
+      </div>
+      <div class="af-card">
+        <div class="af-tag">Conectividad</div>
+        <div class="af-title">eSIM Airalo</div>
+        <p class="af-body">Llegás a Francia con datos desde el primer minuto. Sin buscar locutorio, sin esperar SIM física. Activás desde tu teléfono antes de subir al avión.</p>
+        <a href="https://www.airalo.com" target="_blank" rel="noopener" class="af-link">Activar eSIM (código FEDERI4313) →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMUNIDAD -->
+<section class="comunidad">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center" class="rv">
+      <div>
+        <div class="section-eyebrow" style="margin-bottom:16px">Comunidad</div>
+        <div class="section-title" style="margin-bottom:20px">No llegues<br>solo.</div>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:32px;max-width:400px">Conectá con otros saisonniers que van al mismo destino y en las mismas fechas. Vos decidís si aceptás el contacto — nadie llega sin que lo apruebes.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:28px;height:28px;border-radius:6px;background:rgba(10,58,242,0.08);border:1px solid rgba(10,58,242,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:var(--cobalt);font-weight:700">✓</span></div>
+            <span style="font-size:14px;color:var(--muted)">Filtrás por destino y fechas compatibles</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:28px;height:28px;border-radius:6px;background:rgba(10,58,242,0.08);border:1px solid rgba(10,58,242,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:var(--cobalt);font-weight:700">✓</span></div>
+            <span style="font-size:14px;color:var(--muted)">Aceptación mutua — sin contactos no deseados</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:28px;height:28px;border-radius:6px;background:rgba(10,58,242,0.08);border:1px solid rgba(10,58,242,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:var(--cobalt);font-weight:700">✓</span></div>
+            <span style="font-size:14px;color:var(--muted)">+1.000 candidatos activos en la comunidad</span>
+          </div>
+        </div>
+        <a href="https://app.saisonfr.com" class="btn-primary">Conectar con saisonniers →</a>
+      </div>
+      <div>
+        <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);overflow:hidden">
+          <div style="background:var(--night);padding:12px 16px;display:flex;align-items:center;justify-content:space-between">
+            <span style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--bone);font-family:'DM Mono',monospace">Saisonniers</span>
+            <div style="display:flex;align-items:center;gap:6px;background:rgba(10,58,242,0.2);border:1px solid rgba(10,58,242,0.35);border-radius:100px;padding:3px 10px">
+              <div style="width:5px;height:5px;border-radius:50%;background:var(--cobalt);animation:blink 2s infinite"></div>
+              <span style="font-size:9px;color:var(--cobalt);font-family:'DM Mono',monospace">32 activos</span>
+            </div>
+          </div>
+          <div style="background:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--bone);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🇦🇷</div>
+            <div style="flex:1"><div style="font-size:14px;font-weight:700;color:var(--night);font-family:'Bricolage Grotesque',sans-serif;margin-bottom:3px">Valentina</div><div style="font-size:11px;color:var(--muted)">Argentina · Saint-Tropez · Jun → Sep</div></div>
+            <div style="font-size:9px;background:rgba(10,58,242,0.07);color:var(--cobalt);padding:3px 8px;font-family:'DM Mono',monospace;flex-shrink:0;letter-spacing:0.06em">Recepción</div>
+          </div>
+          <div style="background:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--bone);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🇨🇴</div>
+            <div style="flex:1"><div style="font-size:14px;font-weight:700;color:var(--night);font-family:'Bricolage Grotesque',sans-serif;margin-bottom:3px">Mateo</div><div style="font-size:11px;color:var(--muted)">Colombia · Courchevel · Dic → Mar</div></div>
+            <div style="font-size:9px;background:rgba(10,58,242,0.07);color:var(--cobalt);padding:3px 8px;font-family:'DM Mono',monospace;flex-shrink:0;letter-spacing:0.06em">Sala</div>
+          </div>
+          <div style="background:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+            <div style="width:40px;height:40px;border-radius:50%;background:var(--bone);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🇪🇸</div>
+            <div style="flex:1"><div style="font-size:14px;font-weight:700;color:var(--night);font-family:'Bricolage Grotesque',sans-serif;margin-bottom:3px">Lucía</div><div style="font-size:11px;color:var(--muted)">España · Biarritz · Jul → Oct</div></div>
+            <div style="font-size:9px;background:rgba(10,58,242,0.07);color:var(--cobalt);padding:3px 8px;font-family:'DM Mono',monospace;flex-shrink:0;letter-spacing:0.06em">Cocina</div>
+          </div>
+          <div style="background:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border);filter:blur(4px);opacity:0.35;pointer-events:none">
+            <div style="width:40px;height:40px;border-radius:50%;background:#EAE7DE;flex-shrink:0"></div>
+            <div style="flex:1"><div style="height:12px;background:var(--border);width:80px;margin-bottom:6px"></div><div style="height:10px;background:var(--border);width:130px"></div></div>
+          </div>
+          <div style="background:var(--night);padding:14px 16px;display:flex;align-items:center;justify-content:space-between">
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:24px;color:var(--cobalt);letter-spacing:-0.03em">+29</div><div style="font-size:10px;color:rgba(245,243,236,0.3);margin-top:2px">más saisonniers te esperan</div></div>
+            <a href="https://app.saisonfr.com" style="background:var(--cobalt);color:#fff;padding:8px 18px;border-radius:4px;text-decoration:none;font-size:9px;font-family:'DM Mono',monospace;letter-spacing:0.08em;text-transform:uppercase">Conectar →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="pricing" id="precios">
+  <div class="container">
+    <div class="rv" style="text-align:center">
+      <div class="section-eyebrow" style="text-align:center;margin-bottom:12px">Acceso</div>
+      <div class="section-title">Cubrí toda<br>tu temporada.</div>
+      <p style="font-size:15px;color:var(--muted);max-width:440px;margin:16px auto 0;line-height:1.7">Precio de lanzamiento. Cancelás cuando querés.</p>
+    </div>
+    <div class="rv pricing-grid" style="max-width:780px;margin:56px auto 0;display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:start">
+      <div class="price-card" style="margin:0">
+        <div class="pc-tag">
+          <span style="width:5px;height:5px;background:var(--cobalt);border-radius:50%;flex-shrink:0;animation:blink 2s infinite"></span>
+          Recomendado · cubre la temporada
+        </div>
+        <div class="pc-name">Saison Premium</div>
+        <div class="pc-price">€11,99</div>
+        <div class="pc-period">cada 3 meses</div>
+        <ul class="pc-list" style="margin-top:24px">
+          <li>Contacto directo con el empleador</li>
+          <li>Carta de presentación en francés con IA</li>
+          <li>Guardá ofertas y hacé seguimiento de tus postulaciones</li>
+          <li>Calculadora de sueldo neto SMIC 2026</li>
+          <li>Templates de CV descargables en Canva</li>
+          <li>Guía completa "Tu primera temporada" PDF</li>
+          <li>Checklists de contrato, arribo y cierre</li>
+          <li>Conectar con saisonniers compatibles</li>
+        </ul>
+        <a href="https://app.saisonfr.com" class="btn-primary" style="width:100%;justify-content:center;display:flex;background:var(--cobalt);font-size:13px;padding:14px">Empezar ahora →</a>
+        <p style="text-align:center;font-size:11px;color:rgba(245,243,236,0.25);margin-top:10px">Sin compromiso · Cancelás cuando querás</p>
+      </div>
+      <div class="price-card" style="margin:0;background:var(--paper);border:1px solid var(--border)">
+        <div class="pc-tag" style="background:rgba(10,58,242,0.08);color:var(--cobalt)">Flexible</div>
+        <div class="pc-name" style="color:var(--night)">Saison Premium</div>
+        <div class="pc-price" style="color:var(--night)">€5,99</div>
+        <div class="pc-period" style="color:var(--muted)">por mes</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-top:20px">Mismo acceso completo. Ideal si solo necesitás un mes activo para conseguir tu próximo trabajo.</p>
+        <a href="https://app.saisonfr.com" class="btn-ghost" style="width:100%;justify-content:center;display:flex;margin-top:24px">Elegir mensual →</a>
+        <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:10px">Podés explorar las ofertas antes de suscribirte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÁS ACOMPAÑAMIENTO -->
+<section class="servicios" id="servicios">
+  <div class="container">
+    <div class="rv" style="margin-bottom:48px">
+      <div class="section-eyebrow">Más acompañamiento</div>
+      <div class="section-title">¿Querés ir<br>más seguro?</div>
+    </div>
+    <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)">
+      <div style="background:var(--paper);padding:40px 36px">
+        <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--cobalt);margin-bottom:16px;font-family:'DM Mono',monospace">Asesoría personal</div>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.03em;color:var(--night);margin-bottom:12px;line-height:1.1">Ayuda a tu medida.</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px">Si sentís que necesitás alguien que te guíe con alguna situación específica, el equipo de Saison tiene más de 4 años de temporadas en Francia, Suiza e Italia. Sabemos exactamente qué buscan los empleadores y cómo posicionarte para conseguir el trabajo que querés.</p>
+        <div style="background:rgba(10,58,242,0.05);border-left:2px solid var(--cobalt);padding:12px 16px;margin-bottom:24px;font-size:13px;color:var(--muted);line-height:1.6">Incluye 1 mes de acceso a Saison Premium.</div>
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:24px">
+          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;color:var(--night);letter-spacing:-0.04em">€55</span>
+          <span style="font-size:12px;color:var(--muted)">la sesión · 45 minutos</span>
+        </div>
+        <a href="https://cal.com/saison-federico-alberti/asesoria-personalizada" class="btn-primary">Reservar asesoría →</a>
+      </div>
+      <div style="background:var(--night);padding:40px 36px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--cobalt)"></div>
+        <div style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--cobalt);margin-bottom:16px;font-family:'DM Mono',monospace">Curso de francés</div>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.03em;color:var(--bone);margin-bottom:12px;line-height:1.1">Mientras más hablés,<br>mejor la vas a pasar.</h3>
+        <p style="font-size:14px;color:rgba(245,243,236,0.5);line-height:1.7;margin-bottom:24px">3 meses con una profesora nativa, orientado al mundo de la hospitalidad. 12 clases de 1 hora por semana por Google Meet. Grupos de máximo 8 alumnos.</p>
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:8px">
+          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;color:var(--bone);letter-spacing:-0.04em">€96</span>
+          <span style="font-size:12px;color:rgba(245,243,236,0.4)">los 3 meses · 12 clases</span>
+        </div>
+        <p style="font-size:11px;color:rgba(245,243,236,0.3);margin-bottom:24px">Máx. 8 alumnos · Google Meet · 1h/semana</p>
+        <a href="mailto:contact@saisonfr.com?subject=Quiero%20m%C3%A1s%20info%20sobre%20el%20curso%20de%20franc%C3%A9s" class="btn-primary" style="background:var(--cobalt)">Quiero más info →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:96px 0;background:var(--paper);border-bottom:1px solid var(--border)" id="faq">
+  <div class="container">
+    <div class="rv" style="margin-bottom:48px">
+      <div class="section-eyebrow">Antes de empezar</div>
+      <div class="section-title">Preguntas<br>frecuentes.</div>
+    </div>
+    <div class="rv" style="max-width:640px">
+      <div style="border-top:1px solid rgba(10,58,242,0.14);padding:22px 0">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Necesito hablar francés?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">No es obligatorio, pero <strong>sí te va a abrir puertas</strong>. Las jornadas de temporada son intensas, y los empleadores valoran mucho más a alguien <strong>responsable y con ganas</strong> que a alguien con francés perfecto.</p>
+      </div>
+      <div style="border-top:1px solid rgba(10,58,242,0.14);padding:22px 0">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Necesito visa?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">Todas las ofertas en Saison son para gente <strong>ya autorizada a trabajar en Francia</strong>. Las formas más comunes: pasaporte europeo, titre de séjour (residencia) o visa VVT (working holiday).</p>
+      </div>
+      <div style="border-top:1px solid rgba(10,58,242,0.14);padding:22px 0">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Cuánto se puede ahorrar por temporada?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">Depende de la duración, el salario, las propinas y tu estilo de vida. Pero después de 4 años como saisonniers, en Saison sabemos que <strong>€1.000 de ahorro mensual es el estándar</strong> — y podés ahorrar bastante más si te lo proponés.</p>
+      </div>
+      <div style="border-top:1px solid rgba(10,58,242,0.14);border-bottom:1px solid rgba(10,58,242,0.14);padding:22px 0">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16.5px;color:var(--night);margin-bottom:8px">¿Puedo cancelar cuando quiera?</div>
+        <p style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:560px">Sí. <strong>Sin permanencia</strong>, cancelás cuando quieras desde tu cuenta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section style="padding:72px 0;background:var(--night);border-bottom:1px solid rgba(245,243,236,0.06)" id="contacto">
+  <div class="container" style="text-align:center">
+    <div class="rv">
+      <div class="section-eyebrow" style="text-align:center;color:rgba(245,243,236,0.3)">¿Tenés dudas?</div>
+      <div class="section-title" style="color:var(--bone);margin-bottom:16px">Escribinos.</div>
+      <p style="font-size:14px;color:rgba(245,243,236,0.5);max-width:420px;margin:0 auto 28px;line-height:1.7">Si algo no te quedó claro o necesitás ayuda con algo puntual, mandanos un mail y te respondemos.</p>
+      <a href="mailto:contact@saisonfr.com" class="btn-primary" style="background:var(--cobalt)">contact@saisonfr.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div class="ft-logo">
+      <a href="#" class="logo">
+        <div class="logo-grid"><span></span><span></span><span></span><span></span></div>
+        <span class="logo-name">Saison</span>
+      </a>
+      <p class="ft-tagline">La única plataforma en español con todo lo que necesitás para hacer una temporada en Francia.</p>
+      <a href="/employeurs" class="ft-empleadores">Vous êtes employeur ? →</a>
+    </div>
+    <div class="ft-cols">
+      <div class="ft-col">
+        <h4>Candidatos</h4>
+        <a href="#ofertas">Ver ofertas</a>
+        <a href="#antes-de-venir">Antes de llegar</a>
+        <a href="#precios">Precios</a>
+        <a href="#comunidad">Saisonniers</a>
+      </div>
+      <div class="ft-col">
+        <h4>Saison</h4>
+        <a href="https://instagram.com/saisonfr" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/saisonfr" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://chat.whatsapp.com/HVnifNjtk2LIifo2HSpHSi?mode=gi_t" target="_blank" rel="noopener">Comunidad WhatsApp</a>
+        <a href="/employeurs">Pour les employeurs</a>
+      </div>
+      <div class="ft-col">
+        <h4>Legal</h4>
+        <a href="#">Términos de uso</a>
+        <a href="#">Privacidad</a>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy">© 2026 Saison. Tous droits réservés.</span>
+    <span class="ft-smic">SMIC 2026 · €12,31/h · 35h/sem</span>
+  </div>
+</footer>
+
+<script>
+// REVEAL
+function checkReveal() {
+  document.querySelectorAll('.rv:not(.in)').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.88)
+      el.classList.add('in');
+  });
+}
+window.addEventListener('scroll', checkReveal, { passive: true });
+checkReveal();
+</script>
+</body>
+</html>
