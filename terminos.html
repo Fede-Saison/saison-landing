@@ -2,116 +2,166 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Términos y Condiciones — Saison</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Términos y Condiciones · Saison</title>
+<meta name="description" content="Términos y condiciones de uso de Saison, la plataforma en español para conseguir trabajo de temporada en Francia.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://saisonfr.com/terminos.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --night: #0B1426;
-    --cobalt: #0A3AF2;
-    --bone: #F5F3EC;
-    --muted: #6B6B62;
-    --border: #E4E1D6;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bone);
-    color: var(--night);
-    font-family: 'Hanken Grotesk', sans-serif;
-    line-height: 1.65;
-  }
-  .topbar {
-    padding: 20px 24px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .logo-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3px; width: 26px; height: 26px; }
-  .logo-grid div { border-radius: 4px; }
-  .sq1{background:#0A3AF2} .sq2{background:#6B85F0} .sq3{background:#A6B4F5} .sq4{background:#DEE3FB}
-  .logo-text { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 20px; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
-  h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: -0.02em; margin-bottom: 6px; }
-  .meta { color: var(--muted); font-size: 13px; margin-bottom: 40px; }
-  h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px; margin-top: 40px; margin-bottom: 12px; }
-  p { font-size: 15px; color: #2A2A22; margin-bottom: 14px; }
-  ul, ol { font-size: 15px; color: #2A2A22; padding-left: 20px; }
-  li { margin-bottom: 6px; }
-  a { color: var(--cobalt); }
-  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13.5px; }
-  th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--border); }
-  th { background: #EFEBDD; font-weight: 700; }
-  blockquote { display: none; }
-  strong { font-weight: 700; }
+:root {
+  --night:  #0B1426;
+  --cobalt: #0A3AF2;
+  --bone:   #F5F3EC;
+  --paper:  #FBFAF5;
+  --muted:  rgba(11,20,38,0.5);
+  --border: rgba(11,20,38,0.1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', sans-serif; background: var(--paper); color: var(--night); -webkit-font-smoothing: antialiased; padding-top: 64px; }
+.container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; background: rgba(251,250,245,0.9); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--night); }
+.logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; width: 22px; height: 22px; }
+.logo-grid span { border-radius: 2px; display: block; }
+.logo-grid span:nth-child(1) { background: #0A3AF2; }
+.logo-grid span:nth-child(2) { background: #7690F3; }
+.logo-grid span:nth-child(3) { background: #B3C0F4; }
+.logo-grid span:nth-child(4) { background: #D7DDF5; }
+.logo-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-link { font-size: 13.5px; font-weight: 600; color: var(--night); text-decoration: none; }
+.nav-cta { font-size: 13px; font-weight: 700; color: #fff; background: var(--cobalt); padding: 9px 18px; border-radius: 100px; text-decoration: none; }
+@media (max-width: 640px) { .nav-link.hide-mobile { display: none; } }
+
+/* LEGAL CONTENT */
+.legal-head { padding: 56px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+.legal-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cobalt); margin-bottom: 10px; }
+.legal-h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(28px,5vw,38px); letter-spacing: -0.02em; margin-bottom: 10px; }
+.legal-meta { font-size: 13px; color: var(--muted); }
+.legal-body { padding-bottom: 80px; }
+.legal-body h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.01em; margin: 36px 0 12px; }
+.legal-body p, .legal-body li { font-size: 14.5px; line-height: 1.7; color: rgba(11,20,38,0.78); margin-bottom: 12px; }
+.legal-body ul { padding-left: 20px; margin-bottom: 16px; }
+.legal-body strong { color: var(--night); font-weight: 700; }
+.legal-body a { color: var(--cobalt); font-weight: 600; }
+
+footer { background: var(--night); color: var(--bone); margin-top: 0; }
+.ft-top { max-width: 1120px; margin: 0 auto; padding: 64px 56px 40px; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+.ft-tagline { font-size: 13.5px; color: rgba(245,243,236,0.55); max-width: 280px; margin-top: 12px; line-height: 1.5; }
+.ft-cols { display: flex; gap: 56px; flex-wrap: wrap; }
+.ft-col h4 { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,243,236,0.4); margin-bottom: 14px; }
+.ft-col a { display: block; font-size: 13.5px; color: rgba(245,243,236,0.8); text-decoration: none; margin-bottom: 10px; }
+.ft-bottom { max-width: 1120px; margin: 0 auto; padding: 20px 56px 32px; display: flex; justify-content: space-between; font-size: 11.5px; color: rgba(245,243,236,0.35); border-top: 1px solid rgba(245,243,236,0.1); }
+@media (max-width: 640px) { .ft-top, .ft-bottom { padding-left: 24px; padding-right: 24px; } .ft-bottom { flex-direction: column; gap: 6px; } }
 </style>
 </head>
 <body>
-  <div class="topbar">
-    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
-      <div class="logo-grid"><div class="sq1"></div><div class="sq2"></div><div class="sq3"></div><div class="sq4"></div></div>
-      <span class="logo-text">Saison</span>
-    </a>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-grid"><span></span><span></span><span></span><span></span></div>
+    <span class="logo-name">Saison</span>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link hide-mobile">← Volver al inicio</a>
+    <a href="https://app.saisonfr.com" class="nav-cta">Ver ofertas →</a>
   </div>
-  <div class="wrap">
-    <h1>Términos y Condiciones de Uso — Saison</h1>
-<p><strong>Versión provisoria — vigente desde el lanzamiento hasta la inscripción como autoentrepreneur (SIRET)</strong>
-Última actualización: 13 de septiembre de 2026</p>
-<hr />
-<h2>1. Identificación del prestador 🔶</h2>
-<p>Saison es un servicio operado por <strong>Federico Alberti</strong>, persona física, en trámite de inscripción como autoentrepreneur en Francia (SIRET en curso de obtención, previsto para el 19 de octubre de 2026).</p>
-<ul>
-<li>Contacto: contact@saisonfr.com</li>
-<li>Domicilio de contacto: [a completar tras la inscripción SIRET]</li>
-<li>Actividad: intermediación de información entre candidatos hispanohablantes y ofertas de empleo de temporada en el sector HCR (hostelería, cafés, restaurantes) en Francia.</li>
-</ul>
-<p>Mientras el SIRET esté en trámite, Saison opera como actividad preparatoria de lanzamiento. Esta sección se actualizará con la razón social completa apenas se complete la inscripción.</p>
-<h2>2. Objeto</h2>
-<p>Estos Términos regulan el acceso y uso de la aplicación y sitio web Saison (app.saisonfr.com y saisonfr.com), en adelante "la Plataforma", por parte de personas candidatas a puestos de trabajo de temporada en Francia (en adelante, "el Usuario" o "los Usuarios").</p>
-<p>La Plataforma ofrece:
-- Acceso gratuito a un listado de ofertas de empleo de temporada en el sector HCR en Francia, con un número limitado de contactos directos a empleadores sin cargo.
-- Herramientas informativas gratuitas (calculadora de sueldo neto, guía de puestos, calendario de postulación, frases de francés de supervivencia).
-- Funcionalidades adicionales bajo acceso Premium de pago: contacto ilimitado con empleadores, generación de carta de motivación asistida por IA, y demás funciones descritas en la Plataforma al momento de la compra.</p>
-<h2>3. Naturaleza del servicio — lo que Saison NO es</h2>
-<p>Saison es una plataforma de información y puesta en contacto. <strong>No es una agencia de colocación de empleo, no garantiza la obtención de un puesto de trabajo, y no es parte del contrato laboral</strong> que eventualmente se celebre entre el Usuario y un empleador. Saison no participa en la negociación de condiciones laborales, salariales ni contractuales, salvo cuando expresamente se indique lo contrario en un servicio específico contratado (ej. asesoría personalizada).</p>
-<p>La información sobre requisitos migratorios, niveles de francés, condiciones del SMIC y normativa laboral que ofrece la Plataforma tiene carácter orientativo y no reemplaza el asesoramiento legal o migratorio profesional.</p>
-<h2>4. Registro y cuenta de usuario</h2>
-<p>Para acceder a las ofertas y herramientas, el Usuario debe crear una cuenta proporcionando datos veraces y actualizados (nombre, email, y los datos de perfil que la Plataforma solicite). El Usuario es responsable de la confidencialidad de sus credenciales de acceso y de toda actividad realizada desde su cuenta.</p>
-<p>El acceso está reservado a personas mayores de 18 años.</p>
-<h2>5. Plan gratuito y acceso Premium</h2>
-<p><strong>Plan gratuito:</strong> acceso a la visualización de ofertas, a un número limitado de contactos directos con empleadores, y a las herramientas informativas básicas, sin cargo.</p>
-<p><strong>Acceso Premium:</strong> pago único que desbloquea contacto ilimitado con empleadores y las demás funcionalidades descritas en la Plataforma al momento de la compra. <strong>El pago es único y no se renueva automáticamente</strong>; el acceso permanece activo durante el período indicado al momento de la compra (actualmente 3 meses desde la fecha de pago). Los precios vigentes se muestran en la Plataforma y pueden actualizarse; los cambios de precio no afectan a accesos ya adquiridos.</p>
-<p>El pago se procesa a través de Stripe. Saison no almacena datos de tarjetas de pago; estos son gestionados directamente por el proveedor de pagos conforme a los estándares de seguridad PCI-DSS.</p>
-<h2>6. Vigencia y finalización del acceso Premium</h2>
-<p>El acceso Premium tiene una duración determinada (actualmente 3 meses desde la compra) y <strong>no se renueva automáticamente</strong>. Al finalizar ese período, el Usuario puede adquirir un nuevo acceso Premium si lo desea, sujeto a los precios vigentes al momento de la nueva compra.</p>
-<p>No se realizan reembolsos una vez iniciado el uso del acceso Premium (por ejemplo, tras el primer contacto con un empleador), salvo lo dispuesto en la Sección 9 (derecho de desistimiento).</p>
-<h2>7. Obligaciones del Usuario</h2>
-<p>El Usuario se compromete a:
-- Proporcionar información veraz sobre su identidad, documentación migratoria y nivel de idioma. Declarar un nivel de francés superior al real puede perjudicar su proceso ante los empleadores y compromete su propia responsabilidad.
-- No utilizar la Plataforma para fines distintos a la búsqueda de empleo de temporada.
-- No contactar directamente a empleadores por fuera del flujo previsto por la Plataforma con el fin de eludir el modelo de acceso Premium, cuando dicho contacto se haya facilitado exclusivamente a través de esa funcionalidad.
-- No compartir su cuenta con terceros.</p>
-<h2>8. Propiedad intelectual</h2>
-<p>Los contenidos de la Plataforma (textos, diseño, marca Saison, herramientas, guías, plantillas) son propiedad de Federico Alberti o se utilizan bajo licencia, y no pueden reproducirse, distribuirse ni explotarse comercialmente sin autorización previa.</p>
-<h2>9. Derecho de desistimiento</h2>
-<p>De acuerdo con el artículo L221-18 del Code de la consommation, el consumidor dispone en principio de un plazo de 14 días para desistir de un contrato celebrado a distancia, sin necesidad de justificar su decisión.</p>
-<p>Sin embargo, conforme al artículo <strong>L221-28, 1°</strong> del mismo Código, este derecho <strong>no puede ejercerse</strong> para contratos de prestación de servicios plenamente ejecutados antes del fin del plazo de desistimiento, cuando dicha ejecución haya comenzado con el <strong>acuerdo previo y expreso</strong> del consumidor y con su <strong>reconocimiento expreso de la pérdida del derecho de desistimiento</strong>, una vez que la prestación haya sido plenamente ejecutada.</p>
-<p>En consecuencia: al adquirir el acceso Premium, se le solicitará al Usuario, antes de finalizar la compra, que confirme expresamente que solicita el acceso inmediato al servicio y que reconoce que, una vez utilizado (por ejemplo, al realizar el primer contacto con un empleador), pierde su derecho de desistimiento de 14 días sobre dicha compra.</p>
-<h2>10. Limitación de responsabilidad</h2>
-<p>Saison no garantiza la veracidad, actualización o disponibilidad continua de las ofertas publicadas por terceros empleadores, ni es responsable de las condiciones laborales finalmente ofrecidas por dichos empleadores. Saison no es responsable por decisiones tomadas por el Usuario en base a la información orientativa proporcionada en la Plataforma.</p>
-<h2>11. Protección de datos</h2>
-<p>El tratamiento de datos personales del Usuario se rige por la Política de Privacidad de Saison, disponible en la Plataforma, que forma parte integrante de estos Términos.</p>
-<h2>12. Suspensión y baja de cuenta</h2>
-<p>Saison puede suspender o eliminar una cuenta ante incumplimiento grave de estos Términos, incluyendo la provisión de información falsa sobre documentación migratoria. El Usuario puede solicitar la eliminación de su cuenta en cualquier momento desde la configuración de la aplicación.</p>
-<h2>13. Modificaciones</h2>
-<p>Saison puede modificar estos Términos. Los cambios se notificarán a través de la Plataforma o por email, y entrarán en vigor conforme a lo indicado en la notificación.</p>
-<h2>14. Ley aplicable y jurisdicción</h2>
-<p>Estos Términos se rigen por el derecho francés.</p>
-<p>Si el Usuario tiene la condición de consumidor y reside habitualmente en un país de la Unión Europea, esta elección de ley no lo priva de la protección que le otorguen las disposiciones imperativas de la ley de su país de residencia habitual, en la medida en que dicha ley le sea más favorable, conforme al artículo 6 del Reglamento (CE) n.º 593/2008 ("Roma I").</p>
-<h2>15. Contacto</h2>
-<p>Para consultas sobre estos Términos: contact@saisonfr.com</p>
+</nav>
+
+<div class="container">
+  <div class="legal-head">
+    <div class="legal-eyebrow">Legal</div>
+    <h1 class="legal-h1">Términos y Condiciones de Uso</h1>
+    <p class="legal-meta">Versión provisoria, vigente desde el lanzamiento hasta la inscripción de Saison como autoentrepreneur (SIRET) en Francia. Última actualización: 16 de octubre de 2026.</p>
   </div>
+
+  <div class="legal-body">
+    <h2>1. Identificación del prestador</h2>
+    <p>Saison es un servicio operado por <strong>Federico Alberti</strong>, persona física, en trámite de inscripción como autoentrepreneur en Francia (SIRET en curso de obtención). Esta sección se actualizará con la razón social completa apenas se complete la inscripción.</p>
+    <p>Contacto: <a href="mailto:contact@saisonfr.com">contact@saisonfr.com</a></p>
+    <p>Actividad: intermediación de información entre candidatos hispanohablantes y ofertas de empleo de temporada en el sector HCR (hostelería, cafés, restaurantes) en Francia.</p>
+
+    <h2>2. Objeto</h2>
+    <p>Estos Términos regulan el acceso y uso de la aplicación y sitio web Saison (app.saisonfr.com y saisonfr.com), en adelante "la Plataforma", por parte de personas candidatas a puestos de trabajo de temporada en Francia (en adelante, "el Usuario" o "los Usuarios").</p>
+    <p>La Plataforma ofrece:</p>
+    <ul>
+      <li>Acceso gratuito a un listado de ofertas de empleo de temporada en el sector HCR en Francia.</li>
+      <li>Herramientas informativas gratuitas (calculadora de sueldo neto, guía de puestos, calendario de postulación, frases de francés de supervivencia).</li>
+      <li>Funcionalidades adicionales bajo suscripción paga ("Premium"): contacto directo con datos del empleador, generación de carta de motivación asistida por IA, alertas personalizadas, checklists de contrato y de cierre de temporada.</li>
+    </ul>
+
+    <h2>3. Naturaleza del servicio — lo que Saison NO es</h2>
+    <p>Saison es una plataforma de información y puesta en contacto. <strong>No es una agencia de colocación de empleo, no garantiza la obtención de un puesto de trabajo, y no es parte del contrato laboral</strong> que eventualmente se celebre entre el Usuario y un empleador. Saison no participa en la negociación de condiciones laborales, salariales ni contractuales, salvo cuando expresamente se indique lo contrario en un servicio específico contratado (ej. asesoría personalizada).</p>
+    <p>La información sobre requisitos migratorios, niveles de francés, condiciones del SMIC y normativa laboral que ofrece la Plataforma tiene carácter orientativo y no reemplaza el asesoramiento legal o migratorio profesional.</p>
+
+    <h2>4. Registro y cuenta de usuario</h2>
+    <p>Para acceder a las ofertas y herramientas, el Usuario debe crear una cuenta proporcionando datos veraces y actualizados (nombre, email, y los datos de perfil que la Plataforma solicite). El Usuario es responsable de la confidencialidad de sus credenciales de acceso y de toda actividad realizada desde su cuenta.</p>
+    <p>El acceso está reservado a personas mayores de 18 años.</p>
+
+    <h2>5. Plan gratuito y plan Premium</h2>
+    <p><strong>Plan gratuito:</strong> acceso a la visualización de ofertas y a las herramientas informativas básicas, sin cargo.</p>
+    <p><strong>Plan Premium:</strong> suscripción paga que desbloquea funcionalidades adicionales descritas en la Plataforma al momento de la contratación. Los precios vigentes se muestran en la Plataforma y pueden actualizarse; cualquier cambio de precio no afecta a suscripciones ya activas hasta su próxima renovación.</p>
+    <p>El pago se procesa a través de Stripe. Saison no almacena datos de tarjetas de pago; estos son gestionados directamente por el proveedor de pagos conforme a los estándares de seguridad PCI-DSS.</p>
+
+    <h2>6. Renovación y cancelación de la suscripción</h2>
+    <p>La suscripción Premium se renueva automáticamente al finalizar cada período (mensual o trimestral, según el plan elegido), salvo que el Usuario la cancele antes de la fecha de renovación desde su cuenta o contactando al soporte.</p>
+    <p>La cancelación surte efecto al finalizar el período ya abonado; no se realizan reembolsos proporcionales por el tiempo no utilizado dentro de un período ya pagado, salvo lo dispuesto en la Sección 9.</p>
+
+    <h2>7. Obligaciones del Usuario</h2>
+    <p>El Usuario se compromete a:</p>
+    <ul>
+      <li>Proporcionar información veraz sobre su identidad, documentación migratoria y nivel de idioma. Declarar un nivel de francés superior al real puede perjudicar su proceso ante los empleadores y compromete su propia responsabilidad.</li>
+      <li>No utilizar la Plataforma para fines distintos a la búsqueda de empleo de temporada.</li>
+      <li>No contactar directamente a empleadores por fuera del flujo previsto por la Plataforma con el fin de eludir el modelo de suscripción, cuando dicho contacto se haya facilitado exclusivamente a través de una funcionalidad Premium.</li>
+      <li>No compartir su cuenta con terceros.</li>
+    </ul>
+
+    <h2>8. Propiedad intelectual</h2>
+    <p>Los contenidos de la Plataforma (textos, diseño, marca Saison, herramientas, guías, plantillas) son propiedad de Federico Alberti o se utilizan bajo licencia, y no pueden reproducirse, distribuirse ni explotarse comercialmente sin autorización previa.</p>
+
+    <h2>9. Derecho de desistimiento</h2>
+    <p>Bajo el derecho francés del consumidor (artículo L221-18 y siguientes del Code de la consommation), el Usuario que contrata la suscripción Premium a distancia dispone en principio de un plazo de 14 días para desistir sin necesidad de justificar su decisión, salvo que haya comenzado a utilizar el servicio con su consentimiento expreso, en cuyo caso ese derecho puede verse limitado.</p>
+
+    <h2>10. Limitación de responsabilidad</h2>
+    <p>Saison no garantiza la veracidad, actualización o disponibilidad continua de las ofertas publicadas por terceros empleadores, ni es responsable de las condiciones laborales finalmente ofrecidas por dichos empleadores. Saison no es responsable por decisiones tomadas por el Usuario en base a la información orientativa proporcionada en la Plataforma.</p>
+
+    <h2>11. Protección de datos</h2>
+    <p>El tratamiento de datos personales del Usuario se rige por la <a href="/privacidad.html">Política de Privacidad</a> de Saison, que forma parte integrante de estos Términos.</p>
+
+    <h2>12. Suspensión y baja de cuenta</h2>
+    <p>Saison puede suspender o eliminar una cuenta ante incumplimiento grave de estos Términos, incluyendo la provisión de información falsa sobre documentación migratoria. El Usuario puede solicitar la eliminación de su cuenta en cualquier momento desde la configuración de la aplicación.</p>
+
+    <h2>13. Modificaciones</h2>
+    <p>Saison puede modificar estos Términos. Los cambios se notificarán a través de la Plataforma o por email, y entrarán en vigor conforme a lo indicado en la notificación.</p>
+
+    <h2>14. Ley aplicable y jurisdicción</h2>
+    <p>Estos Términos se rigen por el derecho francés.</p>
+
+    <h2>15. Contacto</h2>
+    <p>Para consultas sobre estos Términos: <a href="mailto:contact@saisonfr.com">contact@saisonfr.com</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-top">
+    <div>
+      <a href="/" class="logo"><div class="logo-grid"><span></span><span></span><span></span><span></span></div><span class="logo-name" style="color:var(--bone)">Saison</span></a>
+      <p class="ft-tagline">La única plataforma en español con todo lo que necesitás para hacer una temporada en Francia.</p>
+    </div>
+    <div class="ft-cols">
+      <div class="ft-col"><h4>Candidatos</h4><a href="/#ofertas">Ver ofertas</a><a href="/#opiniones">Opiniones</a><a href="/#faq">FAQ</a></div>
+      <div class="ft-col"><h4>Saison</h4><a href="https://instagram.com/saisonfr">Instagram</a><a href="https://chat.whatsapp.com/HVnifNjtk2LIifo2HSpHSi?mode=gi_t">Comunidad WhatsApp</a></div>
+      <div class="ft-col"><h4>Legal</h4><a href="/terminos.html">Términos</a><a href="/privacidad.html">Privacidad</a></div>
+    </div>
+  </div>
+  <div class="ft-bottom"><span>© 2026 Saison.</span><span>SMIC 2026 · €12,31/h</span></div>
+</footer>
+
 </body>
 </html>

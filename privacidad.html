@@ -2,178 +2,172 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de Privacidad — Saison</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Política de Privacidad · Saison</title>
+<meta name="description" content="Cómo Saison recopila, usa y protege tus datos personales en la plataforma de trabajo de temporada en Francia.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://saisonfr.com/privacidad.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --night: #0B1426;
-    --cobalt: #0A3AF2;
-    --bone: #F5F3EC;
-    --muted: #6B6B62;
-    --border: #E4E1D6;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bone);
-    color: var(--night);
-    font-family: 'Hanken Grotesk', sans-serif;
-    line-height: 1.65;
-  }
-  .topbar {
-    padding: 20px 24px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .logo-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3px; width: 26px; height: 26px; }
-  .logo-grid div { border-radius: 4px; }
-  .sq1{background:#0A3AF2} .sq2{background:#6B85F0} .sq3{background:#A6B4F5} .sq4{background:#DEE3FB}
-  .logo-text { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 20px; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
-  h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: -0.02em; margin-bottom: 6px; }
-  .meta { color: var(--muted); font-size: 13px; margin-bottom: 40px; }
-  h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px; margin-top: 40px; margin-bottom: 12px; }
-  p { font-size: 15px; color: #2A2A22; margin-bottom: 14px; }
-  ul, ol { font-size: 15px; color: #2A2A22; padding-left: 20px; }
-  li { margin-bottom: 6px; }
-  a { color: var(--cobalt); }
-  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13.5px; }
-  th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--border); }
-  th { background: #EFEBDD; font-weight: 700; }
-  blockquote { display: none; }
-  strong { font-weight: 700; }
+:root {
+  --night:  #0B1426;
+  --cobalt: #0A3AF2;
+  --bone:   #F5F3EC;
+  --paper:  #FBFAF5;
+  --muted:  rgba(11,20,38,0.5);
+  --border: rgba(11,20,38,0.1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', sans-serif; background: var(--paper); color: var(--night); -webkit-font-smoothing: antialiased; padding-top: 64px; }
+.container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; background: rgba(251,250,245,0.9); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--night); }
+.logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; width: 22px; height: 22px; }
+.logo-grid span { border-radius: 2px; display: block; }
+.logo-grid span:nth-child(1) { background: #0A3AF2; }
+.logo-grid span:nth-child(2) { background: #7690F3; }
+.logo-grid span:nth-child(3) { background: #B3C0F4; }
+.logo-grid span:nth-child(4) { background: #D7DDF5; }
+.logo-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-link { font-size: 13.5px; font-weight: 600; color: var(--night); text-decoration: none; }
+.nav-cta { font-size: 13px; font-weight: 700; color: #fff; background: var(--cobalt); padding: 9px 18px; border-radius: 100px; text-decoration: none; }
+@media (max-width: 640px) { .nav-link.hide-mobile { display: none; } }
+
+/* LEGAL CONTENT */
+.legal-head { padding: 56px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+.legal-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cobalt); margin-bottom: 10px; }
+.legal-h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(28px,5vw,38px); letter-spacing: -0.02em; margin-bottom: 10px; }
+.legal-meta { font-size: 13px; color: var(--muted); }
+.legal-body { padding-bottom: 80px; }
+.legal-body h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.01em; margin: 36px 0 12px; }
+.legal-body p, .legal-body li { font-size: 14.5px; line-height: 1.7; color: rgba(11,20,38,0.78); margin-bottom: 12px; }
+.legal-body ul { padding-left: 20px; margin-bottom: 16px; }
+.legal-body strong { color: var(--night); font-weight: 700; }
+.legal-body a { color: var(--cobalt); font-weight: 600; }
+.legal-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 13px; }
+.legal-table th { text-align: left; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 8px 10px; border-bottom: 1.5px solid var(--border); }
+.legal-table td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; color: rgba(11,20,38,0.78); }
+.legal-table-wrap { overflow-x: auto; margin-bottom: 20px; }
+
+footer { background: var(--night); color: var(--bone); margin-top: 0; }
+.ft-top { max-width: 1120px; margin: 0 auto; padding: 64px 56px 40px; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+.ft-tagline { font-size: 13.5px; color: rgba(245,243,236,0.55); max-width: 280px; margin-top: 12px; line-height: 1.5; }
+.ft-cols { display: flex; gap: 56px; flex-wrap: wrap; }
+.ft-col h4 { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,243,236,0.4); margin-bottom: 14px; }
+.ft-col a { display: block; font-size: 13.5px; color: rgba(245,243,236,0.8); text-decoration: none; margin-bottom: 10px; }
+.ft-bottom { max-width: 1120px; margin: 0 auto; padding: 20px 56px 32px; display: flex; justify-content: space-between; font-size: 11.5px; color: rgba(245,243,236,0.35); border-top: 1px solid rgba(245,243,236,0.1); }
+@media (max-width: 640px) { .ft-top, .ft-bottom { padding-left: 24px; padding-right: 24px; } .ft-bottom { flex-direction: column; gap: 6px; } }
 </style>
 </head>
 <body>
-  <div class="topbar">
-    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
-      <div class="logo-grid"><div class="sq1"></div><div class="sq2"></div><div class="sq3"></div><div class="sq4"></div></div>
-      <span class="logo-text">Saison</span>
-    </a>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-grid"><span></span><span></span><span></span><span></span></div>
+    <span class="logo-name">Saison</span>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link hide-mobile">← Volver al inicio</a>
+    <a href="https://app.saisonfr.com" class="nav-cta">Ver ofertas →</a>
   </div>
-  <div class="wrap">
-    <h1>Política de Privacidad — Saison</h1>
-<p><strong>Versión provisoria — vigente desde el lanzamiento hasta la inscripción como autoentrepreneur (SIRET)</strong>
-Última actualización: 13 de septiembre de 2026</p>
-<hr />
-<h2>1. Responsable del tratamiento</h2>
-<p>El responsable del tratamiento de los datos personales recopilados a través de Saison (app.saisonfr.com y saisonfr.com) es <strong>Federico Alberti</strong>, persona física, en trámite de inscripción como autoentrepreneur en Francia.</p>
-<p>Contacto para temas de privacidad: contact@saisonfr.com</p>
-<h2>2. Datos que recopilamos y su finalidad</h2>
-<table>
-<thead>
-<tr>
-<th>Categoría de dato</th>
-<th>Ejemplos</th>
-<th>Finalidad</th>
-<th>Base legal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Datos de identificación</td>
-<td>Nombre, apellido, edad, nacionalidad</td>
-<td>Crear tu cuenta y verificar elegibilidad para las ofertas</td>
-<td>Ejecución del servicio solicitado</td>
-</tr>
-<tr>
-<td>Datos de contacto</td>
-<td>Email, número de WhatsApp</td>
-<td>Comunicarnos con vos sobre tu cuenta y postulaciones</td>
-<td>Ejecución del servicio solicitado</td>
-</tr>
-<tr>
-<td>Situación migratoria</td>
-<td>Tipo de visa, estatus legal en Europa</td>
-<td>Filtrar ofertas compatibles con tu situación</td>
-<td>Consentimiento explícito</td>
-</tr>
-<tr>
-<td>Nivel de idioma</td>
-<td>Nivel de francés e inglés declarado</td>
-<td>Emparejarte con ofertas según el nivel requerido</td>
-<td>Ejecución del servicio solicitado</td>
-</tr>
-<tr>
-<td>Preferencias laborales</td>
-<td>Puesto, región, fechas de disponibilidad, alojamiento</td>
-<td>Personalizar las ofertas que ves</td>
-<td>Ejecución del servicio solicitado</td>
-</tr>
-<tr>
-<td>Currículum y documentos</td>
-<td>CV adjunto, foto de perfil</td>
-<td>Compartir tu perfil con empleadores cuando corresponda</td>
-<td>Consentimiento explícito</td>
-</tr>
-<tr>
-<td>Datos de pago</td>
-<td>Gestionados por Stripe, no almacenados por Saison</td>
-<td>Procesar tu acceso Premium</td>
-<td>Ejecución del contrato</td>
-</tr>
-<tr>
-<td>Datos técnicos</td>
-<td>Dispositivo, IP, uso de la app</td>
-<td>Seguridad y funcionamiento de la Plataforma</td>
-<td>Interés legítimo</td>
-</tr>
-</tbody>
-</table>
-<p>No solicitamos ni tratamos datos sensibles más allá de los estrictamente necesarios para la finalidad del servicio (por ejemplo, la situación migratoria, cuando la proporcionás voluntariamente para acceder a ofertas compatibles).</p>
-<h2>3. Cómo usamos tus datos frente a los empleadores</h2>
-<p>Este punto es central en nuestro modelo y queremos que sea explícito: <strong>la identidad del empleador no se revela a los candidatos del plan gratuito</strong>. Del mismo modo, tus datos de contacto directo (email, WhatsApp) y tu carta de motivación solo se comparten con un empleador específico cuando vos activás la función correspondiente (contacto gratuito limitado o acceso Premium), y únicamente para el puesto al que decidiste postularte.</p>
-<p>No vendemos, alquilamos ni compartimos tu información con terceros para fines de marketing ajenos a Saison.</p>
-<h2>4. Con quién compartimos tus datos (encargados del tratamiento)</h2>
-<p>Utilizamos proveedores externos que procesan datos en nuestro nombre, bajo las garantías de confidencialidad correspondientes:</p>
-<ul>
-<li><strong>Supabase</strong> (base de datos, autenticación y almacenamiento de archivos, incluyendo tu CV)</li>
-<li><strong>Stripe</strong> (procesamiento de pagos del acceso Premium)</li>
-<li><strong>Resend</strong> (envío de emails transaccionales y notificaciones)</li>
-<li><strong>Empleadores del sector HCR</strong> (únicamente los datos que vos autorizás compartir al postularte a una oferta específica)</li>
-</ul>
-<p>Estos proveedores están obligados contractualmente a proteger tus datos y a utilizarlos solo para prestar el servicio que tienen contratado con nosotros.</p>
-<h2>5. Cuánto tiempo conservamos tus datos</h2>
-<p>Conservamos tus datos mientras tu cuenta esté activa. Si solicitás la eliminación de tu cuenta, eliminamos o anonimizamos tus datos personales dentro de un plazo razonable, salvo que debamos conservar cierta información por obligación legal (por ejemplo, registros de facturación).</p>
-<p>Las ofertas de empleo se eliminan automáticamente de la Plataforma a los 60 días de su publicación.</p>
-<h2>6. Transferencias internacionales</h2>
-<p>La mayor parte de tus datos personales (perfil, documentos, CV) se almacenan en servidores de <strong>Supabase ubicados en la región de Irlanda (Unión Europea)</strong>, dentro del Espacio Económico Europeo, por lo que no constituyen una transferencia internacional fuera de la UE.</p>
-<p>Para los servicios que sí pueden implicar procesamiento fuera de la UE, aplicamos las siguientes garantías, según la información pública de cada proveedor:</p>
-<ul>
-<li><strong>Stripe</strong> (pagos): cuenta con una entidad europea (Stripe Payments Europe Limited, con sede en Irlanda) y aplica las Cláusulas Contractuales Tipo de la UE ("Standard Contractual Clauses") para cualquier dato que se transfiera a Stripe Inc. en Estados Unidos, además de estar certificada bajo el marco EU-U.S. Data Privacy Framework.</li>
-<li><strong>Resend</strong> (envío de emails): es una empresa con sede en Estados Unidos, y almacena el contenido de los emails, registros de entrega y datos de cuenta en ese país, independientemente de la región de envío seleccionada. Esta transferencia está cubierta por las Cláusulas Contractuales Tipo incluidas en su Acuerdo de Procesamiento de Datos y por su certificación bajo el EU-U.S. Data Privacy Framework.</li>
-</ul>
-<h2>7. Tus derechos</h2>
-<p>De acuerdo con el Reglamento General de Protección de Datos (RGPD), tenés derecho a:</p>
-<ul>
-<li><strong>Acceder</strong> a los datos personales que tenemos sobre vos</li>
-<li><strong>Rectificar</strong> datos inexactos o incompletos</li>
-<li><strong>Solicitar la eliminación</strong> de tus datos ("derecho al olvido")</li>
-<li><strong>Oponerte</strong> al tratamiento de tus datos en determinados casos</li>
-<li><strong>Solicitar la portabilidad</strong> de tus datos a otro servicio</li>
-<li><strong>Limitar</strong> el tratamiento de tus datos en determinadas circunstancias</li>
-</ul>
-<p>Podés ejercer estos derechos escribiendo a contact@saisonfr.com. Responderemos dentro de los plazos establecidos por el RGPD.</p>
-<p>Si considerás que no hemos respetado tus derechos, podés presentar una reclamación ante la autoridad de control competente. En Francia, esta autoridad es la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) — www.cnil.fr.</p>
-<h2>8. Seguridad de los datos</h2>
-<p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos, incluyendo control de acceso mediante políticas de seguridad a nivel de fila (RLS) en nuestra base de datos y encriptación en tránsito. Ningún sistema es completamente infalible, pero trabajamos activamente para minimizar riesgos.</p>
-<h2>9. Menores de edad</h2>
-<p>Saison no está dirigida a menores de 18 años. No recopilamos intencionalmente datos de personas menores de esa edad.</p>
-<h2>10. Cookies y tecnologías similares</h2>
-<p>Saison no utiliza cookies de publicidad ni de rastreo de terceros. Utilizamos <strong>almacenamiento local del navegador (localStorage)</strong> para dos fines estrictamente funcionales:</p>
-<ul>
-<li>Mantener tu sesión iniciada, gestionado por nuestro proveedor de autenticación (Supabase).</li>
-<li>Recordar, si llegaste a Saison a través del enlace de un colaborador o referido, el código correspondiente, para poder atribuir correctamente tu registro.</li>
-</ul>
-<p>Esta información no se comparte con terceros con fines publicitarios y podés borrarla en cualquier momento eliminando los datos de navegación de tu navegador, aunque esto cerrará tu sesión activa.</p>
-<h2>11. Cambios a esta política</h2>
-<p>Podemos actualizar esta Política de Privacidad. Te notificaremos los cambios relevantes a través de la Plataforma o por email antes de que entren en vigor.</p>
-<h2>12. Contacto</h2>
-<p>Para cualquier consulta sobre esta Política de Privacidad o el tratamiento de tus datos: contact@saisonfr.com</p>
+</nav>
+
+<div class="container">
+  <div class="legal-head">
+    <div class="legal-eyebrow">Legal</div>
+    <h1 class="legal-h1">Política de Privacidad</h1>
+    <p class="legal-meta">Versión provisoria, vigente desde el lanzamiento hasta la inscripción de Saison como autoentrepreneur (SIRET) en Francia. Última actualización: 16 de octubre de 2026.</p>
   </div>
+
+  <div class="legal-body">
+    <h2>1. Responsable del tratamiento</h2>
+    <p>El responsable del tratamiento de los datos personales recopilados a través de Saison (app.saisonfr.com y saisonfr.com) es <strong>Federico Alberti</strong>, persona física, en trámite de inscripción como autoentrepreneur en Francia.</p>
+    <p>Contacto para temas de privacidad: <a href="mailto:contact@saisonfr.com">contact@saisonfr.com</a></p>
+
+    <h2>2. Datos que recopilamos y su finalidad</h2>
+    <div class="legal-table-wrap">
+    <table class="legal-table">
+      <tr><th>Categoría de dato</th><th>Ejemplos</th><th>Finalidad</th><th>Base legal</th></tr>
+      <tr><td>Datos de identificación</td><td>Nombre, apellido, edad, nacionalidad</td><td>Crear tu cuenta y verificar elegibilidad para las ofertas</td><td>Ejecución del servicio solicitado</td></tr>
+      <tr><td>Datos de contacto</td><td>Email, número de WhatsApp</td><td>Comunicarnos con vos sobre tu cuenta y postulaciones</td><td>Ejecución del servicio solicitado</td></tr>
+      <tr><td>Situación migratoria</td><td>Tipo de visa, estatus legal en Europa</td><td>Filtrar ofertas compatibles con tu situación</td><td>Consentimiento explícito</td></tr>
+      <tr><td>Nivel de idioma</td><td>Nivel de francés e inglés declarado</td><td>Emparejarte con ofertas según el nivel requerido</td><td>Ejecución del servicio solicitado</td></tr>
+      <tr><td>Preferencias laborales</td><td>Puesto, región, fechas de disponibilidad, alojamiento</td><td>Personalizar las ofertas que ves</td><td>Ejecución del servicio solicitado</td></tr>
+      <tr><td>Currículum y documentos</td><td>CV adjunto, foto de perfil</td><td>Compartir tu perfil con empleadores cuando corresponda</td><td>Consentimiento explícito</td></tr>
+      <tr><td>Datos de pago</td><td>Gestionados por Stripe, no almacenados por Saison</td><td>Procesar tu suscripción Premium</td><td>Ejecución del contrato</td></tr>
+      <tr><td>Datos técnicos</td><td>Dispositivo, IP, uso de la app</td><td>Seguridad y funcionamiento de la Plataforma</td><td>Interés legítimo</td></tr>
+    </table>
+    </div>
+    <p>No solicitamos ni tratamos datos sensibles más allá de los estrictamente necesarios para la finalidad del servicio (por ejemplo, la situación migratoria, cuando la proporcionás voluntariamente para acceder a ofertas compatibles).</p>
+
+    <h2>3. Cómo usamos tus datos frente a los empleadores</h2>
+    <p>Este punto es central en nuestro modelo y queremos que sea explícito: <strong>la identidad del empleador no se revela a los candidatos del plan gratuito</strong>. Del mismo modo, tus datos de contacto directo (email, WhatsApp) y tu carta de motivación solo se comparten con un empleador específico cuando vos activás la función correspondiente (plan Premium o servicio de shortlist), y únicamente para el puesto al que decidiste postularte.</p>
+    <p>No vendemos, alquilamos ni compartimos tu información con terceros para fines de marketing ajenos a Saison.</p>
+
+    <h2>4. Con quién compartimos tus datos (encargados del tratamiento)</h2>
+    <p>Utilizamos proveedores externos que procesan datos en nuestro nombre, bajo las garantías de confidencialidad correspondientes:</p>
+    <ul>
+      <li><strong>Supabase</strong> (base de datos, autenticación y almacenamiento de archivos, incluyendo tu CV)</li>
+      <li><strong>Stripe</strong> (procesamiento de pagos de la suscripción Premium)</li>
+      <li><strong>Resend</strong> (envío de emails transaccionales y notificaciones)</li>
+      <li><strong>Empleadores del sector HCR</strong> (únicamente los datos que vos autorizás compartir al postularte a una oferta específica)</li>
+    </ul>
+    <p>Estos proveedores están obligados contractualmente a proteger tus datos y a utilizarlos solo para prestar el servicio que tienen contratado con nosotros.</p>
+
+    <h2>5. Cuánto tiempo conservamos tus datos</h2>
+    <p>Conservamos tus datos mientras tu cuenta esté activa. Si solicitás la eliminación de tu cuenta, eliminamos o anonimizamos tus datos personales dentro de un plazo razonable, salvo que debamos conservar cierta información por obligación legal (por ejemplo, registros de facturación).</p>
+    <p>Las ofertas de empleo se eliminan automáticamente de la Plataforma a los 60 días de su publicación.</p>
+
+    <h2>6. Transferencias internacionales</h2>
+    <p>Cuando alguno de nuestros proveedores procesa datos fuera del Espacio Económico Europeo, nos aseguramos de que existan garantías adecuadas conforme al RGPD, como cláusulas contractuales tipo u otro mecanismo de transferencia válido.</p>
+
+    <h2>7. Tus derechos</h2>
+    <p>De acuerdo con el Reglamento General de Protección de Datos (RGPD), tenés derecho a:</p>
+    <ul>
+      <li><strong>Acceder</strong> a los datos personales que tenemos sobre vos</li>
+      <li><strong>Rectificar</strong> datos inexactos o incompletos</li>
+      <li><strong>Solicitar la eliminación</strong> de tus datos ("derecho al olvido")</li>
+      <li><strong>Oponerte</strong> al tratamiento de tus datos en determinados casos</li>
+      <li><strong>Solicitar la portabilidad</strong> de tus datos a otro servicio</li>
+      <li><strong>Limitar</strong> el tratamiento de tus datos en determinadas circunstancias</li>
+    </ul>
+    <p>Podés ejercer estos derechos escribiendo a <a href="mailto:contact@saisonfr.com">contact@saisonfr.com</a>. Responderemos dentro de los plazos establecidos por el RGPD.</p>
+    <p>Si considerás que no hemos respetado tus derechos, podés presentar una reclamación ante la autoridad de control competente. En Francia, esta autoridad es la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) — <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+
+    <h2>8. Seguridad de los datos</h2>
+    <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos, incluyendo control de acceso mediante políticas de seguridad a nivel de fila (RLS) en nuestra base de datos y encriptación en tránsito. Ningún sistema es completamente infalible, pero trabajamos activamente para minimizar riesgos.</p>
+
+    <h2>9. Menores de edad</h2>
+    <p>Saison no está dirigida a menores de 18 años. No recopilamos intencionalmente datos de personas menores de esa edad.</p>
+
+    <h2>10. Cambios a esta política</h2>
+    <p>Podemos actualizar esta Política de Privacidad. Te notificaremos los cambios relevantes a través de la Plataforma o por email antes de que entren en vigor.</p>
+
+    <h2>11. Contacto</h2>
+    <p>Para cualquier consulta sobre esta Política de Privacidad o el tratamiento de tus datos: <a href="mailto:contact@saisonfr.com">contact@saisonfr.com</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-top">
+    <div>
+      <a href="/" class="logo"><div class="logo-grid"><span></span><span></span><span></span><span></span></div><span class="logo-name" style="color:var(--bone)">Saison</span></a>
+      <p class="ft-tagline">La única plataforma en español con todo lo que necesitás para hacer una temporada en Francia.</p>
+    </div>
+    <div class="ft-cols">
+      <div class="ft-col"><h4>Candidatos</h4><a href="/#ofertas">Ver ofertas</a><a href="/#opiniones">Opiniones</a><a href="/#faq">FAQ</a></div>
+      <div class="ft-col"><h4>Saison</h4><a href="https://instagram.com/saisonfr">Instagram</a><a href="https://chat.whatsapp.com/HVnifNjtk2LIifo2HSpHSi?mode=gi_t">Comunidad WhatsApp</a></div>
+      <div class="ft-col"><h4>Legal</h4><a href="/terminos.html">Términos</a><a href="/privacidad.html">Privacidad</a></div>
+    </div>
+  </div>
+  <div class="ft-bottom"><span>© 2026 Saison.</span><span>SMIC 2026 · €12,31/h</span></div>
+</footer>
+
 </body>
 </html>
