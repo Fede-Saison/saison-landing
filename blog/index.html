@@ -65,12 +65,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 @keyframes rise{to{opacity:1;transform:translateY(0)}}
 .cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#13224a,var(--night) 75%)}
 .cover::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 20%,rgba(10,58,242,.45) 0%,transparent 55%)}
+.cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 .cover .motif{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
 .cover .num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:92px;color:rgba(245,243,236,.1);letter-spacing:-.04em}
-.cover .glyph{position:absolute;bottom:18px;left:20px;display:grid;grid-template-columns:1fr 1fr;gap:3px;width:26px;height:26px;opacity:.5}
+.cover .glyph{position:absolute;bottom:18px;left:20px;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3px;width:26px;height:26px;opacity:.85;filter:drop-shadow(0 1px 4px rgba(0,0,0,.4))}
 .cover .glyph span{border-radius:3px;display:block}
 .cover .glyph span:nth-child(1){background:#0A3AF2}.cover .glyph span:nth-child(2){background:#7690F3}.cover .glyph span:nth-child(3){background:#B3C0F4}.cover .glyph span:nth-child(4){background:#D7DDF5}
-.tag{position:absolute;right:0;bottom:0;background:var(--cobalt);color:#fff;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;border-radius:10px 0 0 0;font-weight:500}
+.tag{position:absolute;right:0;bottom:0;z-index:2;background:var(--cobalt);color:#fff;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;border-radius:10px 0 0 0;font-weight:500}
 .card-body{padding:22px 22px 20px}
 .card h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;line-height:1.28;margin-bottom:10px}
 .card p{font-size:14px;line-height:1.55;color:var(--muted);margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -172,6 +173,8 @@ footer{background:var(--night);padding:56px 56px 32px}
 
     <a class="card" data-cat="guias" href="/blog/cv-para-trabajar-en-francia?utm_source=blog&amp;utm_medium=index&amp;utm_campaign=blog-home&amp;utm_content=card-cv" style="animation-delay:.02s">
       <div class="cover">
+        <!-- Reemplazar por la foto curada: /blog/img/cv-para-trabajar-en-francia.jpg (recomendado 4:3, mínimo 800x600) -->
+        <img class="cover-img" src="/blog/img/cv-para-trabajar-en-francia.jpg" alt="CV para trabajar en Francia" loading="lazy" decoding="async" onerror="this.style.display='none'">
         <div class="motif"><span class="num">01</span></div>
         <div class="glyph"><span></span><span></span><span></span><span></span></div>
         <span class="tag">Guía</span>
@@ -188,6 +191,8 @@ footer{background:var(--night);padding:56px 56px 32px}
 
     <a class="card" data-cat="guias" href="/blog/como-prepararte-para-una-entrevista-en-francia?utm_source=blog&amp;utm_medium=index&amp;utm_campaign=blog-home&amp;utm_content=card-entrevista" style="animation-delay:.08s">
       <div class="cover">
+        <!-- Reemplazar por la foto curada: /blog/img/como-prepararte-para-una-entrevista-en-francia.jpg (recomendado 4:3, mínimo 800x600) -->
+        <img class="cover-img" src="/blog/img/como-prepararte-para-una-entrevista-en-francia.jpg" alt="Entrevista de trabajo en Francia" loading="lazy" decoding="async" onerror="this.style.display='none'">
         <div class="motif"><span class="num">02</span></div>
         <div class="glyph"><span></span><span></span><span></span><span></span></div>
         <span class="tag">Guía</span>
@@ -202,27 +207,27 @@ footer{background:var(--night);padding:56px 56px 32px}
       </div>
     </a>
 
-    <div class="card ghost" data-cat="tramites" style="animation-delay:.14s">
+    <div class="card ghost" data-cat="testimonios" style="animation-delay:.14s">
       <div class="cover"><span class="soon">Próximamente</span></div>
       <div class="card-body">
-        <h3>Visa Vacaciones-Trabajo: la guía paso a paso</h3>
-        <p>Qué documentos necesitás, los tiempos reales del trámite y los errores más comunes al aplicar.</p>
+        <h3>La historia detrás de Saison</h3>
+        <p>Antes de ser una plataforma, Saison fue nuestra propia búsqueda de trabajo en Francia. Por qué decidimos construir esto, contado por quien lo vivió primero.</p>
       </div>
     </div>
 
-    <div class="card ghost" data-cat="testimonios" style="animation-delay:.2s">
+    <div class="card ghost" data-cat="guias" style="animation-delay:.2s">
       <div class="cover"><span class="soon">Próximamente</span></div>
       <div class="card-body">
-        <h3>"Llegué sin hablar nada de francés": historias de la comunidad</h3>
-        <p>Testimonios reales de quienes ya hicieron su primera temporada, contados por ellos mismos.</p>
+        <h3>Salarios de temporada en Francia</h3>
+        <p>Qué salario esperar según el puesto y la región, cuándo una oferta está bien pagada y qué mirar antes de aceptar un número.</p>
       </div>
     </div>
 
     <div class="card ghost" data-cat="vida" style="animation-delay:.26s">
       <div class="cover"><span class="soon">Próximamente</span></div>
       <div class="card-body">
-        <h3>Cuánto cuesta vivir una temporada en los Alpes</h3>
-        <p>Gastos reales de alojamiento, comida y salidas en destinos de montaña, mes a mes.</p>
+        <h3>Cuánto se puede ahorrar por temporada</h3>
+        <p>Salario, propinas, costo de vida real y gastos que nadie te avisa: la cuenta completa de lo que te podés llevar al final.</p>
       </div>
     </div>
 
