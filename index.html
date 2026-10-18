@@ -77,6 +77,16 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .nav-cta:hover { background: var(--cobalt); }
 .nav-empleadores { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cobalt); text-decoration: none; font-family: 'DM Mono', monospace; border: 1px solid rgba(10,58,242,0.2); padding: 9px 16px; border-radius: 100px; }
 .nav-empleadores:hover { background: rgba(10,58,242,0.06); }
+.nav-burger { display: none; flex-direction: column; justify-content: center; gap: 4px; width: 32px; height: 32px; background: none; border: none; cursor: pointer; padding: 0; margin-left: 8px; }
+.nav-burger span { display: block; width: 20px; height: 2px; background: var(--night); border-radius: 1px; transition: transform .25s ease, opacity .25s ease; }
+.nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.nav-mobile-menu { position: fixed; top: 64px; left: 0; right: 0; background: var(--bone); border-bottom: 1px solid var(--border); display: flex; flex-direction: column; padding: 8px 20px 20px; gap: 2px; transform: translateY(-8px); opacity: 0; pointer-events: none; transition: transform .2s ease, opacity .2s ease; z-index: 99; }
+.nav-mobile-menu.show { transform: translateY(0); opacity: 1; pointer-events: auto; }
+.nav-mobile-link { display: block; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; font-family: 'DM Mono', monospace; color: var(--night); text-decoration: none; padding: 14px 4px; border-bottom: 1px solid var(--border); }
+.nav-mobile-link:last-child { border-bottom: none; }
+@media (max-width: 600px) { .nav-burger { display: flex; } }
 
 /* STICKY CTA */
 .sticky-cta { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%) translateY(120%); z-index: 200; display: flex; align-items: center; gap: 14px; background: var(--night); color: var(--bone); padding: 10px 10px 10px 20px; border-radius: 100px; box-shadow: 0 12px 32px rgba(11,20,38,0.28); transition: transform 0.35s cubic-bezier(0.22,1,0.36,1); }
@@ -482,7 +492,17 @@ footer { background: var(--night); padding: 56px 56px 32px; }
     <a href="https://app.saisonfr.com" class="nav-cta">Ver ofertas →</a>
     <a href="/employeurs" class="nav-empleadores">Employeurs →</a>
   </div>
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="#precios" class="nav-mobile-link">Cómo funciona</a>
+  <a href="#opiniones" class="nav-mobile-link">Opiniones</a>
+  <a href="#faq" class="nav-mobile-link">FAQ</a>
+  <a href="/blog" class="nav-mobile-link">Blog</a>
+  <a href="/employeurs" class="nav-mobile-link">Employeurs →</a>
+</div>
 
 <!-- HERO — qué es + 3 formas de usarlo, visibles de entrada -->
 <section class="hero">
@@ -1033,6 +1053,22 @@ footer { background: var(--night); padding: 56px 56px 32px; }
   startAuto();
 })();
 </script>
-
+<script>
+  const navBurger = document.getElementById('navBurger');
+  const navMobileMenu = document.getElementById('navMobileMenu');
+  if (navBurger && navMobileMenu) {
+    navBurger.addEventListener('click', () => {
+      const isOpen = navMobileMenu.classList.toggle('show');
+      navBurger.setAttribute('aria-expanded', String(isOpen));
+    });
+    navMobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMobileMenu.classList.remove('show');
+        navBurger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
 </body>
+
 </html>
