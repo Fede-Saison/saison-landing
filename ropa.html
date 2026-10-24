@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Equipo de invierno Saison</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: una sola columna de lectura, capas de abajo hacia arriba, total en el único bloque cobalto. */
+:root{
+  --bg:#FFFFFF; --surface:#F7F7F5; --fg:#0B1426; --muted:#596074; --rule:#E4E2DC;
+  --accent:#0A3AF2; --accent-text:#0A3AF2; --on-accent:#F5F3EC;
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg); font:400 16px/1.5 var(--body);
+  padding-block:32px 56px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap{max-width:720px; margin:0 auto}
+.brand{display:flex; align-items:center; gap:10px; font:800 22px/1 var(--display); letter-spacing:-.02em}
+h1{font:800 clamp(2rem,7vw,3.1rem)/1.02 var(--display); letter-spacing:-.035em; margin:36px 0 12px; text-wrap:balance}
+.lead{color:var(--muted); max-width:52ch; margin:0}
+.seg{display:inline-flex; margin:28px 0 8px; border:1.5px solid var(--rule); border-radius:12px; padding:3px; background:var(--surface)}
+.seg button{font:600 15px/1 var(--body); color:var(--fg); background:transparent; border:0; border-radius:9px; padding:11px 22px; cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--fg); color:var(--bg)}
+.seg button:focus-visible,.btn:focus-visible,.own input:focus-visible{outline:3px solid var(--accent); outline-offset:2px}
+.hint{font-size:.85rem; color:var(--muted); margin:0 0 8px}
+.group{margin-top:36px}
+.group h2{font:600 12px/1 var(--body); letter-spacing:.12em; text-transform:uppercase; color:var(--accent-text); margin:0 0 4px}
+.group .sub{font:700 1.25rem/1.2 var(--display); letter-spacing:-.02em; margin:0 0 6px}
+.row{display:grid; grid-template-columns:1fr auto; gap:8px 20px; padding:18px 0; border-top:1px solid var(--rule)}
+.info{min-width:0}
+.name{font-weight:600}
+.tag{display:inline-block; font:600 11px/1 var(--body); letter-spacing:.08em; text-transform:uppercase; border:1px solid var(--rule); color:var(--muted); border-radius:6px; padding:4px 6px; margin-left:8px; vertical-align:2px}
+.why{color:var(--muted); font-size:.92rem; margin:3px 0 0; max-width:54ch}
+.note{color:var(--muted); font-size:.82rem; margin:4px 0 0}
+.side{display:flex; flex-direction:column; align-items:flex-end; gap:8px}
+.price{font:700 1.4rem/1 var(--display); font-variant-numeric:tabular-nums; letter-spacing:-.02em; white-space:nowrap}
+.row.owned .price{text-decoration:line-through; opacity:.45}
+.btn{display:inline-block; font:600 14px/1 var(--body); color:var(--fg); text-decoration:none; border:1.5px solid var(--fg); border-radius:10px; padding:11px 14px; white-space:nowrap}
+.btn:hover{background:var(--fg); color:var(--bg)}
+.own{display:flex; align-items:center; gap:8px; font-size:.85rem; color:var(--muted); cursor:pointer}
+.own input{width:18px; height:18px; accent-color:var(--accent); margin:0}
+.total{margin-top:44px; background:var(--surface); color:var(--fg); border:1.5px solid var(--rule); border-radius:18px; padding:26px 24px}
+.total .lbl{font:600 12px/1 var(--body); letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+.total .num{font:800 clamp(2.6rem,11vw,4rem)/1 var(--display); letter-spacing:-.04em; margin:12px 0 8px; font-variant-numeric:tabular-nums; color:var(--accent-text)}
+.total p{margin:0; color:var(--muted); font-size:.95rem}
+.total .opt{margin-top:10px; font-weight:600; color:var(--fg)}
+.cta{margin-top:28px; border:1.5px solid var(--rule); background:var(--surface); border-radius:18px; padding:22px 24px; display:flex; gap:16px 24px; flex-wrap:wrap; align-items:center; justify-content:space-between}
+.cta strong{font:700 1.2rem/1.2 var(--display); letter-spacing:-.02em; display:block}
+.cta span{color:var(--muted); font-size:.92rem}
+.cta .btn{background:var(--accent); border-color:var(--accent); color:var(--on-accent)}
+.cta .btn:hover{background:var(--fg); border-color:var(--fg); color:var(--bg)}
+.fine{margin-top:24px; font-size:.82rem; color:var(--muted); max-width:62ch}
+@media (max-width:520px){
+  .row{grid-template-columns:1fr}
+  .side{flex-direction:row; align-items:center; justify-content:space-between; flex-wrap:wrap}
+}
+@media (prefers-reduced-motion:no-preference){ .btn{transition:background .15s,color .15s} }
+</style>
+
+<div class="wrap">
+  <div class="brand">
+    <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+      <rect width="13.5" height="13.5" rx="2.7" fill="#0A3AF2"/>
+      <rect x="16.5" width="13.5" height="13.5" rx="2.7" fill="#0A3AF2" opacity=".6"/>
+      <rect y="16.5" width="13.5" height="13.5" rx="2.7" fill="#0A3AF2" opacity=".35"/>
+      <rect x="16.5" y="16.5" width="13.5" height="13.5" rx="2.7" fill="#0A3AF2" opacity=".15"/>
+    </svg>
+    <span>Saison</span>
+  </div>
+
+  <h1>Qué ropa llevar a tu temporada de invierno en Francia</h1>
+  <p class="lead">Para ir y volver del trabajo, no para esquiar. Tus traslados van a ser de 20 a 30 minutos: necesitás las capas correctas, y mucha de la ropa que ya tenés sirve.</p>
+
+  <div class="seg" role="group" aria-label="Versión de la ropa">
+    <button type="button" id="btn-h" aria-pressed="true">Hombre</button>
+    <button type="button" id="btn-m" aria-pressed="false">Mujer</button>
+  </div>
+  <p class="hint">Marcá "Ya lo tengo" en lo que ya tenés y el total se recalcula.</p>
+
+  <div id="list"></div>
+
+  <div class="total" aria-live="polite">
+    <div class="lbl" id="t-lbl">Total hombre</div>
+    <div class="num" id="t-num">0,00 €</div>
+    <p id="t-sub">Sin contar el antideslizante opcional.</p>
+    <p class="opt" id="t-opt"></p>
+  </div>
+
+  <div class="cta">
+    <div>
+      <strong>¿Buscás temporada?</strong>
+      <span>Mirá las ofertas con alojamiento en Courchevel y en más de 80 destinos de nieve.</span>
+    </div>
+    <a class="btn" href="https://saisonfr.com" rel="noopener">Ver ofertas en Saison</a>
+  </div>
+
+  <p class="fine">Los links llevan a decathlon.fr. Precios al 24/10/2026: pueden cambiar. Revisá el talle y el stock antes de comprar. El gorro y el antideslizante los vende un tercero dentro de Decathlon.</p>
+</div>
+
+<script>
+(function(){
+  var D='https://www.decathlon.fr/p/';
+  var GROUPS=[
+    {id:'base',  label:'Capa base',     sub:'Lo que va pegado a la piel'},
+    {id:'media', label:'Capa media',    sub:'La que retiene el calor'},
+    {id:'ext',   label:'Capa exterior', sub:'La que te protege'},
+    {id:'pies',  label:'Pies',          sub:'Lo que más importa es el agarre'},
+    {id:'cab',   label:'Cabeza y manos',sub:'Con poco dinero cambia mucho'}
+  ];
+  var ITEMS=[
+    {id:'top', g:'base', name:'Remera térmica', why:'Decide si tenés frío. Nada de algodón: mojado, enfría.',
+      p:{h:6.99,m:6.99},
+      u:{h:D+'sous-vetement-thermique-de-ski-chaud-et-confort-homme-bl100-haut-noir/302821/c382m8510029',
+         m:D+'sous-vetement-de-ski-thermique-chaud-et-confort-femme-100-blanc-greige/302806/c335m8807917'},
+      n:{m:'En la página elegí el color negro.'}},
+    {id:'bot', g:'base', name:'Pantalón térmico', why:'Va debajo del pantalón normal.',
+      p:{h:6.99,m:6.99},
+      u:{h:D+'sous-vetement-pantalon-thermique-de-ski-homme-bl-100-noir/302822/c382m8510030',
+         m:D+'sous-vetement-pantalon-thermique-de-ski-femme-bl-100-bas-noir/302807/c382m8510033'}},
+    {id:'med', g:'base', name:'Medias de montaña, pack de 2', why:'Pies secos y abrigados durante todo el traslado.',
+      p:{h:7.19,m:7.19},
+      u:{h:D+'chaussettes-chaudes-de-randonnee-mi-hautes-2-paires-adulte-sh500-vert/307022/c241m8872276',
+         m:D+'chaussettes-chaudes-de-randonnee-mi-hautes-2-paires-adulte-sh500-vert/307022/c241m8872276'}},
+    {id:'pol', g:'media', name:'Polar media cremallera', why:'Si entrás a un lugar con calefacción, te lo sacás y listo.',
+      p:{h:8.99,m:8.99},
+      u:{h:D+'polaire-de-randonnee-montagne-homme-mh100-demi-zip-noir/312360/c1m966425',
+         m:D+'polaire-de-randonnee-montagne-femme-mh100-demi-zip-rose/312282/c341m8817715'}},
+    {id:'cam', g:'ext', name:'Campera -10 °C', why:'Es el abrigo. Impermeable y con confort hasta -10 °C.',
+      p:{h:44.99,m:44.99},
+      u:{h:D+'veste-de-randonnee-10degc-impermeable-homme-nh500-vert-et-beige/331992/c277c414c382m8986420',
+         m:D+'veste-de-randonnee-10degc-impermeable-femme-nh500-noir/331299/c382m8640297'}},
+    {id:'cub', g:'ext', name:'Cubrepantalón impermeable', why:'Solo para días de nieve o lluvia. Si no nieva, no lo necesitás.',
+      p:{h:17.99,m:15.99},
+      u:{h:D+'surpantalon-impermeable-de-randonnee-nh500-imper-homme/345947/c382m8796550',
+         m:D+'surpantalon-impermeable-de-randonnee-raincut-femme/193191/c1c344m8408195'}},
+    {id:'bts', g:'pies', name:'Botas de invierno', why:'Buscá una suela con agarre.',
+      w:{h:'Según Decathlon: confort hasta -6 °C quieto y límite de -15 °C en movimiento.'},
+      p:{h:34.99,m:34.99},
+      u:{h:D+'chaussures-hiver-de-randonnee-impermeables-homme-nh100-marron/338961/c259m8737444',
+         m:D+'chaussures-de-randonnee-neige-chaudes-et-impermeables-femme-nh100-noir/346370/c382c93m8800108'},
+      n:{h:'Talles del 40 al 46.'}},
+    {id:'ant', g:'pies', name:'Antideslizantes para hielo', tag:'Opcional', opt:true,
+      why:'En hielo la suela sola no alcanza: Decathlon lo aclara en la ficha de las botas.',
+      p:{h:16.95,m:16.95},
+      u:{h:D+'mp/crampon-a-neige-ideal-pour-les-deplacements-sur-neige-dure-et-tassee-snow-walk/3cbc5b3b-d7fc-48a8-a920-2dfe869151f3/c1',
+         m:D+'mp/crampon-a-neige-ideal-pour-les-deplacements-sur-neige-dure-et-tassee-snow-walk/3cbc5b3b-d7fc-48a8-a920-2dfe869151f3/c1'}},
+    {id:'cue', g:'cab', name:'Cuello tubular', why:'Tapa cuello y cara cuando hay viento.',
+      p:{h:4.99,m:4.99},
+      u:{h:D+'tour-de-cou-de-randonnee-adulte-hike-100-noir/330154/c1m8965251',
+         m:D+'tour-de-cou-de-randonnee-adulte-hike-100-noir/330154/c1m8965251'}},
+    {id:'gor', g:'cab', name:'Gorro', why:'Las orejas se enfrían rápido.',
+      p:{h:7.94,m:7.94},
+      u:{h:D+'mp/bonnet-de-ski-woolly-bleu-roi/00793e15-22a0-42d7-b6f1-bec0c17af114/c218c188c90',
+         m:D+'mp/bonnet-de-ski-woolly-bleu-roi/00793e15-22a0-42d7-b6f1-bec0c17af114/c218c188c90'}},
+    {id:'gua', g:'cab', name:'Guantes táctiles', why:'Para traslados cortos. Dejan usar el celular sin sacártelos.',
+      p:{h:14.99,m:14.99},
+      u:{h:D+'gants-tactiles-et-stretch-de-trekking-montagne-mt500-noir-adulte/335238/c382c382m8655824',
+         m:D+'gants-tactiles-et-stretch-de-trekking-montagne-mt500-noir-adulte/335238/c382c382m8655824'}}
+  ];
+
+  var g = (location.hash === '#mujer') ? 'm' : 'h';
+  var owned = {};
+  var KEY = 'saison-ropa-tengo';
+  try { (JSON.parse(localStorage.getItem(KEY) || '[]')).forEach(function(k){ owned[k] = true; }); } catch(e){}
+
+  function money(n){ return n.toFixed(2).replace('.', ',') + ' €'; }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  var list = document.getElementById('list');
+  var html = '';
+  GROUPS.forEach(function(G){
+    html += '<section class="group"><h2>' + esc(G.label) + '</h2><p class="sub">' + esc(G.sub) + '</p>';
+    ITEMS.filter(function(i){ return i.g === G.id; }).forEach(function(i){
+      html += '<div class="row" id="row-' + i.id + '">' +
+        '<div class="info">' +
+          '<div class="name">' + esc(i.name) + (i.tag ? '<span class="tag">' + esc(i.tag) + '</span>' : '') + '</div>' +
+          '<p class="why">' + esc(i.why) + '</p>' +
+          '<p class="note" id="note-' + i.id + '" hidden></p>' +
+        '</div>' +
+        '<div class="side">' +
+          '<div class="price" id="price-' + i.id + '"></div>' +
+          '<a class="btn" id="link-' + i.id + '" href="#" target="_blank" rel="noopener">Ver en Decathlon</a>' +
+          (i.opt ? '' : '<label class="own"><input type="checkbox" id="own-' + i.id + '" data-id="' + i.id + '"> Ya lo tengo</label>') +
+        '</div></div>';
+    });
+    html += '</section>';
+  });
+  list.innerHTML = html;
+
+  list.addEventListener('change', function(e){
+    var id = e.target && e.target.getAttribute('data-id');
+    if (!id) return;
+    if (e.target.checked) owned[id] = true; else delete owned[id];
+    try { localStorage.setItem(KEY, JSON.stringify(Object.keys(owned))); } catch(err){}
+    refresh();
+  });
+
+  function setG(next){
+    g = next;
+    try { history.replaceState(null, '', g === 'm' ? '#mujer' : '#hombre'); } catch(e){}
+    refresh();
+  }
+  document.getElementById('btn-h').addEventListener('click', function(){ setG('h'); });
+  document.getElementById('btn-m').addEventListener('click', function(){ setG('m'); });
+
+  function refresh(){
+    document.getElementById('btn-h').setAttribute('aria-pressed', g === 'h');
+    document.getElementById('btn-m').setAttribute('aria-pressed', g === 'm');
+    var total = 0, opt = 0;
+    ITEMS.forEach(function(i){
+      var price = i.p[g];
+      document.getElementById('price-' + i.id).textContent = money(price);
+      document.getElementById('link-' + i.id).setAttribute('href', i.u[g]);
+      var row = document.getElementById('row-' + i.id);
+      var own = !i.opt && owned[i.id];
+      row.classList.toggle('owned', !!own);
+      var cb = document.getElementById('own-' + i.id);
+      if (cb) cb.checked = !!own;
+      var note = document.getElementById('note-' + i.id);
+      var text = [];
+      if (i.w && i.w[g]) text.push(i.w[g]);
+      if (i.n && i.n[g]) text.push(i.n[g]);
+      note.textContent = text.join(' ');
+      note.hidden = text.length === 0;
+      if (i.opt) opt = price; else if (!own) total += price;
+    });
+    document.getElementById('t-lbl').textContent = 'Total ' + (g === 'h' ? 'hombre' : 'mujer');
+    document.getElementById('t-num').textContent = money(total);
+    var n = Object.keys(owned).length;
+    document.getElementById('t-sub').textContent = n ? 'Sin contar lo que ya tenés ni el antideslizante opcional.' : 'Sin contar el antideslizante opcional.';
+    document.getElementById('t-opt').textContent = '+ ' + money(opt) + ' si querés los antideslizantes';
+  }
+  refresh();
+})();
+</script>
