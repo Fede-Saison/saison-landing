@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Programa Saisonniers · Acompañamiento para trabajar en Francia · Saison</title>
-<meta name="description" content="El único acompañamiento en español para conseguir tu temporada en Francia: CV al estándar francés, acceso directo a empleadores, revisión de contrato y seguimiento semanal hasta que firmes. €50, pago único.">
-<meta name="robots" content="index,follow">
+<meta name="description" content="Acompañamiento en español para conseguir tu temporada en Francia: CV optimizado al estándar francés, hoja de ruta personalizada, revisión de contrato y asistencia hasta que firmes. €100, pago único. Cupos de verano desde enero.">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://saisonfr.com/programa-saisonniers.html">
+<link rel="alternate" hreflang="es" href="https://saisonfr.com/programa-saisonniers.html">
+<link rel="alternate" hreflang="x-default" href="https://saisonfr.com/programa-saisonniers.html">
+<link rel="preload" as="image" href="programa-eiffel.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -29,11 +32,10 @@
   },
   "offers": {
     "@type": "Offer",
-    "price": "50",
+    "price": "100",
     "priceCurrency": "EUR",
-    "priceValidUntil": "2027-04-30",
-    "availability": "https://schema.org/LimitedAvailability",
-    "description": "Pago único. Incluye asesoría inicial, CV al estándar francés, hoja de ruta personalizada, acceso directo a red de empleadores, método de búsqueda, kit de mensajes, revisión de contrato y seguimiento hasta 45 días."
+    "availability": "https://schema.org/SoldOut",
+    "description": "Pago único. Cupos de invierno agotados; los de verano abren a principios de enero. Incluye asesoría inicial, CV optimizado al estándar francés, hoja de ruta personalizada, método de búsqueda, kit de mensajes, revisión de contrato y asistencia hasta 45 días."
   }
 }
 </script>
@@ -44,10 +46,18 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "¿Cuándo abren los cupos del Programa Saisonniers de verano?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los cupos de invierno están agotados. Los de verano abren a principios de enero. Si te anotás en la lista de espera, te avisamos antes de abrir al público, sin compromiso de compra. Mientras tanto podés usar Saison gratis o con Premium (€7,99, pago único por 90 días) para buscar por tu cuenta."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "¿Por qué no garantizamos empleo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Porque en Francia es ilegal cobrarle a alguien por garantizarle un empleo: el artículo L5321-3 del Code du travail prohíbe exigir una retribución a cambio de servicios de colocación, y el artículo L5324-1 castiga esto con hasta 6 meses de prisión y 3.750€ de multa. Y aunque no lo fuera, no nos parecería correcto. Nosotros ya pasamos por esto: sabemos lo difícil que es buscar temporada sin conocer el mercado. Por eso te damos todo lo que tenemos — CV, contactos, método y seguimiento — pero la decisión final siempre es del empleador, y nunca te vamos a prometer algo que no depende de nosotros."
+        "text": "Porque en Francia es ilegal cobrarle a alguien por garantizarle un empleo: el artículo L5321-3 del Code du travail prohíbe exigir una retribución a cambio de servicios de colocación, y el artículo L5324-1 castiga esto con hasta 6 meses de prisión y 3.750€ de multa. Y aunque no lo fuera, no nos parecería correcto. Nosotros ya pasamos por esto: sabemos lo difícil que es buscar temporada sin conocer el mercado. Por eso te damos todo lo que tenemos — CV, hoja de ruta, método y asistencia — pero la decisión final siempre es del empleador, y nunca te vamos a prometer algo que no depende de nosotros."
       }
     },
     {
@@ -63,7 +73,7 @@
       "name": "¿Qué diferencia hay entre el Programa Saisonniers y el plan Premium?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Premium te da las herramientas para buscar por tu cuenta: ofertas, contacto de empleadores, carta con IA y alertas. El Programa Saisonniers suma asesoría personal, tu CV armado por nuestro equipo, una hoja de ruta con tu lista de establecimientos objetivo y seguimiento semanal hasta que firmes contrato."
+        "text": "Premium te da las herramientas para buscar por tu cuenta: ofertas, contacto de empleadores, carta con IA y alertas. El Programa Saisonniers suma asesoría personal, tu CV optimizado por nuestro equipo, una hoja de ruta con tu lista de establecimientos objetivo y seguimiento semanal hasta que firmes contrato."
       }
     },
     {
@@ -107,7 +117,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 @media (max-width: 640px) { .nav-back { display: none; } }
 
 /* HERO */
-.hero { position: relative; min-height: 86vh; display: flex; align-items: flex-end; background: linear-gradient(180deg, rgba(11,20,38,0.72) 0%, rgba(11,20,38,0.85) 55%, rgba(11,20,38,0.97) 100%), url('programa-eiffel.jpg') center 30%/cover no-repeat; color: var(--bone); }
+.hero { position: relative; min-height: 86vh; display: flex; align-items: flex-end; background: linear-gradient(180deg, rgba(11,20,38,0.72) 0%, rgba(11,20,38,0.85) 55%, rgba(11,20,38,0.97) 100%), url('programa-eiffel.webp') center 30%/cover no-repeat; color: var(--bone); }
 .hero-inner { padding: 60px 24px 56px; max-width: 920px; margin: 0 auto; width: 100%; }
 .hero-badge { display: inline-flex; align-items: center; gap: 7px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cobalt); background: rgba(10,58,242,0.18); border: 1px solid rgba(10,58,242,0.4); padding: 7px 14px; border-radius: 100px; margin-bottom: 20px; }
 .hero-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--cobalt); }
@@ -189,6 +199,35 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
 .ft-col a { display: block; font-size: 13.5px; color: rgba(245,243,236,0.8); text-decoration: none; margin-bottom: 10px; }
 .ft-bottom { max-width: 1120px; margin: 0 auto; padding: 18px 56px 28px; display: flex; justify-content: space-between; font-size: 11.5px; color: rgba(245,243,236,0.35); border-top: 1px solid rgba(245,243,236,0.1); }
 @media (max-width: 640px) { .ft-top, .ft-bottom { padding-left: 24px; padding-right: 24px; } .ft-bottom { flex-direction: column; gap: 6px; } }
+
+/* ---- Cupos / lista de espera ---- */
+.ann{background:var(--night);color:var(--bone)}
+.ann-in{max-width:1120px;margin:0 auto;padding:11px max(16px,env(safe-area-inset-right,0px)) 11px max(16px,env(safe-area-inset-left,0px));display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;justify-content:center;text-align:center;font-size:13px;line-height:1.5}
+.ann-dot{width:7px;height:7px;border-radius:50%;background:#FF6B4A;flex:none}
+.ann a{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid rgba(245,243,236,.5);text-decoration:none;color:var(--bone)}
+.wl{padding:72px 0;background:var(--paper);border-bottom:1px solid var(--border)}
+.wl-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;max-width:960px;margin:0 auto;padding:0 24px}
+.wl-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(10,58,242,.3);background:rgba(10,58,242,.06);color:var(--cobalt);padding:6px 14px;border-radius:100px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.wl-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(26px,3.8vw,40px);letter-spacing:-.03em;line-height:1.05;margin-bottom:14px}
+.wl-text{font-size:14.5px;line-height:1.7;color:rgba(11,20,38,.6);max-width:44ch}
+.wl-form{display:grid;gap:12px;min-width:0}
+.wl-form label{display:block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(11,20,38,.6);margin-bottom:4px}
+.wl-form input[type=email],.wl-form input[type=tel]{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid rgba(11,20,38,.25);border-radius:10px;background:#fff;color:var(--night)}
+.wl-form input:focus-visible,.wl-form button:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+.wl-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.wl-submit{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--cobalt);color:#fff;padding:15px 26px;border-radius:100px;border:0;cursor:pointer;font-weight:700}
+.wl-submit:disabled{opacity:.6;cursor:default}
+.wl-msg{font-size:13px;color:var(--cobalt);min-height:20px;margin:0}
+.wl-comm{display:block;text-align:center;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--night);border:1px solid rgba(11,20,38,.25);padding:14px 26px;border-radius:100px}
+.wl-status{display:grid;gap:6px;margin:0 0 14px}
+.wl-s{display:flex;gap:8px;align-items:center;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+.wl-s::before{content:"";width:8px;height:8px;border-radius:50%;flex:none}
+.wl-s.off{color:rgba(245,243,236,.55);text-decoration:line-through;text-decoration-color:rgba(245,243,236,.35)}
+.wl-s.off::before{background:#FF6B4A}
+.wl-s.soon{color:var(--bone)}
+.wl-s.soon::before{background:#7690F3}
+.wl-later{margin:20px 0 0;padding:16px 18px;background:var(--bone);border-left:2px solid var(--cobalt);font-size:14px;line-height:1.6}
+@media (max-width:820px){.wl{padding:52px 0}.wl-grid{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
 <body>
@@ -200,20 +239,20 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
   </a>
   <div style="display:flex;align-items:center;gap:24px">
     <a href="/" class="nav-back">← Volver al inicio</a>
-    <a href="https://cal.com/saison-federico-alberti/llamada-gratuita-para-programa-saisonniers" class="nav-cta">Reservar llamada →</a>
+    <a href="#lista-espera" class="nav-cta">Avisame cuando abran →</a>
   </div>
 </nav>
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">★ Más elegido · Pre-temporada</div>
+    <div class="hero-badge">Invierno agotado · Verano en enero</div>
     <h1>Programa<br><em>Saisonniers.</em></h1>
     <p class="hero-sub">La forma más tranquila de conseguir tu primera (o próxima) temporada de trabajo en Francia. Acompañamiento humano real, de hispanohablantes que ya hicieron este camino, desde la postulación hasta el contrato firmado.</p>
     <div class="hero-meta">
       <div>
         <div class="hero-meta-lbl">Inversión</div>
-        <div class="hero-meta-val">€50 · pago único</div>
-        <div class="hero-meta-sub">★ 50% OFF · hasta agotar cupos</div>
+        <div class="hero-meta-val">€100 · pago único</div>
+        <div class="hero-meta-sub">Invierno agotado · verano en enero</div>
       </div>
       <div>
         <div class="hero-meta-lbl">Duración</div>
@@ -235,7 +274,7 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
     <div class="eyebrow">Qué es el Programa Saisonniers</div>
     <h2 class="h2">Acompañamiento humano real,<br><em>no solo una app.</em></h2>
     <p class="lead">El Programa Saisonniers combina las herramientas de Saison con la experiencia de nuestro equipo: profesionales hispanohablantes que ya hicieron temporadas en Francia, en hotelería, restauración y camping. Es para quienes quieren venir sobre seguro.</p>
-    <p class="body-text">A diferencia del plan Premium (€7,99) donde buscás por tu cuenta con nuestras herramientas, en el Programa <strong>trabajamos tu candidatura con vos</strong>: te armamos el CV al formato francés, te damos acceso directo a los empleadores de nuestra red que matchean con tu perfil junto con el método y los mensajes exactos para postular, revisamos el contrato cuando llegue la propuesta, y te acompañamos hasta que firmes — en un máximo de 45 días desde que arrancamos.</p>
+    <p class="body-text">A diferencia del plan Premium (€7,99) donde buscás por tu cuenta con nuestras herramientas, en el Programa <strong>trabajamos tu candidatura con vos</strong>: optimizamos tu CV al formato francés, armamos una hoja de ruta personalizada con el método y los mensajes para postular, revisamos el contrato cuando llegue la propuesta, y te asistimos hasta que firmes — en un máximo de 45 días desde que arrancamos.</p>
     <div class="quote-block">
       <p class="quote-text">"Lo que te damos no es información — eso ya está gratis en internet. Lo que te damos es que alguien que ya hizo este camino te acompañe durante el proceso, en tu idioma."</p>
       <p class="quote-author">Equipo Saison</p>
@@ -268,11 +307,11 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
     <div class="eyebrow">Dos temporadas, una sola forma de encararlas</div>
     <div class="photo-split">
       <div class="photo-split-half">
-        <img src="programa-friends-snow.jpg" alt="Temporada de invierno en una estación de esquí de los Alpes franceses, trabajo saisonnier">
+        <img src="programa-friends-snow.webp" width="1200" height="815" loading="lazy" decoding="async" alt="Temporada de invierno en una estación de esquí de los Alpes franceses, trabajo saisonnier">
         <div class="photo-split-cap">Invierno · Alpes</div>
       </div>
       <div class="photo-split-half">
-        <img src="programa-cove1.jpg" alt="Temporada de verano en un hotel o camping de la Costa Azul, trabajo saisonnier en Francia">
+        <img src="programa-cove1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Temporada de verano en un hotel o camping de la Costa Azul, trabajo saisonnier en Francia">
         <div class="photo-split-cap">Verano · Costa Azul</div>
       </div>
     </div>
@@ -288,11 +327,11 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
       </div>
       <div class="feature-card">
         <div class="feature-num">2</div>
-        <div><div class="feature-title">Optimización completa de tu CV al estándar francés</div><div class="feature-body">Te lo rediseñamos y adaptamos al formato que buscan los empleadores franceses. No lo hace una IA — lo hace nuestro equipo, con el conocimiento del mercado real.</div></div>
+        <div><div class="feature-title">Optimización completa de tu CV al estándar francés</div><div class="feature-body">Lo optimizamos y adaptamos al formato que buscan los empleadores franceses. No lo hace una IA — lo hace nuestro equipo, con el conocimiento del mercado real.</div></div>
       </div>
       <div class="feature-card">
         <div class="feature-num">3</div>
-        <div><div class="feature-title">Acceso directo a empleadores de nuestra red</div><div class="feature-body">Te damos el contacto de reclutamiento de los empleadores que matchean con tu perfil, puesto y disponibilidad — y el mensaje exacto para escribirles, sin perder tiempo buscando el canal correcto.</div></div>
+        <div><div class="feature-title">Hoja de ruta personalizada para tu búsqueda</div><div class="feature-body">Armamos con vos un plan según tu perfil, puesto, zona y disponibilidad: qué tipo de establecimientos buscar, cuándo y cómo postular, con el método y los mensajes para hacerlo bien.</div></div>
       </div>
       <div class="feature-card">
         <div class="feature-num">4</div>
@@ -313,22 +352,40 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
     <div class="eyebrow">Cómo funciona · paso a paso</div>
     <h2 class="h2">De la primera llamada<br><em>al contrato firmado.</em></h2>
     <div class="steps">
-      <div class="step"><div class="step-num">Paso 1</div><div class="step-title">Reservás una llamada</div><div class="step-body">Agendamos 15 min por videollamada para conocernos y chequear que el Programa te sirva.</div></div>
-      <div class="step"><div class="step-num">Paso 2</div><div class="step-title">Confirmás y pagás</div><div class="step-body">Si todo cierra, hacés el pago único de €50 y arrancamos esa misma semana.</div></div>
-      <div class="step"><div class="step-num">Paso 3</div><div class="step-title">Trabajamos tu candidatura</div><div class="step-body">Recibís tu CV, tu hoja de ruta y el acceso directo a empleadores de nuestra red. Postulás vos, con seguimiento semanal nuestro.</div></div>
+      <div class="step"><div class="step-num">Paso 1</div><div class="step-title">Reservás una llamada</div><div class="step-body">Los cupos de invierno están agotados. En enero se reabre la llamada de 15 minutos para conocernos y ver si el Programa te sirve.</div></div>
+      <div class="step"><div class="step-num">Paso 2</div><div class="step-title">Confirmás y pagás</div><div class="step-body">Si todo cierra, hacés el pago único de €100 y arrancamos esa misma semana.</div></div>
+      <div class="step"><div class="step-num">Paso 3</div><div class="step-title">Trabajamos tu candidatura</div><div class="step-body">Recibís tu CV optimizado y tu hoja de ruta. Postulás vos, con asistencia y seguimiento semanal nuestro.</div></div>
       <div class="step"><div class="step-num">Paso 4</div><div class="step-title">Firmás tu contrato</div><div class="step-body">Cuando llegue la propuesta, lo revisamos juntos. Tu temporada está confirmada.</div></div>
     </div>
 
     <div class="pricing-block">
       <div class="pricing-eyebrow">Inversión</div>
-      <div class="pricing-row"><div class="pricing-amount">€50</div><div class="pricing-old">€100</div></div>
-      <div class="pricing-note">pago único · precio de pre-temporada</div>
-      <div class="pricing-badge">★ 50% OFF · cupos limitados</div>
+      <div class="pricing-row"><div class="pricing-amount">€100</div></div>
+      <div class="pricing-note">pago único · por temporada</div>
+      <div class="pricing-badge">Invierno agotado · Verano desde enero</div>
       <p class="pricing-foot">En Saison creemos que nadie debería endeudarse para venir a trabajar — por eso ofrecemos un acompañamiento completo a un precio accesible, sin cuotas ni comisión sobre tu sueldo.</p>
       <div class="cta-row">
-        <a href="https://cal.com/saison-federico-alberti/llamada-gratuita-para-programa-saisonniers" class="cta-btn">Reservar llamada →</a>
+        <a href="#lista-espera" class="cta-btn">Avisame cuando abran →</a>
         <a href="mailto:contact@saisonfr.com" class="cta-btn ghost">O escribinos por mail</a>
       </div>
+    </div>
+  </div>
+
+  <div class="section" id="lista-espera" style="padding-top:0">
+    <div class="wl-grid" style="padding:0;max-width:none">
+      <div>
+        <div class="wl-pill">Verano · principios de enero</div>
+        <h2 class="wl-title">Los cupos de invierno se llenaron. Los de verano abren a principios de enero.</h2>
+        <p class="wl-text">Dejá tus datos y te escribimos antes de abrir al público. Sin compromiso de compra.</p>
+      </div>
+      <form class="wl-form" id="wlForm" data-origen="programa" novalidate>
+        <div><label for="wlEmail">Email</label><input id="wlEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="tu@email.com" required maxlength="254"></div>
+        <div><label for="wlWa">WhatsApp (opcional)</label><input id="wlWa" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="+54 9 ..." maxlength="30"></div>
+        <input type="text" name="empresa" class="wl-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="wl-submit">Anotarme en la lista →</button>
+        <p class="wl-msg" id="wlMsg" role="status" aria-live="polite"></p>
+        <a class="wl-comm" href="https://chat.whatsapp.com/HVnifNjtk2LIifo2HSpHSi?mode=gi_t" target="_blank" rel="noopener">Entrar a la comunidad de WhatsApp</a>
+      </form>
     </div>
   </div>
 
@@ -337,8 +394,12 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
     <h2 class="h2">Lo que todos<br><em>nos preguntan antes.</em></h2>
     <div class="faq">
       <div class="faq-item">
+        <div class="faq-q">¿Cuándo abren los cupos del Programa Saisonniers de verano?</div>
+        <div class="faq-a">Los cupos de invierno están agotados. Los de verano abren a principios de enero. Si te anotás en la lista de espera, te avisamos antes de abrir al público, sin compromiso de compra. Mientras tanto podés usar Saison gratis o con Premium (€7,99, pago único por 90 días) para buscar por tu cuenta.</div>
+      </div>
+      <div class="faq-item">
         <div class="faq-q">¿Por qué no garantizamos empleo?</div>
-        <div class="faq-a">Porque en Francia es ilegal cobrarle a alguien por garantizarle un empleo: el artículo L5321-3 del Code du travail prohíbe exigir una retribución a cambio de servicios de colocación, y el artículo L5324-1 castiga esto con hasta 6 meses de prisión y 3.750€ de multa. Y aunque no lo fuera, no nos parecería correcto. Nosotros ya pasamos por esto: sabemos lo difícil que es buscar temporada sin conocer el mercado. Por eso te damos todo lo que tenemos — CV, contactos, método y seguimiento — pero la decisión final siempre es del empleador, y nunca te vamos a prometer algo que no depende de nosotros.</div>
+        <div class="faq-a">Porque en Francia es ilegal cobrarle a alguien por garantizarle un empleo: el artículo L5321-3 del Code du travail prohíbe exigir una retribución a cambio de servicios de colocación, y el artículo L5324-1 castiga esto con hasta 6 meses de prisión y 3.750€ de multa. Y aunque no lo fuera, no nos parecería correcto. Nosotros ya pasamos por esto: sabemos lo difícil que es buscar temporada sin conocer el mercado. Por eso te damos todo lo que tenemos — CV, hoja de ruta, método y asistencia — pero la decisión final siempre es del empleador, y nunca te vamos a prometer algo que no depende de nosotros.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">¿Necesito tener mi documentación en regla antes de pagar?</div>
@@ -346,7 +407,7 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
       </div>
       <div class="faq-item">
         <div class="faq-q">¿Qué diferencia hay con el plan Premium?</div>
-        <div class="faq-a">Premium te da las herramientas para buscar por tu cuenta. El Programa suma asesoría personal, tu CV armado por nuestro equipo, tu hoja de ruta con establecimientos objetivo y seguimiento semanal hasta que firmes.</div>
+        <div class="faq-a">Premium te da las herramientas para buscar por tu cuenta. El Programa suma asesoría personal, tu CV optimizado por nuestro equipo, tu hoja de ruta con establecimientos objetivo y seguimiento semanal hasta que firmes.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">¿Qué pasa si no firmo un contrato dentro de los 45 días?</div>
@@ -372,5 +433,27 @@ footer { background: var(--night); color: var(--bone); margin-top: 40px; }
   <div class="ft-bottom"><span>© 2026 Saison.</span><span>SMIC 2026 · €12,31/h</span></div>
 </footer>
 
+<script>
+// Lista de espera del Programa (verano): guarda email y WhatsApp en la tabla lista_espera de Supabase.
+(function(){
+  var f=document.getElementById('wlForm'); if(!f) return;
+  var URL='https://bipboatssbxxneukqxdk.supabase.co/rest/v1/lista_espera', KEY='sb_publishable_gPuoCRWnESWuvZ2L154E1w_uyfdPJZp';
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('wlMsg'), em=f.email.value.trim().toLowerCase(), wa=f.whatsapp.value.trim();
+    if(f.empresa.value) return;
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){ m.textContent='Escribí un email válido para avisarte.'; f.email.focus(); return; }
+    var b=f.querySelector('button[type=submit]'); b.disabled=true; m.textContent='Guardando...';
+    fetch(URL,{method:'POST',headers:{'apikey':KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify({email:em,whatsapp:wa||null,temporada:'verano-2027',origen:f.getAttribute('data-origen')||'landing'})})
+    .then(function(r){
+      if(r.ok||r.status===409){ m.textContent='Listo. Te escribimos antes de abrir los cupos de verano.'; f.reset(); try{ if(window.va) window.va('event',{name:'waitlist_signup'}); }catch(_){} }
+      else { throw new Error(r.status); }
+    })
+    .catch(function(){ m.textContent='No pudimos guardarlo. Escribinos a contact@saisonfr.com y te anotamos.'; })
+    .then(function(){ b.disabled=false; });
+  });
+})();
+</script>
 </body>
 </html>
