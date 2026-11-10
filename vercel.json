@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/LUCASSAISON", "destination": "/?utm_source=lucas&utm_medium=reel&utm_campaign=francia", "permanent": false },
+    { "source": "/lucassaison", "destination": "/?utm_source=lucas&utm_medium=reel&utm_campaign=francia", "permanent": false }
+  ]
+}
