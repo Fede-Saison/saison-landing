@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>La historia detrás de Saison | Saison</title>
+<meta name="description" content="5 países, 8 temporadas, muchas casas e infinitas crisis. Por qué construimos el primer portal de empleo en español para trabajar por temporadas en Francia.">
+<meta property="og:title" content="La historia detrás de Saison">
+<meta property="og:description" content="5 países, 8 temporadas, muchas casas e infinitas crisis. Por qué construimos el primer portal de empleo en español para trabajar por temporadas en Francia.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://www.saisonfr.com/blog/la-historia-detras-de-saison">
+<meta property="og:image" content="https://www.saisonfr.com/og/la-historia-detras-de-saison.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.saisonfr.com/og/la-historia-detras-de-saison.jpg">
+<link rel="canonical" href="https://www.saisonfr.com/blog/la-historia-detras-de-saison">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0B1426;--cobalt:#0A3AF2;--bone:#F5F3EC;--paper:#FBFAF5;--muted:rgba(11,20,38,.62);--soft:rgba(11,20,38,.42);--border:rgba(11,20,38,.09);--red:#D2382B;--red-bg:rgba(210,56,43,.06);--cob-bg:rgba(10,58,242,.05)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--paper);color:var(--night);-webkit-font-smoothing:antialiased;padding-top:64px}
+a{color:inherit}
+.mono{font-family:'DM Mono',monospace}
+#progress{position:fixed;top:64px;left:0;height:3px;width:0;background:var(--cobalt);z-index:101;transition:width .1s linear}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(251,250,245,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--night)}
+.logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:22px;height:22px}
+.logo-grid span{border-radius:2px;display:block}
+.logo-grid span:nth-child(1){background:#0A3AF2}.logo-grid span:nth-child(2){background:#7690F3}.logo-grid span:nth-child(3){background:#B3C0F4}.logo-grid span:nth-child(4){background:#D7DDF5}
+.logo-name{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;letter-spacing:-.03em}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-link{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);text-decoration:none;font-family:'DM Mono',monospace}
+.nav-link:hover{color:var(--night)}.nav-link.active{color:var(--cobalt)}
+.nav-cta{font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:var(--night);color:var(--bone);padding:9px 20px;border-radius:100px;text-decoration:none;font-family:'DM Mono',monospace}
+.nav-cta:hover{background:var(--cobalt)}
+.article-header{max-width:760px;margin:0 auto;padding:64px 32px 40px}
+.breadcrumb{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-bottom:26px}
+.breadcrumb a{color:var(--cobalt);text-decoration:none}.breadcrumb span{color:rgba(11,20,38,.25);margin:0 10px}
+.category-pill{display:inline-flex;align-items:center;gap:7px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--cobalt);background:rgba(10,58,242,.07);padding:6px 14px;border-radius:100px;margin-bottom:22px;font-weight:500}
+.category-pill::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--cobalt)}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(34px,5vw,54px);letter-spacing:-.035em;line-height:1.05;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--cobalt)}
+.lead{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(17px,1.7vw,20px);font-weight:500;line-height:1.55;color:var(--muted);margin-bottom:32px}
+.byline{display:flex;align-items:center;gap:14px;padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--night);color:var(--bone);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-weight:500;font-size:15px}
+.byline-name{font-weight:600;font-size:14px}
+.byline-meta{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--soft);margin-top:3px}
+.hero{max-width:1120px;margin:0 auto 48px;padding:0 32px}
+.hero-box{background:linear-gradient(135deg,#13224a,var(--night) 70%);border-radius:18px;padding:56px 48px;position:relative;overflow:hidden;color:var(--bone);display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.hero-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(10,58,242,.35) 0%,transparent 55%)}
+.hero-num{position:relative;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(56px,8vw,96px);line-height:.95;letter-spacing:-.04em;color:var(--bone)}
+.hero-num small{display:block;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7690F3;font-weight:400;margin-top:14px}
+.hero-qs{position:relative;list-style:none;display:grid;gap:12px}
+.hero-qs li{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(15px,1.7vw,18px);font-weight:600;padding:14px 18px;border:1px solid rgba(245,243,236,.14);border-radius:12px;background:rgba(245,243,236,.04)}
+.hero-qs li span{font-family:'DM Mono',monospace;font-size:11px;color:#7690F3;margin-right:10px}
+.layout{max-width:1120px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:240px minmax(0,720px);gap:56px;justify-content:center}
+.toc{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow:auto}
+.toc details{border:1px solid var(--border);border-radius:14px;background:#fff;padding:4px 0}
+.toc summary{list-style:none;cursor:pointer;padding:14px 18px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);display:flex;justify-content:space-between}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::after{content:'+';color:var(--cobalt);font-size:15px}
+.toc details[open] summary::after{content:'–'}
+.toc ol{list-style:none;counter-reset:t;padding:0 10px 10px}
+.toc li{counter-increment:t}
+.toc a{display:flex;gap:10px;padding:8px;border-radius:8px;text-decoration:none;font-size:13.5px;line-height:1.35;color:var(--muted)}
+.toc a::before{content:counter(t,decimal-leading-zero);font-family:'DM Mono',monospace;font-size:10.5px;color:var(--soft);padding-top:2px}
+.toc a:hover{background:var(--cob-bg);color:var(--night)}
+.toc a.active{background:var(--cob-bg);color:var(--cobalt);font-weight:600}
+.toc a.active::before{color:var(--cobalt)}
+.body p{font-size:17px;line-height:1.72;margin-bottom:20px;color:rgba(11,20,38,.8)}
+.body p strong,.body li strong{color:var(--night);font-weight:600}
+.body a{color:var(--cobalt);text-decoration:underline;text-decoration-color:rgba(10,58,242,.3);text-underline-offset:3px}
+.body a:hover{text-decoration-color:var(--cobalt)}
+.body h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em;margin:32px 0 12px}
+.body ul.dots{margin:16px 0 24px;list-style:none}
+.body ul.dots li{position:relative;padding-left:24px;margin-bottom:10px;font-size:16.5px;line-height:1.65;color:rgba(11,20,38,.8)}
+.body ul.dots li::before{content:'';position:absolute;left:2px;top:11px;width:8px;height:8px;background:var(--cobalt);border-radius:2px}
+.tldr{background:#fff;border:1px solid rgba(10,58,242,.18);border-radius:16px;padding:26px 28px;margin-bottom:40px}
+.tldr-title{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt);margin-bottom:14px}
+.tldr ul{list-style:none;display:grid;gap:10px}
+.tldr li{font-size:15.5px;line-height:1.55;padding-left:26px;position:relative;color:rgba(11,20,38,.82)}
+.tldr li::before{content:'→';position:absolute;left:0;color:var(--cobalt);font-family:'DM Mono',monospace}
+.sec{border-top:1px solid var(--border)}
+.sec>summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:36px 0 18px;scroll-margin-top:84px}
+.sec>summary::-webkit-details-marker{display:none}
+.sec>summary h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,3vw,32px);letter-spacing:-.028em;line-height:1.15}
+.sec>summary h2 .n{display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--cobalt);font-weight:500;margin-bottom:10px}
+.sec>summary .tog{flex-shrink:0;width:34px;height:34px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;color:var(--cobalt);margin-top:22px;transition:transform .2s}
+.sec[open]>summary .tog{transform:rotate(45deg)}
+.sec>summary:hover .tog{background:var(--cob-bg)}
+.sec-body{padding-bottom:24px}
+.rule{border:1px solid var(--border);background:#fff;border-radius:16px;padding:24px 24px 8px;margin:18px 0}
+.rule-head{display:flex;align-items:baseline;gap:14px;margin-bottom:12px;flex-wrap:wrap}
+.rule-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;color:var(--cobalt);line-height:1;letter-spacing:-.04em}
+.rule-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em;line-height:1.25}
+.rule p{font-size:16px!important}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 18px}
+.bad,.good{border-radius:10px;padding:12px 14px;font-size:14.5px;line-height:1.5}
+.bad{background:var(--red-bg);border-left:3px solid var(--red)}
+.good{background:var(--cob-bg);border-left:3px solid var(--cobalt)}
+.bad b,.good b{display:block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;font-weight:500}
+.bad b{color:var(--red)}.good b{color:var(--cobalt)}
+blockquote{border-left:3px solid var(--cobalt);background:var(--cob-bg);padding:20px 26px;margin:28px 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:18px;line-height:1.55;border-radius:0 10px 10px 0}
+.tip{display:flex;gap:14px;align-items:flex-start;background:var(--bone);border-radius:12px;padding:16px 18px;margin:20px 0;font-size:15px;line-height:1.55}
+.tip .ic{flex-shrink:0;width:26px;height:26px;border-radius:7px;background:var(--cobalt);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:13px}
+.tip a{font-weight:600}
+.tip.warn{background:var(--red-bg)}.tip.warn .ic{background:var(--red)}
+.caption{font-size:13px!important;color:var(--soft)!important;font-style:italic}
+.photo{margin:28px 0}
+.photo img{width:100%;display:block;border-radius:16px;object-fit:cover}
+.photo figcaption{margin-top:10px}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}
+.photo-grid .photo{margin:0}
+.photo-grid figcaption{margin-top:8px}
+@media (max-width:640px){.photo-grid{grid-template-columns:1fr}}
+.quiz{scroll-margin-top:84px;background:var(--night);color:var(--bone);border-radius:18px;padding:32px 30px;margin:36px 0}
+.quiz-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7690F3;margin-bottom:10px}
+.quiz h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:24px;letter-spacing:-.025em;margin:0 0 6px!important;color:var(--bone)}
+.quiz h2 .n{display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;color:#7690F3;font-weight:500;margin-bottom:10px}
+.quiz>p{color:rgba(245,243,236,.65)!important;font-size:14.5px!important;margin-bottom:18px!important}
+.cta{background:var(--night);color:var(--bone);border-radius:18px;padding:34px 30px;margin:44px 0}
+.cta-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7690F3;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.cta-eyebrow::before{content:'';width:24px;height:1px;background:#7690F3}
+.cta h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:24px;letter-spacing:-.025em;line-height:1.15;margin:0 0 10px!important;color:var(--bone)}
+.cta p{font-size:14.5px!important;color:rgba(245,243,236,.7)!important;line-height:1.6;margin-bottom:22px!important}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:13px 22px;border-radius:100px;text-decoration:none!important;font-weight:500}
+.btn.primary{background:var(--cobalt);color:#fff!important}
+.btn.primary:hover{background:#2a55ff}
+.btn.ghost{color:var(--bone)!important;border:1px solid rgba(245,243,236,.22)}
+.btn.ghost:hover{border-color:var(--bone)}
+.faq{margin-top:8px}
+.faq details{border-top:1px solid rgba(10,58,242,.14)}
+.faq summary{padding:22px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-family:'DM Mono',monospace;color:var(--cobalt);font-size:20px;flex-shrink:0}
+.faq details[open] summary::after{content:'–'}
+.faq .a{font-size:15.5px;color:var(--muted);line-height:1.65;padding-bottom:22px}
+.sources{font-size:13px;color:var(--soft);line-height:1.7;margin-top:10px}
+.sources a{color:var(--soft);text-decoration-color:rgba(11,20,38,.2)}
+.closing{max-width:720px;margin:0 auto;padding:24px 32px 96px}
+.closing h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-.025em;margin-bottom:12px}
+.closing p{font-size:16px;color:var(--muted);line-height:1.65;margin-bottom:22px}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+.next a{display:block;border:1px solid var(--border);border-radius:14px;padding:18px;text-decoration:none;background:#fff;transition:border-color .2s}
+.next a:hover{border-color:var(--cobalt)}
+.next span{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--cobalt)}
+.next strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:17px;margin-top:6px;line-height:1.3}
+footer{background:var(--night);padding:56px 56px 32px}
+.ft-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:48px}
+.ft-tagline{font-size:11px;color:rgba(245,243,236,.35);margin-top:10px;max-width:240px}
+.ft-cols{display:flex;gap:48px;flex-wrap:wrap}
+.ft-col h4{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,236,.3);margin-bottom:14px;font-family:'DM Mono',monospace}
+.ft-col a{display:block;font-size:11px;color:rgba(245,243,236,.5);text-decoration:none;margin-bottom:8px}
+.ft-bottom{display:flex;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(245,243,236,.06);font-size:10px;color:rgba(245,243,236,.25);flex-wrap:wrap;gap:10px}
+.mbar{display:none}
+@media (max-width:1000px){.layout{grid-template-columns:minmax(0,720px);gap:0}.toc{position:static;max-height:none;margin-bottom:28px}}
+@media (max-width:640px){
+  nav{padding:0 16px}.nav-links .nav-link{display:none}
+  .article-header,.layout,.closing,.hero{padding-left:16px;padding-right:16px}
+  .article-header{padding-top:40px}
+  .hero-box{grid-template-columns:1fr;padding:36px 22px;gap:24px}
+  .body p{font-size:16px}
+  .pair,.next{grid-template-columns:1fr}
+  .quiz,.cta{padding:26px 20px}
+  footer{padding:48px 20px 96px}
+  .mbar{display:flex;position:fixed;bottom:12px;left:12px;right:12px;z-index:99;background:var(--night);color:var(--bone);border-radius:100px;padding:8px 8px 8px 18px;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 8px 30px rgba(11,20,38,.25);transform:translateY(140%);transition:transform .3s}
+  .mbar.show{transform:none}
+  .mbar span{font-size:13px;font-weight:500}
+  .mbar a{background:var(--cobalt);color:#fff;text-decoration:none;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:11px 16px;border-radius:100px;white-space:nowrap}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"La historia detrás de Saison",
+  "description":"5 países, 8 temporadas, muchas casas e infinitas crisis. Por qué construimos el primer portal de empleo en español para trabajar por temporadas en Francia.",
+  "author":{"@type":"Person","name":"Federico Alberti","jobTitle":"Fundador de Saison"},
+  "publisher":{"@type":"Organization","name":"Saison","url":"https://www.saisonfr.com"},
+  "mainEntityOfPage":"https://www.saisonfr.com/blog/la-historia-detras-de-saison",
+  "datePublished":"2026-11-19",
+  "dateModified":"2026-11-25",
+  "inLanguage":"es"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Saison","item":"https://www.saisonfr.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.saisonfr.com/blog"},
+    {"@type":"ListItem","position":3,"name":"La historia detrás de Saison"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Saison reemplazó a YSNV Work?","acceptedAnswer":{"@type":"Answer","text":"Sí. YSNV Work fue la semilla que empezó todo esto. Saison es la evolución tecnológica de ese trabajo: una plataforma con recursos de acceso libre, guías, portal de empleo y acompañamiento humano."}},
+    {"@type":"Question","name":"¿Saison garantiza conseguirme trabajo?","acceptedAnswer":{"@type":"Answer","text":"No. Saison ordena, filtra y te acerca las ofertas reales en tu idioma, y te acompaña en el proceso con guías y el Programa Saisonniers. El trabajo de postularte y destacar sigue siendo tuyo."}},
+    {"@type":"Question","name":"¿Qué tipo de trabajos vas a encontrar en Saison?","acceptedAnswer":{"@type":"Answer","text":"Principalmente hostelería de temporada: hoteles, restaurantes, clubes de playa, muchos con alojamiento (y a veces comida) incluidos, con contratos de entre 4 y 6 meses."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav>
+  <a href="/" class="logo"><div class="logo-grid"><span></span><span></span><span></span><span></span></div><span class="logo-name">Saison</span></a>
+  <div class="nav-links">
+    <a href="/#precio-ayuda" class="nav-link">Servicios</a>
+    <a href="/blog" class="nav-link active">Blog</a>
+    <a href="https://app.saisonfr.com/?utm_source=blog&amp;utm_medium=articulo&amp;utm_campaign=historia-saison&amp;utm_content=nav" class="nav-cta">Ver ofertas →</a>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="breadcrumb"><a href="/">Saison</a><span>→</span><a href="/blog">Blog</a><span>→</span>La historia detrás de Saison</div>
+  <div class="category-pill">Testimonio · Fundador</div>
+  <h1>La historia detrás de <em>Saison</em>.</h1>
+  <p class="lead">5 países, 8 temporadas, muchas casas e infinitas crisis. Por qué construimos el primer portal de empleo en español para trabajar por temporadas en Francia.</p>
+  <div class="byline">
+    <div class="avatar">F</div>
+    <div>
+      <div class="byline-name">Federico Alberti · Fundador de Saison</div>
+      <div class="byline-meta">19 nov 2026 · 7 min de lectura</div>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-box" role="img" aria-label="Resumen del recorrido del fundador">
+    <div class="hero-num">8<small>temporadas antes de construir Saison</small></div>
+    <ul class="hero-qs">
+      <li><span>→</span>5 países, Argentina, Estados Unidos, Suiza, Italia y Francia</li>
+      <li><span>→</span>4 años, 8 temporadas en la hostelería de lujo francesa</li>
+      <li><span>→</span>Hoy: el primer portal de empleo en español para temporadas en Francia</li>
+    </ul>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="toc" aria-label="Índice del artículo">
+    <details open id="tocBox">
+      <summary>En este artículo</summary>
+      <ol>
+        <li><a href="#que-son-las-temporadas">Qué son las temporadas en Francia</a></li>
+        <li><a href="#la-vida-de-saisonnier">La vida de saisonnier</a></li>
+        <li><a href="#el-problema-real">El problema real: no es falta de información, es que está desordenada</a></li>
+        <li><a href="#que-es-saison-hoy">Qué es Saison hoy</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+      </ol>
+    </details>
+  </aside>
+
+  <main class="body">
+
+    <div class="tldr">
+      <div class="tldr-title">En pocas palabras</div>
+      <ul>
+        <li>Viví en <strong>5 países</strong> y pasé <strong>8 temporadas</strong> en Francia para entender cómo funciona en serio este mercado.</li>
+        <li>Pensaba que "temporada" era sinónimo de picking de fruta o trabajo en viñedos. Me encontré con hoteles 5 estrellas — y también con empleadores que prometen una cosa y entregan otra.</li>
+        <li>Nadie me explicó cuándo buscar, cómo se calculan las <a href="/blog/cuanto-se-gana-trabajando-en-francia-temporada">horas extra</a> ni qué es un <em>état des lieux</em>. Lo aprendí a los golpes, sin ninguna guía en español.</li>
+        <li>Ayudando a otros candidatos me di cuenta de que el problema no era falta de información: es que estaba desparramada, en francés, y hecha para gente que ya conoce el país.</li>
+        <li>Por eso armamos <strong>Saison</strong>: el primer portal de empleo en español para que tu primera temporada en Francia no sea un salto a ciegas.</li>
+      </ul>
+    </div>
+
+    <!-- 01 -->
+    <details class="sec" open>
+      <summary id="que-son-las-temporadas"><h2><span class="n">01</span>Qué son las temporadas en Francia</h2><span class="tog" aria-hidden="true">+</span></summary>
+      <div class="sec-body">
+        <p>Antes de vivir esto, si me decías "temporada en Francia" yo me imaginaba trabajar en un viñedo, haciendo quesos, alojamientos precarios y salarios bajos. Nada que llame mucho la atención. Así que imagínense cuando llegué y me encontré con otra cosa completamente distinta: <strong>hoteles 5 estrellas, restaurantes de lujo, clubes de playa</strong> — lugares donde hay gente que paga miles de euros por noche, y yo ahí, del otro lado del mostrador a cambio de un salario bueno, con un alojamiento con todas las comodidades y en ocasiones hasta comida incluida.</p>
+        <figure class="photo">
+          <img src="/blog/img/historia/fede-saint-tropez.jpg" alt="Federico en Saint-Tropez durante una temporada de verano" loading="lazy">
+          <figcaption class="caption">Saint-Tropez, donde pasé 4 temporadas.</figcaption>
+        </figure>
+        <p>Fue casi por casualidad que me metí en la vida de las "saison", y cuando me di cuenta había pasado <strong>4 años</strong> en este estilo de vida. Aprendí oficios que jamás había tocado, viajé a lugares que siempre soñé, empecé a hacer cosas que siempre quise, y todo esto gracias al <a href="/blog/cuanto-se-ahorra-trabajando-una-temporada-en-francia">ahorro</a> que me permitió este tipo de trabajo. Pero ojo, no todo siempre es color de rosa. También me tocó la otra cara: empleadores que prometen una cosa en la entrevista y entregan otra, jefes que se aprovechan de que estás lejos de casa, sin red y sin saber bien tus derechos, <strong>jornadas que se estiran mucho más de lo que dice el papel</strong>. Nadie te muestra esto en el video promocional de la agencia, pero existe, y prefiero que lo sepas de entrada.</p>
+        <p>Toda esa mezcla —lo lindo y lo feo— es la que terminó convertida en Saison: una comunidad hecha por y para saisonniers, no una vidriera que solo muestra la parte linda.</p>
+        <div class="tip"><span class="ic">→</span><span>Si querés saber si podés trabajar en Francia según tu situación, te lo explicamos en <a href="/blog/5-formas-de-trabajar-en-francia">5 formas de trabajar en Francia siendo latino</a>.</span></div>
+      </div>
+    </details>
+
+    <!-- 02 -->
+    <details class="sec" open>
+      <summary id="la-vida-de-saisonnier"><h2><span class="n">02</span>La vida de saisonnier</h2><span class="tog" aria-hidden="true">+</span></summary>
+      <div class="sec-body">
+        <p>Llegar a Francia con un trabajo que te incluye el alojamiento es, seamos honestos, un golazo: tanto si venís de paso buscando una experiencia, como si tenés la idea de quedarte y armar una base. El problema es que a nadie se le ocurre explicarte cómo funciona esto en la práctica.</p>
+        <p>Fui aprendiendo, a los golpes, cómo y sobre todo <strong>cuándo</strong> buscar estos <a href="/blog/5-formas-de-trabajar-en-francia">trabajos</a>, qué <a href="/blog/tipos-de-contrato-para-trabajar-en-francia">tipo de contrato</a> me convenía, cómo armar un <a href="/blog/cv-para-trabajar-en-francia">CV</a> que a un reclutador francés le sirva de algo, cómo se calculan en serio las <a href="/blog/cuanto-se-gana-trabajando-en-francia-temporada">horas extra</a>, qué significa legalmente que el alojamiento "esté incluido", cómo funcionan las vacaciones pagas, qué es un <em>état des lieux</em>... la lista sigue. Y no había nada de esto resumido en español, en ningún lado, cuando yo lo necesitaba. Tuve que armar el rompecabezas solo, pieza por pieza — hoy ese mismo mercado sigue teniendo riesgos reales, y es justamente lo que Saison busca ordenar para que al que recién empieza no le pase lo mismo que a mí.</p>
+        <figure class="photo">
+          <img src="/blog/img/historia/fede-courchevel.jpg" alt="Federico esquiando en Courchevel durante una temporada de invierno" loading="lazy">
+          <figcaption class="caption">Courchevel, donde recién a los 28 años aprendí a esquiar 😄</figcaption>
+        </figure>
+      </div>
+    </details>
+
+    <!-- 03 -->
+    <details class="sec" open>
+      <summary id="el-problema-real"><h2><span class="n">03</span>El problema real: no es falta de información, es que está desordenada</h2><span class="tog" aria-hidden="true">+</span></summary>
+      <div class="sec-body">
+        <p>A fines de 2025 empecé a ayudar a gente a conseguir estos trabajos — un poco porque me lo pedían, un poco porque no podía quedarme quieto viendo a otros cometer los mismos errores que yo, o como algunos se abusaban de la ilusión de la gente que tiene ganas de vivir esta experiencia. Los ayudaba con sus CVs, con sus dudas, trataba de acompañarlos. Y cuando llegaba el momento de buscar trabajo, les tiraba mil links: sitios web, portales de empleo, grupos de Facebook, de WhatsApp. Problema: ninguno de esos sitios estaba pensado para ellos, y navegarlos y entender toda la terminología les exigía horas diarias.</p>
+        <p>Latinos que muchas veces llegan sin experiencia, sin idioma ni conocimiento de cómo funciona todo acá terminan viendo una oferta de finanzas en París al lado de un puesto de voiturier en los Alpes, sin entender cuál trabajo es el mejor para ellos, cuál es el salario real, si viene con alojamiento o no. Lo que para un francés es obvio, para nosotros es un jeroglífico.</p>
+        <blockquote>El problema nunca fue que no hubiera información. El problema es que estaba desparramada, en francés, y hecha por y para gente que ya conoce el país.</blockquote>
+        <p>Ahí fue cuando dije basta de resolverlo a mano, uno por uno, y decidí armar algo que lo resolviera de raíz: una plataforma y una comunidad pensadas específicamente para hispanohablantes que buscan su primera temporada en Francia de la forma más segura posible — con portal de empleo, herramientas, guías y este mismo blog.</p>
+      </div>
+    </details>
+
+    <!-- 04 -->
+    <details class="sec" open>
+      <summary id="que-es-saison-hoy"><h2><span class="n">04</span>Qué es Saison hoy</h2><span class="tog" aria-hidden="true">+</span></summary>
+      <div class="sec-body">
+        <p>Saison es una plataforma y una comunidad hecha por y para hispanohablantes que quieren trabajar por temporadas en Francia. Nada de gurú ni de fórmula mágica: buscamos dar acompañamiento humano y tecnológico para que no tengas que resolver esto solo, como me tocó a mí. En el blog vas a encontrar lo que necesitás para armar tu temporada; en la app, las ofertas filtradas por región y por disponibilidad de alojamiento, con tu perfil emparejándote con lo que mejor se adapta a tu nivel de francés y tu experiencia.</p>
+        <p>Para que quede claro desde el vamos: buscar y aplicar a las ofertas en la app es <strong>gratis</strong>. Algunas herramientas más a fondo, como el acompañamiento del <a href="https://www.saisonfr.com/programa-saisonniers.html">Programa Saisonniers</a>, sí tienen un costo, porque hay trabajo humano real detrás: te acompaña gente que ya estuvo en tu lugar. No te vamos a vender que esto reemplaza tu esfuerzo ni que te garantiza un contrato — pero sí te ahorra el tiempo y la confusión que a nosotros nos tomó meses resolver sin ayuda.</p>
+        <p>¿Y con qué te quedás al final de todo esto, además de la experiencia? En mi caso, con el <a href="/blog/cuanto-se-ahorra-trabajando-una-temporada-en-francia">ahorro</a> de cada temporada me escapo todos los años al sudeste asiático — mi lugar preferido en el mundo, al que tengo la suerte de volver desde que vine a trabajar a Francia.</p>
+        <div class="photo-grid">
+          <figure class="photo">
+            <img src="/blog/img/historia/fede-sea-snorkel.jpg" alt="Federico buceando en el sudeste asiático" loading="lazy">
+            <figcaption class="caption">Sudeste asiático, mi lugar preferido en el mundo.</figcaption>
+          </figure>
+          <figure class="photo">
+            <img src="/blog/img/historia/fede-sea-hut.jpg" alt="Federico y su esposa viajando por el sudeste asiático" loading="lazy">
+            <figcaption class="caption">Y todo con los ahorros de algunos meses de trabajo nada más.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </details>
+
+    <div class="cta">
+      <div class="cta-eyebrow">¿Querés empezar tu propia temporada?</div>
+      <h3>Encontrá tu primera oferta en español.</h3>
+      <p>Ofertas filtradas por región y alojamiento, en un solo lugar y en tu idioma. Gratis para empezar a buscar.</p>
+      <div class="btns">
+        <a href="https://app.saisonfr.com/?utm_source=blog&amp;utm_medium=articulo&amp;utm_campaign=historia-saison&amp;utm_content=cta-medio" class="btn primary">Entrar a la app gratis →</a>
+        <a href="https://www.saisonfr.com/programa-saisonniers.html" class="btn ghost">Conocer el Programa Saisonniers</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <details class="sec" open>
+      <summary id="faq"><h2><span class="n">05</span>Preguntas frecuentes</h2><span class="tog" aria-hidden="true">+</span></summary>
+      <div class="sec-body faq">
+        <details><summary>¿Saison reemplazó a YSNV Work?</summary><div class="a">Sí. YSNV Work fue la semilla que empezó todo esto. Saison es la evolución tecnológica de ese trabajo: una plataforma con recursos de acceso libre, guías, portal de empleo y acompañamiento humano.</div></details>
+        <details><summary>¿Saison garantiza conseguirme trabajo?</summary><div class="a">No. Saison ordena, filtra y te acerca las ofertas reales en tu idioma, y te acompaña en el proceso con guías y el Programa Saisonniers. El trabajo de postularte y destacar sigue siendo tuyo.</div></details>
+        <details><summary>¿Qué tipo de trabajos vas a encontrar en Saison?</summary><div class="a">Principalmente hostelería de temporada: hoteles, restaurantes, clubes de playa, muchos con alojamiento (y a veces comida) incluidos, con contratos de entre 4 y 6 meses.</div></details>
+      </div>
+    </details>
+
+  </main>
+</div>
+
+<section class="closing">
+  <h3>Próximo paso</h3>
+  <p>Si esta historia te resuena, probablemente estés en el mismo punto en el que estaba yo antes de armar Saison: con muchas preguntas sueltas sobre cómo funciona todo esto en la práctica. Arrancá por las guías del blog o directamente mirá las ofertas disponibles.</p>
+  <div class="btns">
+    <a href="https://app.saisonfr.com/?utm_source=blog&amp;utm_medium=articulo&amp;utm_campaign=historia-saison&amp;utm_content=cierre" class="btn primary">Entrar a la app gratis →</a>
+  </div>
+  <div class="next">
+    <a href="/blog/5-formas-de-trabajar-en-francia"><span>Trámite</span><strong>5 formas de trabajar en Francia siendo latino</strong></a>
+    <a href="/blog/cuanto-se-ahorra-trabajando-una-temporada-en-francia"><span>Guía</span><strong>Cuánto se ahorra haciendo una temporada</strong></a>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div>
+      <a href="/" class="logo"><div class="logo-grid"><span></span><span></span><span></span><span></span></div><span class="logo-name" style="color:var(--bone)">Saison</span></a>
+      <p class="ft-tagline">Hecho por saisonniers, para saisonniers.</p>
+    </div>
+    <div class="ft-cols">
+      <div class="ft-col"><h4>Candidatos</h4><a href="https://app.saisonfr.com/?utm_source=blog&amp;utm_medium=articulo&amp;utm_campaign=historia-saison&amp;utm_content=footer">Ver ofertas</a><a href="/blog">Blog</a><a href="/#precio-ayuda">Servicios</a><a href="/programa-saisonniers.html">Programa Saisonniers</a></div>
+      <div class="ft-col"><h4>Saison</h4><a href="https://instagram.com/saisonfr">Instagram</a><a href="/employeurs">Employeurs</a></div>
+      <div class="ft-col"><h4>Legal</h4><a href="/terminos.html">Términos</a><a href="/privacidad.html">Privacidad</a></div>
+    </div>
+  </div>
+  <div class="ft-bottom"><span>© 2026 Saison</span><span>contact@saisonfr.com</span></div>
+</footer>
+
+<div class="mbar" id="mbar"><span>Mirá las ofertas</span><a href="https://app.saisonfr.com/?utm_source=blog&amp;utm_medium=articulo&amp;utm_campaign=historia-saison&amp;utm_content=mbar">Ver ofertas →</a></div>
+
+<script>
+(function(){
+  var bar=document.getElementById('progress'),mbar=document.getElementById('mbar');
+  function onScroll(){
+    var h=document.documentElement,max=h.scrollHeight-h.clientHeight,p=max>0?h.scrollTop/max:0;
+    bar.style.width=(p*100)+'%';
+    if(mbar) mbar.classList.toggle('show',p>0.15&&p<0.96);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  links.forEach(function(a){
+    a.addEventListener('click',function(){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t){var d=t.closest('details.sec');if(d)d.open=true;}
+      if(window.innerWidth<=1000){document.getElementById('tocBox').open=false;}
+    });
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id);});
+        }
+      });
+    },{rootMargin:'-20% 0px -70% 0px'});
+    links.forEach(function(l){var t=document.querySelector(l.getAttribute('href'));if(t)io.observe(t);});
+  }
+  if(window.innerWidth<=1000){document.getElementById('tocBox').open=false;}
+})();
+</script>
+</body>
+</html>
